@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage[paperwidth=297mm,paperheight=210mm, margin=0.3cm]{geometry}
+\usepackage{ifthen}
+\usepackage{blindtext}
+\usepackage{multicol}
+\usepackage{enumitem}
+
+
+% Remove page number
+\pagestyle{empty}
+
+\begin{document}
+
+\section*{\huge{\underline{Ingeniería Lingüística. \emph{Cheat sheet} de UNL}}}
+
+\begin{multicols*}{3}
+
+\subsection*{\underline{Atributos de las UW}}
+
+Expresan información propia del contexto. Afecta al hablante, al enunciado, modalidad. Por ejemplo, para indicar que una UW es plural:
+
+\begin{verbatim}
+tongue(icl>abstract_thing,equ>language):09.@pl
+\end{verbatim}
+
+\begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
+    \item \textbf{Número} (singular o plural - @sg,@pl)
+    \item \textbf{Referencia} (definida, indefinida, genérica - @def, @indef). Ej: artículo determinado / indeterminado.
+    \item \textbf{Modalidad} (grado de certidumbre - @not, @possible...)
+    \item \textbf{Tiempo} (pasado, presente, futuro - @present, @past...)
+    \item \textbf{Intención} del hablante (ruego, invitación, orden - @order...)
+    \item \textbf{Información} adicional (@entry – nodo principal del grafo)
+\end{itemize}
+
+\subsection*{\underline{Definición de UWs}}
+
+\begin{verbatim}
+UW = Headword(restricciones)
+\end{verbatim}
+
+\subsubsection*{Headwords}
+
+Expresan de forma lo más genérica posible el significado, para luego matizarse con restricciones. Tipos:
+\begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
+    \item \textbf{Palabra inglesa}. Debe estar en forma de diccionario (la más básica). Ejemplo: \emph{fish}, que debe ser matizado con \emph{living\_thing} o \emph{food} para significar respectivamente pez o pescado.
+    \item \textbf{Frase inglesa}. Solamente válido cuando no se puede utilizar una sola headword para representar el significado local. Ejemplo: \emph{after\_meal\_conversation} para sobremesa. 
+    \item \textbf{Palabra no inglesa}. Ejemplo: \emph{paella}.
+\end{itemize}
+
+\subsubsection*{Restricciones}
+
+Restringen el significado general de las Headwords. Tienen funcionalidad ontológica, semántica y argumental.
+
+
+\begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
+    \item \underline{\textbf{$>$icl}}. Conecta una UW con su clase natural (hiperónimo: palabra cuyo significado engloba el de otros). \verb+bus(icl>vehículo)+. Algunos icl útiles:
+    \begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
+        \item \textbf{verb}. Forma más general de describir un verbo; evitar usar.
+        \begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
+            \item do. Acciones con un agente que las empieza.
+            \item occur. Eventos sin un agente responsable.
+            \item be. Situaciones estáticas (estados, propiedades, relaciones...)
+        \end{itemize}
+        \item \textbf{thing}. Forma más general de describir un sustantivo; evitar usar.
+        \begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
+            \item abstract\_thing (action, activity, process, quantity...)
+            \item concrete\_thing (living\_thing(person, animal, plant), functional\_thing, matter, natural\_object)
+            \item place.
+        \end{itemize}
+        \item \textbf{adj}. Forma más general de describir un adjetivo.
+        \item \textbf{adv}. Forma más general de describir un adverbio.
+    \end{itemize}
+    \item \underline{\textbf{$>$iof}}. Conecta objetos únicos con el concepto del que son instancia. \verb+Barcelona(iof>city)+, \verb+Barcelona(iof>sport_club)+, \verb+Cervantes(iof>person)+.
+    \item \textbf{$>$equ}. Indica un sinónimo de la UW. \verb+UN(equ>United_Nations)+
+    \item \textbf{$>$ant}. Indica un antónimo de la UW. \verb+poor(ant>rich)+
+    \item \textbf{$>$pof}. Indica que la UW es un componente de un todo. \verb+roof(pof>house)+.
+    \item \textbf{$>$com}. Indica un componente importante del sentido de la UW. \verb+corner(icl>place, com>interior)+
+    \item \textbf{$>$agt}. Indica el agente de una acción. Ejemplo: \verb+marry(agt>human)+ si traducimos del español, pero \verb+marry(agt>male)+ o \verb+marry(agt>female)+ desde el ruso.
+    \item   
+\end{itemize}
+
+
+
+
+\end{multicols*}
+
+\end{document}
