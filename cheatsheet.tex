@@ -4,10 +4,17 @@
 \usepackage{blindtext}
 \usepackage{multicol}
 \usepackage{enumitem}
+\usepackage[parfill]{parskip}
+\usepackage{titlesec}
 
-
+% General styling
 % Remove page number
 \pagestyle{empty}
+% No indentation
+\setlength{\parindent}{0pt}
+% section spacing(left, before, after)
+\titlespacing*{\subsubsection}
+{0pt}{6pt}{8pt}
 
 \begin{document}
 
@@ -15,13 +22,11 @@
 
 \begin{multicols*}{3}
 
-\subsection*{\underline{Atributos de las UW}}
+\textbf {UW = Headword(restricciones)}
 
-Expresan información propia del contexto. Afecta al hablante, al enunciado, modalidad. Por ejemplo, para indicar que una UW es plural:
+\subsubsection*{\underline{Atributos de las UW}}
 
-\begin{verbatim}
-tongue(icl>abstract_thing,equ>language):09.@pl
-\end{verbatim}
+Ej. plural de lengua: \verb+tongue(icl>abstract_thing):09.@pl+
 
 \begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
     \item \textbf{Número} (singular o plural - @sg,@pl)
@@ -32,28 +37,18 @@ tongue(icl>abstract_thing,equ>language):09.@pl
     \item \textbf{Información} adicional (@entry – nodo principal del grafo)
 \end{itemize}
 
-\subsection*{\underline{Definición de UWs}}
+\subsubsection*{\underline{Headwords}}
 
-\begin{verbatim}
-UW = Headword(restricciones)
-\end{verbatim}
-
-\subsubsection*{Headwords}
-
-Expresan de forma lo más genérica posible el significado, para luego matizarse con restricciones. Tipos:
 \begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
     \item \textbf{Palabra inglesa}. Debe estar en forma de diccionario (la más básica). Ejemplo: \emph{fish}, que debe ser matizado con \emph{living\_thing} o \emph{food} para significar respectivamente pez o pescado.
     \item \textbf{Frase inglesa}. Solamente válido cuando no se puede utilizar una sola headword para representar el significado local. Ejemplo: \emph{after\_meal\_conversation} para sobremesa. 
     \item \textbf{Palabra no inglesa}. Ejemplo: \emph{paella}.
 \end{itemize}
 
-\subsubsection*{Restricciones}
-
-Restringen el significado general de las Headwords. Tienen funcionalidad ontológica, semántica y argumental.
-
+\subsubsection*{\underline{Restricciones}}
 
 \begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
-    \item \underline{\textbf{$>$icl}}. Conecta una UW con su clase natural (hiperónimo: palabra cuyo significado engloba el de otros). \verb+bus(icl>vehículo)+. Algunos icl útiles:
+    \item \underline{\textbf{icl$>$}}. Conecta una UW con su clase natural (hiperónimo: palabra cuyo significado engloba el de otros). \verb+bus(icl>vehículo)+. Algunos icl útiles:
     \begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
         \item \textbf{verb}. Forma más general de describir un verbo; evitar usar.
         \begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
@@ -70,17 +65,86 @@ Restringen el significado general de las Headwords. Tienen funcionalidad ontoló
         \item \textbf{adj}. Forma más general de describir un adjetivo.
         \item \textbf{adv}. Forma más general de describir un adverbio.
     \end{itemize}
-    \item \underline{\textbf{$>$iof}}. Conecta objetos únicos con el concepto del que son instancia. \verb+Barcelona(iof>city)+, \verb+Barcelona(iof>sport_club)+, \verb+Cervantes(iof>person)+.
-    \item \textbf{$>$equ}. Indica un sinónimo de la UW. \verb+UN(equ>United_Nations)+
-    \item \textbf{$>$ant}. Indica un antónimo de la UW. \verb+poor(ant>rich)+
-    \item \textbf{$>$pof}. Indica que la UW es un componente de un todo. \verb+roof(pof>house)+.
-    \item \textbf{$>$com}. Indica un componente importante del sentido de la UW. \verb+corner(icl>place, com>interior)+
-    \item \textbf{$>$agt}. Indica el agente de una acción. Ejemplo: \verb+marry(agt>human)+ si traducimos del español, pero \verb+marry(agt>male)+ o \verb+marry(agt>female)+ desde el ruso.
-    \item   
+    \item \underline{\textbf{iof$>$}}. Conecta objetos únicos con el concepto del que son instancia. \verb+Barcelona(iof>city)+, \verb+Barcelona(iof>sport_club)+, \verb+Cervantes(iof>person)+.
+    \item \textbf{equ$>$}. Indica un sinónimo de la UW. \verb+UN(equ>United_Nations)+
+    \item \textbf{ant$>$}. Indica un antónimo de la UW. \verb+poor(ant>rich)+
+    \item \textbf{pof$>$}. Indica que la UW es un componente de un todo. \verb+roof(pof>house)+.
+    \item \textbf{com$>$}. Indica un componente importante del sentido de la UW. \verb+corner(icl>place, com>interior)+
 \end{itemize}
 
+\subsubsection*{\underline{Relaciones semánticas}}
 
+\underline{Relaciones argumentales}:
 
+\begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
+    \item \textbf{agt() ó agt$>$}. Participante que inicia (con o sin voluntad)
+    una acción (verbos bajo la categoría icl>do). \verb+marry(agt>human)+ si traducimos del español, pero \verb+marry(agt>male)+ o \verb+marry(agt>female)+ desde el ruso. \verb+agt(read(icl>do,agt>person,...),Alejandro(...))+.
+    \item \textbf{obj() ó obj$>$}. Define el participante directamente afectado por un evento o estado. Incluye:
+    \begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
+        \item Sujeto de verbos que indican procesos (icl$>$occur). \underline{La ciudad} se inundó tras las fuertes lluvias.
+        \item Objeto de verbos que indican actividades o acciones (icl$>$do). Diseñaron un nuevo \underline{plan}.
+        \item Objeto de verbos que indican estados (icl$>$be). Tengo un \underline{bolígrafo}.
+    \end{itemize}
+    \item \textbf{cob() ó cob$>$}. Existe en paralelo con el objeto (obj) y está afectado por el evento. obj está en el primer plano mientras que cob está en el segundo plano. El AVE va a conectar Madrid [obj] con Málaga [cob].
+    \item \textbf{aoj() ó aoj$>$}. Define el participante que se encuentra en un cierto estado o tiene cierta propiedad. La velocidad del \underline{avión}. \underline{María} quiere a Juan.
+    \item \textbf{rec() ó rec$>$}. Recipiente. Doy una carta a \underline{María}.
+    \item \textbf{gol() ó gol$>$}. Define el estado o propiedad que el objeto adquiere en la situación. Las luces cambiaron de rojo \underline{a verde}.
+    \item \textbf{src() ó src$>$}. Define el estado inicial de un objeto. Las luces cambiaron de \underline{rojo} a verde.
+\end{itemize}
+
+\underline{Relaciones causales}:
+
+\begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
+    \item \textbf{rsn() ó rsn$>$}. Define la razón por la que ocurre un evento. No fueron a la montaña por el \underline{mal tiempo}.
+    \item \textbf{pur() ó pur$>$}. Define el propósito u objetivo del agente de un evento. Trabaja para \underline{ganar dinero}.
+\end{itemize}
+
+\underline{Relaciones circunstanciales}:
+
+\begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
+    \item \textbf{met() ó met$>$}. Define los medios o el método por el cual se realiza una acción. Lo resolvió con \underline{un algoritmo}.
+    \item \textbf{ins() ó ins$>$}. Define el instrumento con el que se ejecuta una acción. Un
+    instrumento es siempre un objeto concreto (icl$>$concrete\_thing). Abrió la puerta con \underline{una ganzúa}.
+    \item \textbf{man() ó man$>$}. Define la manera en que se realiza un evento o las características de un evento. Es una ciudad \underline{muy} bella.
+\end{itemize}
+    
+\underline{Relaciones espaciales}:
+
+\begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
+    \item \textbf{plc() ó plc$>$}. Lugar. Se sentó \underline{debajo} del árbol.
+    \item \textbf{plf() ó plf$>$}. Lugar de dónde. Vinieron a Madrid desde \underline{Granada}.
+    \item \textbf{plt() ó plt$>$}. Lugar a dónde. Vinieron a \underline{Madrid} desde Granada.
+    \item \textbf{snc() ó snc$>$}. Lugar virtual. Hay dificultades en \underline{este documento}.
+\end{itemize}
+
+\underline{Relaciones temporales}:
+
+\begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
+    \item \textbf{tim() ó tim$>$}. Tiempo. Llegaron todos a las \underline{cinco} de la tarde.
+    \item \textbf{tmf() ó tmf$>$}. Tiempo inicial. Trabajó desde las \underline{ocho} de la mañana.
+    \item \textbf{tmt() ó tmt$>$}. Tiempo final. Trabajó hasta las \underline{ocho} de la noche.
+    \item \textbf{dur() ó dur$>$}. Duración. Durante su \underline{ausencia} las cosas fueron más fáciles.
+\end{itemize}
+
+\underline{Relaciones nominales}:
+
+\begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
+    \item \textbf{mod() ó mod$>$}. Una cosa que modifica a otra. Árbol \underline{verde}.
+    \item \textbf{pos() ó pos$>$}. Poseedor de una cosa. Perro de \underline{Juan}.
+    \item \textbf{pof() ó pof$>$}. Relación de parte de un todo. Ala del \underline{pájaro}. 
+    \item \textbf{nam() ó nam$>$}. Nombre de algo. El río \underline{Po}. 
+    \item \textbf{cnt() ó cnt$>$}. Forma distinta de denotar el objeto. Paquito, \underline{Jefazo}.
+\end{itemize}
+
+\underline{Relaciones lógicas}:
+
+\begin{itemize}[itemsep=0pt, parsep=0pt, leftmargin=1em]
+    \item \textbf{and() ó and$>$}. Conjunción y. Pedro y Pablo.
+    \item \textbf{or() ó or$>$}. Disyunción o. Jueves o Viernes.
+    \item \textbf{con() ó con$>$}. Condición a la realización del evento. Si \underline{vienes}, yo también me voy.
+    \item \textbf{qua() ó qua$>$}. Cantidad. \underline{Cinco} lobitos.
+    \item \textbf{bas() ó bas$>$}. Indica comparación. Joaquín es más listo que el \underline{resto}.
+\end{itemize}
 
 \end{multicols*}
 
