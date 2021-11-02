@@ -1,0 +1,166 @@
+% [S:1]
+% {org}
+% Las lenguas habladas por un gran grupo de personas son menos vulnerables
+% al peligro de desaparecer que otras.
+% {/org}
+% {unl}
+% mod(tongue(icl>concrete_thing,pof>body):04.@def.@pl, spoken(icl>adj):0C)
+% pos(group(icl>group,mod>thing):0X.@indef, person(icl>person):16.@pl)
+% mod(group(icl>group,mod>thing):0X.@indef, large(icl>adj):0S)
+% obj(vulnerable(icl>adj):06.@entry,
+% danger(icl>abstract_thing,obj>uw):0L.@def)
+% man(vulnerable(icl>adj):06.@entry, less(icl>how):00)
+% obj(danger(icl>abstract_thing,obj>uw):0L.@def,
+% disappear(icl>occur,equ>vanish,obj>thing,plf>uw):0W)
+% agt(spoken(icl>adj):0C, group(icl>group,mod>thing):0X.@indef)
+% aoj(vulnerable(icl>adj):06.@entry,
+% tongue(icl>concrete_thing,pof>body):04.@def.@pl)
+% bas(less(icl>how):00, other(icl>adj,equ> additional):00.@pl)
+% {/unl}
+% [/S]
+
+\documentclass{article}
+\usepackage[margin=0.2cm]{geometry}
+
+\begin{document}
+
+    Listado de palabras:
+    \begin{itemize}
+        \item Alfombra
+        \begin{verbatim}
+            carpet(icl>floor_cover).@sg
+        \end{verbatim}
+        \item Cama
+        \begin{verbatim}
+            bed(icl>bedroom_furniture).@sg
+        \end{verbatim}
+        \item Casa
+        \begin{verbatim}
+            house(icl>home).@sg
+        \end{verbatim}
+        \item Color*
+        \begin{verbatim}
+            colour(icl>visual_property, aoj>concrete_thing, obj>colour).@sg
+            El libro[aoj] es de color rojo[obj] 
+        \end{verbatim}
+        \item Cosas
+        \begin{verbatim}
+            thing(icl>physical_entity).@pl
+        \end{verbatim}
+        \item Cuadros
+        \begin{verbatim}
+            painting(icl>graphic_art).@pl
+        \end{verbatim}
+        \item Ejercicios*
+        \begin{verbatim}
+            exercise(icl>lesson, aoj>abstract_thing).@pl
+            Utilizo mi libro de ejercicios (de español [aoj]) para aprender mejor el español.
+        \end{verbatim}
+        \item Escritorio
+        \begin{verbatim}
+            desk(icl>table).@sg
+        \end{verbatim}
+        \item Espacio
+        \begin{verbatim}
+            space(icl>location).@sg
+        \end{verbatim}
+        \item Español*
+        \begin{verbatim}
+            spanish(iof>romance_language).@sg
+        \end{verbatim}
+        \item Esquina
+        \begin{verbatim}
+            corner(icl>area, com>interior).@sg
+        \end{verbatim}
+        \item Estante
+        \begin{verbatim}
+            shelf(icl>support).@sg
+        \end{verbatim}
+        \item Fondo*
+        \begin{verbatim}
+            background(icl>view, aoj>concrete_thing).@sg
+            Se ve al fondo (de la habitación)[aoj] la ventana.
+        \end{verbatim}
+        \item Habitación*
+        \begin{verbatim}
+            bedroom(icl>room, pof>house).@sg
+        \end{verbatim}
+        \item Hogar
+        \begin{verbatim}
+            home(icl>residence).@sg
+        \end{verbatim}
+        \item Infancia
+        \begin{verbatim}
+            childhood(icl>time_of_life).@sg
+        \end{verbatim}
+        \item Juguetes
+        \begin{verbatim}
+            toy(icl>artifact).@pl
+        \end{verbatim}
+        \item Libro/Libros**
+        \begin{verbatim}
+            book(icl>publication, aoj>abstract_thing).@pl
+            book(icl>publication, aoj>abstract_thing).@sg
+            Leo un libro sobre el español (aoj)
+            book(icl>publication)
+        \end{verbatim}
+        \item Lugar/Lugares*
+        \begin{verbatim}
+            place(icl>point).@sg
+        \end{verbatim}
+        \item Luz
+        \begin{verbatim}
+            light(icl>ilumination).@sg
+        \end{verbatim}
+        \item Lámpara
+        \begin{verbatim}
+            lamp(icl>source_of_illumination).@sg
+        \end{verbatim}
+        \item Música
+        \begin{verbatim}
+            music(icl>sound).@sg
+        \end{verbatim}
+        \item Novelas
+        \begin{verbatim}
+            novel(icl>book).@sg
+        \end{verbatim}
+        \item Objetos
+        \begin{verbatim}
+            object(icl>physical_entity).@pl
+        \end{verbatim}
+        \item Paredes*
+        \begin{verbatim}
+            wall(icl>divider, pof>room).@pl
+        \end{verbatim}
+        \item Parte*
+        \begin{verbatim}
+            part(icl>relation, aoj>abstract_thing).@sg
+            Cierta parte de mi tiempo (aoj)
+        \end{verbatim}
+        \item Puerta
+        \begin{verbatim}
+            door(icl>movable_barrier).@sg
+        \end{verbatim}
+        \item Silla
+        \begin{verbatim}
+            chair(icl>seat).@sg
+        \end{verbatim}
+        \item Techo*
+        \begin{verbatim}
+            roof(icl>protective_covering, pof>house)
+        \end{verbatim}
+        \item Tiempo
+        \begin{verbatim}
+            time(icl>time_period).@sg
+        \end{verbatim}
+        \item Tono*
+        \begin{verbatim}
+            tone(icl>colour, aoj>concrete_thing, obj>abstract_thing).@sg
+            El libro[aoj] es de un tono oscuro[obj] 
+        \end{verbatim}
+        \item Ventana
+        \begin{verbatim}
+            window(icl>frame).@sg
+        \end{verbatim}
+    \end{itemize}
+\end{document}
