@@ -10,7 +10,7 @@ __Sustantivos__
 
 Uno de mis __lugares__ <i>favoritos</i> de mi __hogar__ _es_ mi __habitación__. <u>Siempre</u> que _llego_ a __casa__ _voy_ <u>directamente</u> a mi __habitación__ para _descansar_ y _divertirme_. <u>Allí</u> _paso_ la <i>mayor</i> __parte__ de mi __tiempo__ <i>libre</i>, _escuchando_ __música__, _leyendo_ __libros__ <i>interesantes</i> o _dibujando_ todo lo que _puedo imaginar_.
 
-Me _siento_ <u>muy</u> <i>cómodo</i> en mi __habitación__. <u>Nada más</u> _entrar_ por la __puerta__ _se ve_ al __fondo__ la __ventana__ que _deja entrar_ una <i>agradable</i> __luz__. Las __paredes__ _están pintadas_ en un __tono__ <i>claro</i> y la __lámpara__ del __techo__ y la __alfombra__ _tienen_ el <i>mismo</i> __color__.
+Me _siento_ <u>muy</u> <i>cómodo</i> en mi __habitación__. <u>Nada más</u> _entrar_ por la __puerta__ _se ve_ al __fondo__ la __ventana__ que _deja_ _entrar_ una <i>agradable</i> __luz__. Las __paredes__ _están_ <i>pintadas</i> en un __tono__ <i>claro</i> y la __lámpara__ del __techo__ y la __alfombra__ _tienen_ el <i>mismo</i> __color__.
 
 La __cama__ es <u>muy</u> <i>cómoda</i> y _es_ <u>donde</u> _he colocado_ unos __juguetes__ que me _recuerdan_ a mi __infancia__. <u>Encima</u> de la __cama__ _es_ el <i>mejor</i> __lugar__ para _leer_ mis __novelas__ <i>preferidas</i>. Me _gusta_ <u>mucho</u> _estirarme_ <u>encima</u> de la __cama__ y _contemplar_ los __cuadros__ de las __paredes__ de mi __habitación__.
 

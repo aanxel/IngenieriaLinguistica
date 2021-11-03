@@ -24,7 +24,7 @@
 
 \begin{document}
 
-    Listado de palabras:
+    Listado de Sustantivos:
     \begin{itemize}
         \item Alfombra
         \begin{verbatim}
@@ -97,14 +97,14 @@
         \begin{verbatim}
             toy(icl>artifact).@pl
         \end{verbatim}
-        \item Libro/Libros**
+        \item Libro, Libros**
         \begin{verbatim}
             book(icl>publication, aoj>abstract_thing).@pl
             book(icl>publication, aoj>abstract_thing).@sg
             Leo un libro sobre el español (aoj)
             book(icl>publication)
         \end{verbatim}
-        \item Lugar/Lugares*
+        \item Lugar, Lugares*
         \begin{verbatim}
             place(icl>point).@sg
         \end{verbatim}
@@ -161,6 +161,124 @@
         \item Ventana
         \begin{verbatim}
             window(icl>frame).@sg
+        \end{verbatim}
+    \end{itemize}
+    Listado de Verbos:
+    \begin{itemize}
+        \item almaceno*
+        \begin{verbatim}
+            store(icl>do, agt>animal, obj>concrete_thing, plc>thing).@sg.@present
+            Yo[agt] almaceno cocacola[obj] en la *despensa[plc].
+        \end{verbatim}
+        \item aprender
+        \begin{verbatim}
+            learn(icl>do, agt>animal, obj>abstract_thing)
+            Yo[agt] quiero aprender UNL[obj].
+        \end{verbatim}
+        \item contemplar*
+        \begin{verbatim}
+            contemplate(icl>do, agt>animal, *obj>thing)
+            Es divertido contemplar *(Alguien)[agt] el paisaje[obj].
+        \end{verbatim}
+        % \item deja*
+        % \begin{verbatim}
+        %     let(icl>do, agt>thing, *obj>thing).@sg.@present
+        %     La ventana[agt] deja entrar[obj] la luz.
+        % \end{verbatim}
+        \item descansar* (tipo be?)
+        \begin{verbatim}
+            rest(icl>do, agt>animal)
+            Al panda[agt] le gusta descansar.
+        \end{verbatim}
+        \item dibujando*
+        \begin{verbatim}
+            draw(icl>do, agt>human, obj>thing*).@progress
+            Yo[agt] estoy dibujando un perro[obj].
+        \end{verbatim}
+        \item divertirme* be?
+        \begin{verbatim}
+            have_fun(icl>be, aoj>human).@sg
+            Yo[aoj] quiero divertirme.
+        \end{verbatim}
+        \item deja entrar*
+        \begin{verbatim}
+            let_in(icl>do, agt>thing, *obj>thing, plt>thing).@sg.@present
+            La ventana[agt] deja (entrar la luz)[obj] a la habitación[plt].
+        \end{verbatim}
+        \item es
+        \begin{verbatim}
+            be(icl>be, obj>uw, aoj>uw).@sg.@present
+            El coche[aoj] es azul[obj].
+        \end{verbatim}
+        \item escuchando* (escuchar a alguiem vs sonido)
+        \begin{verbatim}
+            listen(icl>do, agt>animal, obj>thing).@progress
+            Javier[agt] está escuchando música[obj].
+        \end{verbatim}
+        \item están
+        \begin{verbatim}
+            be(icl>be, obj>uw, aoj>uw).@pl.@present
+            Los niños[aoj] están felices[obj].
+        \end{verbatim}
+        \item estirarme
+        \begin{verbatim}
+            stretch(icl>be, aoj>animal).@sg
+            Yo[aoj] voy a estirarme.
+        \end{verbatim}
+        \item estudio
+        \begin{verbatim}
+            study(icl>do, agt>human, obj>thing).@sg.@present
+            Yo[agt] estudio redes bayesianas[obj].
+        \end{verbatim}
+        \item gusta, gustan
+        \begin{verbatim}
+            like(icl>be, aoj>animal, obj>thing).@sg.@present
+            like(icl>be, aoj>animal, obj>thing).@pl.@present
+            A María[aoj] le gustan las galletas María[obj].
+        \end{verbatim}
+        \item he colocado
+        \begin{verbatim}
+            
+        \end{verbatim}
+        \item leer, leyendo
+        \begin{verbatim}
+            
+        \end{verbatim}
+        \item llego
+        \begin{verbatim}
+            
+        \end{verbatim}
+        \item paso
+        \begin{verbatim}
+            
+        \end{verbatim}
+        \item puedo imaginar*
+        \begin{verbatim}
+            
+        \end{verbatim}
+        \item recuerdan
+        \begin{verbatim}
+            
+        \end{verbatim}
+        \item se ve
+        \begin{verbatim}
+            
+        \end{verbatim}
+        \item siento
+        \begin{verbatim}
+            
+        \end{verbatim}
+        \item tengo, tienen
+        \begin{verbatim}
+            
+        \end{verbatim}
+        \item utilizo
+        \begin{verbatim}
+            
+        \end{verbatim}
+        \item voy
+        \begin{verbatim}
+            
         \end{verbatim}
     \end{itemize}
 \end{document}

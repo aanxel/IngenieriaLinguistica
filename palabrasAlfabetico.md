@@ -174,5 +174,7 @@
 
 - mismo
 
+- pintadas
+
 - preferidas
 
