@@ -1,0 +1,421 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{titling}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{xparse}
+\usepackage{xcolor}
+\usepackage[style=authoryear,giveninits=true, uniquename=init, maxcitenames=2, natbib]{biblatex}
+\usepackage[citecolor=blue]{hyperref}
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\newcommand\course{\emph{Máster Universitario en Inteligencia Artificial \\ Ingeniería Lingüística}}
+
+\title{Práctica 1: Traducción a UNL} % Title of the assignment
+
+\author{
+        \normalsize Joaquín Jiménez López de Castro --- \small\texttt{jo.jimenez@alumnos.upm.es}\\
+        \normalsize Ángel Fragua Baeza --- \small\texttt{angel.fragua@alumnos.upm.es}
+}
+
+%----------------------------------------------------------------------------------------
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+\renewcommand{\lstlistingname}{Código}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclareNameAlias{sortname}{family-given}
+\addbibresource{main.bib}
+\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]{citetitle}{#1\isdot}
+\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]{title}{#1\isdot}
+
+\newenvironment{absolutelynopagebreak}
+  {\par\nobreak\vfil\penalty0\vfilneg
+   \vtop\bgroup}
+  {\par\xdef\tpd{\the\prevdepth}\egroup
+   \prevdepth=\tpd}
+
+\NewDocumentCommand{\uw}{mmm}{
+    \begin{absolutelynopagebreak}
+        \item #1
+        \begin{itemize}[label={}]
+            \item \texttt{#2}
+            \def\temp{#3}\ifx\temp\empty
+            \else
+            \item #3
+            \fi
+        \end{itemize}
+    \end{absolutelynopagebreak}
+}
+
+\NewDocumentCommand{\uwlist}{mm}{
+    \subsection*{#1}
+    \begin{itemize}[itemindent=2em, label={$\blacktriangleright $}]
+        #2
+    \end{itemize}
+}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\newpage
+
+\pagenumbering{arabic}
+
+\section{Texto original}
+
+\textcolor{teal}{Verbos}
+
+\textcolor{blue}{Sustantivos}
+
+\textcolor{red}{Adjetivos}
+
+\textcolor{orange}{Adverbios}
+
+Uno de mis \textcolor{blue}{lugares} \textcolor{red}{favoritos} de mi \textcolor{blue}{hogar} \textcolor{teal}{es} mi \textcolor{blue}{habitación}. \textcolor{orange}{Siempre} que \textcolor{teal}{llego} a \textcolor{blue}{casa} \textcolor{teal}{voy} \textcolor{orange}{directamente} a mi \textcolor{blue}{habitación} para \textcolor{teal}{descansar} y \textcolor{teal}{divertirme}. \textcolor{orange}{Allí} \textcolor{teal}{paso} la \textcolor{red}{mayor} \textcolor{blue}{parte} de mi \textcolor{blue}{tiempo} \textcolor{red}{libre}, \textcolor{teal}{escuchando} \textcolor{blue}{música}, \textcolor{teal}{leyendo} \textcolor{blue}{libros} \textcolor{red}{interesantes} o \textcolor{teal}{dibujando} todo lo que \textcolor{teal}{puedo imaginar}.
+
+Me \textcolor{teal}{siento} \textcolor{orange}{muy} \textcolor{red}{cómodo} en mi \textcolor{blue}{habitación}. \textcolor{orange}{Nada más} \textcolor{teal}{entrar} por la \textcolor{blue}{puerta} \textcolor{teal}{se ve} al \textcolor{blue}{fondo} la \textcolor{blue}{ventana} que \textcolor{teal}{deja} \textcolor{teal}{entrar} una \textcolor{red}{agradable} \textcolor{blue}{luz}. Las \textcolor{blue}{paredes} \textcolor{teal}{están} \textcolor{red}{pintadas} en un \textcolor{blue}{tono} \textcolor{red}{claro} y la \textcolor{blue}{lámpara} del \textcolor{blue}{techo} y la \textcolor{blue}{alfombra} \textcolor{teal}{tienen} el \textcolor{red}{mismo} \textcolor{blue}{color}.
+
+La \textcolor{blue}{cama} \textcolor{teal}{es} \textcolor{orange}{muy} \textcolor{red}{cómoda} y \textcolor{teal}{es} \textcolor{orange}{donde} \textcolor{teal}{he colocado} unos \textcolor{blue}{juguetes} que me \textcolor{teal}{recuerdan} a mi \textcolor{blue}{infancia}. \textcolor{orange}{Encima} de la \textcolor{blue}{cama} \textcolor{teal}{es} el \textcolor{red}{mejor} \textcolor{blue}{lugar} para \textcolor{teal}{leer} mis \textcolor{blue}{novelas} \textcolor{red}{preferidas}. Me \textcolor{teal}{gusta} \textcolor{orange}{mucho} \textcolor{teal}{estirarme} \textcolor{orange}{encima} de la \textcolor{blue}{cama} y \textcolor{teal}{contemplar} los \textcolor{blue}{cuadros} de las \textcolor{blue}{paredes} de mi \textcolor{blue}{habitación}.
+
+En una \textcolor{blue}{esquina} de la \textcolor{blue}{habitación} \textcolor{teal}{he colocado} un \textcolor{blue}{escritorio} con una \textcolor{blue}{silla} que \textcolor{teal}{es} el \textcolor{blue}{lugar} \textcolor{orange}{donde} \textcolor{teal}{estudio} o \textcolor{orange}{donde} \textcolor{teal}{utilizo} mi \textcolor{blue}{libro} de \textcolor{blue}{ejercicios} para \textcolor{teal}{aprender} \textcolor{orange}{mejor} el \textcolor{blue}{español}. El \textcolor{blue}{escritorio} \textcolor{teal}{es} \textcolor{red}{grande}, \textcolor{teal}{tengo} \textcolor{blue}{espacio} para todas mis \textcolor{blue}{cosas}. \textcolor{orange}{Encima} del \textcolor{blue}{escritorio} \textcolor{teal}{tengo} un \textcolor{blue}{estante} \textcolor{orange}{donde} \textcolor{teal}{almaceno} todos mis \textcolor{blue}{libros} y \textcolor{orange}{también} otros \textcolor{blue}{objetos} que me \textcolor{teal}{gustan}.
+
+\section{Creación de UWs}
+
+\uwlist{Listado de Sustantivos:}
+{
+    \uw
+    {Alfombra}
+    {carpet(icl>floor\_cover)}
+    {}
+    \uw
+    {Cama}
+    {bed(icl>bedroom\_furniture)}
+    {}
+    \uw
+    {Casa}
+    {house(icl>home)}
+    {}
+    \uw
+    {Color *(Argumentos?)}
+    {colour(icl>visual\_property, aoj>concrete\_thing, obj>colour)}
+    {El libro[aoj] es de color rojo[obj]}
+    \uw
+    {Cosas}
+    {thing(icl>physical\_entity)}
+    {}
+    \uw
+    {Cuadros}
+    {painting(icl>graphic\_art)}
+    {}
+    \uw
+    {Ejercicios *(Argumentos?, propósito pur?)}
+    {exercise(icl>lesson, aoj>abstract\_thing)}
+    {Utilizo mi libro de ejercicios de español [aoj] para facilitir el aprendizaje.}
+    \uw
+    {Escritorio}
+    {desk(icl>table)}
+    {}
+    \uw
+    {Espacio}
+    {space(icl>location)}
+    {}
+    \uw
+    {Español}
+    {spanish(iof>romance\_language)}
+    {}
+    \uw
+    {Esquina}
+    {corner(icl>area, com>interior)}
+    {}
+    \uw
+    {Estante}
+    {shelf(icl>support)}
+    {}
+    \uw
+    {Fondo *(Argumentos?)}
+    {background(icl>view, aoj>concrete\_thing)}
+    {Se ve al fondo (de la habitación)[aoj] la ventana.}
+    \uw
+    {Habitación *(parte de la casa? Realmente es necesario para definir la uw?)}
+    {bedroom(icl>room, pof>house)}
+    {}
+    \uw
+    {Hogar}
+    {home(icl>residence)}
+    {}
+    \uw
+    {Infancia}
+    {childhood(icl>time\_of\_life)}
+    {}
+    \uw
+    {Juguetes}
+    {toy(icl>artifact)}
+    {}
+    \uw
+    {Libro, Libros *(Argumentos? )}
+    {book(icl>publication, aoj>abstract\_thing)}
+    {Leo un libro del español (aoj)}
+    \uw
+    {Lugar, Lugares *(Argumentos? lugar donde ...)}
+    {place(icl>point)}
+    {}
+    \uw
+    {Luz}
+    {light(icl>ilumination)}
+    {}
+    \uw
+    {Lámpara}
+    {lamp(icl>source\_of\_illumination)}
+    {}
+    \uw
+    {Música}
+    {music(icl>sound)}
+    {}
+    \uw
+    {Novelas}
+    {novel(icl>book)}
+    {}
+    \uw
+    {Objetos}
+    {object(icl>physical\_entity)}
+    {}
+    \uw
+    {Paredes *(Argumentos? Parte de habitación para semántica?)}
+    {wall(icl>divider, pof>room)}
+    {}
+    \uw
+    {Parte* (Argumento?)}
+    {part(icl>relation, aoj>abstract\_thing)}
+    {Cierta parte de mi tiempo (aoj)}
+    \uw
+    {Puerta}
+    {door(icl>movable\_barrier)}
+    {}
+    \uw
+    {Silla}
+    {chair(icl>seat)}
+    {}
+    \uw
+    {Techo *(Argumento pof...)}
+    {roof(icl>protective\_covering, pof>house)}
+    {}
+    \uw
+    {Tiempo *(unir con libre->tiempo libre->free time)}
+    {time(icl>time\_period)}
+    {}
+    \uw
+    {Tono *(Argumentos? clase más concreta para el objeto)}
+    {tone(icl>colour, aoj>concrete\_thing, obj>abstract\_thing)}
+    {El libro[aoj] es de un tono oscuro[obj] }
+    \uw
+    {Ventana}
+    {window(icl>frame)}
+    {}
+}
+
+\uwlist{Listado de Verbos:}
+{
+    \uw
+    {Almaceno *(plc>thing o plc>place?)}
+    {store(icl>do, agt>animal, obj>concrete\_thing, plc>thing)}
+    {Yo[agt] almaceno cocacola[obj] en la *despensa[plc].}
+    \uw
+    {Aprender}
+    {learn(icl>do, agt>animal, obj>abstract\_thing)}
+    {Yo[agt] quiero aprender UNL[obj].}
+    \uw
+    {Contemplar *Formas impersonales}
+    {contemplate(icl>do, agt>animal, *obj>concrete\_thing)}
+    {Es divertido contemplar *(Alguien)[agt] el paisaje[obj].}
+    \uw
+    {Descansar *tipo be}
+    {rest(icl>do, agt>animal)}
+    {Al panda[agt] le gusta descansar.}
+    \uw
+    {Dibujando *argumento concreto}
+    {draw(icl>do, agt>human, obj>thing*)}
+    {Yo[agt] estoy dibujando un perro[obj].}
+    \uw
+    {Divertirme *(do con agt>human?)}
+    {have\_fun(icl>be, aoj>human)}
+    {Yo[aoj] quiero divertirme.}
+    \uw
+    {Deja entrar *(occur? ventana=obj, luz=cob)}
+    {let\_in(icl>do, agt>thing, obj>thing, plt>thing)}
+    {La ventana[agt] deja (entrar la luz)[obj] a la habitación[plt].}
+    \uw
+    {Es, Están *(Distintos verbos en español misma UW)}
+    {be(icl>be, obj>uw, aoj>uw)}
+    {El coche[aoj] es azul[obj].\\
+    Los niños[aoj] están felices[obj].}
+    \uw
+    {Escuchando *(escuchar a alguien vs sonido). Gerundio en español adverbio}
+    {listen(icl>do, agt>animal, obj>sound)}
+    {Javier[agt] está escuchando música[obj].}
+    \uw
+    {Estirarme}
+    {stretch(icl>be, aoj>animal)}
+    {Yo[aoj] voy a estirarme.}
+    \uw
+    {Estudio}
+    {study(icl>do, agt>human, obj>thing)}
+    {Yo[agt] estudio redes bayesianas[obj].}
+    \uw
+    {Gusta, Gustan}
+    {like(icl>be, aoj>animal, obj>thing)}
+    {A María[aoj] le gustan las galletas María[obj].}
+    \uw
+    {He colocado *(plc (thing o uw?))}
+    {place(icl>do, agt>animal, obj>concrete\_thing, plc>thing)}
+    {Yo[agt] he colocado mi ratón[obj] en el escritorio[plc].}
+    \uw
+    {Leer, Leyendo}
+    {read(icl>do, agt>human, obj>information)}
+    {Yo[agt] estoy leyendo un libro[obj].}
+    \uw
+    {Llego *(plc (thing o uw?))}
+    {arrive(icl>do, agt>animal, plc>thing)}
+    {Yo[agt] llego a casa[plc] tarde.}
+    \uw
+    {Paso *(dur o tim, be o do)}
+    {spend(icl>do, agt>concrete\_thing, dur>abstract\_thing, obj>process)}
+    {El ordenador[agt] pasa 5 minutos[dur] computando[obj] cada día.}
+    \uw
+    {Puedo imaginar *(una sola uw (+atributo luego @possibility?), obj$>$abstract\_thing (imagino un libro), thing/uw?)}
+    {imagine(icl>do, obj>thing, agt>human)}
+    {Juan[agt] imagina una historia[obj].\\
+    Yo[agt] imagino que querrás irte[obj]. -> Sería uw, no thing, pero cambia el sentido}
+    \uw
+    {Recuerdan}
+    {remind(icl>be, obj>thing, aoj>human, cob>thing)}
+    {Las montañas[obj] me[aoj] recuerdan a mi infancia[cob].}
+    \uw
+    {Se ve *(be? estado de visibilidad)}
+    {see(icl>occur, obj>concret\_thing, plc>thing)}
+    {La casa[obj] se ve en la colina[plc].}
+    \uw
+    {Siento}
+    {feel(icl>be, aoj>human, obj>abstract\_thing)}
+    {Yo [aoj] me siento cómodo[obj] en mi habitación.}
+    \uw
+    {Tengo, Tienen}
+    {have(icl>be, aoj>thing, obj>thing)}
+    {Yo[aoj] tengo hambre[obj].\\
+    Las camas[aoj] tienen muchos años[obj].}
+    \uw
+    {Utilizo}
+    {use(icl>do, agt>animal, ins>thing, pur>uw)}
+    {Yo[agt] utilizo la cama[ins] para dormir[pur].}
+    \uw
+    {Voy *(plc thing)}
+    {go(icl>do, agt>animal, plc>thing)}
+    {}
+}
+
+\uwlist{Listado de Adverbios:}
+{
+    \uw
+    {Allí *(Descartar y utilizar plc)}
+    {there(icl>where)}
+    {}
+    \uw
+    {Directamente}
+    {directly(icl>how)}
+    {}
+    \uw
+    {Donde *(Descartar y utilizar plc)}
+    {where(icl>where)}
+    {}
+    \uw
+    {Encima}
+    {above(icl>where)}
+    {}
+    \uw
+    {Mejor}
+    {better(icl>how)}
+    {}
+    \uw
+    {Mucho}
+    {a\_lot(icl>quantity)}
+    {}
+    \uw
+    {Muy}
+    {very(icl>how)}
+    {}
+    \uw
+    {Nada más}
+    {as\_soon\_as(icl>how)}
+    {}
+    \uw
+    {Siempre}
+    {always(icl>at\_any\_time>how)}
+    {}
+    \uw
+    {También}
+    {also(icl>how)}
+    {}
+}
+
+\uwlist{Listado de Adjetivos:}
+{
+    \uw
+    {Agradable}
+    {pleasant(icl>adj)}
+    {}
+    \uw
+    {Claro}
+    {light(icl>adj)}
+    {}
+    \uw
+    {Cómodo}
+    {comfortable(icl>adj)}
+    {}
+    \uw
+    {Favoritos, Preferidas}
+    {favorite(icl>adj)}
+    {}
+    \uw
+    {Grande}
+    {big(icl>adj)}
+    {}
+    \uw
+    {Interesantes}
+    {interesting(icl>adj)}
+    {}
+    \uw
+    {Libre *(unir con tiempo -> free\_time)}
+    {available(icl>adj)}
+    {}
+    \uw
+    {Mayor}
+    {most(icl>adj)}
+    {}
+    \uw
+    {Mejor}
+    {best(icl>adj)}
+    {}
+    \uw
+    {Mismo}
+    {same(icl>adj)}
+    {}
+    \uw
+    {Pintadas}
+    {painted(icl>adj)}
+    {}
+}
+
+\end{document}
