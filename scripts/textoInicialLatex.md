@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="styles.css">
+
+\textcolor{green}{Verbos}
+
+\textcolor{blue}{Sustantivos}
+
+\textcolor{red}{Adjetivos}
+
+\textcolor{orange}{Adverbios}
+
+Uno de mis \textcolor{blue}{lugares} \textcolor{red}{favoritos} de mi \textcolor{blue}{hogar} \textcolor{green}{es} mi \textcolor{blue}{habitación}. \textcolor{orange}{Siempre} que \textcolor{green}{llego} a \textcolor{blue}{casa} \textcolor{green}{voy} \textcolor{orange}{directamente} a mi \textcolor{blue}{habitación} para \textcolor{green}{descansar} y \textcolor{green}{divertirme}. \textcolor{orange}{Allí} \textcolor{green}{paso} la \textcolor{red}{mayor} \textcolor{blue}{parte} de mi \textcolor{blue}{tiempo} \textcolor{red}{libre}, \textcolor{green}{escuchando} \textcolor{blue}{música}, \textcolor{green}{leyendo} \textcolor{blue}{libros} \textcolor{red}{interesantes} o \textcolor{green}{dibujando} todo lo que \textcolor{green}{puedo imaginar}.
+
+Me \textcolor{green}{siento} \textcolor{orange}{muy} \textcolor{red}{cómodo} en mi \textcolor{blue}{habitación}. \textcolor{orange}{Nada más} \textcolor{green}{entrar} por la \textcolor{blue}{puerta} \textcolor{green}{se ve} al \textcolor{blue}{fondo} la \textcolor{blue}{ventana} que \textcolor{green}{deja} \textcolor{green}{entrar} una \textcolor{red}{agradable} \textcolor{blue}{luz}. Las \textcolor{blue}{paredes} \textcolor{green}{están} \textcolor{red}{pintadas} en un \textcolor{blue}{tono} \textcolor{red}{claro} y la \textcolor{blue}{lámpara} del \textcolor{blue}{techo} y la \textcolor{blue}{alfombra} \textcolor{green}{tienen} el \textcolor{red}{mismo} \textcolor{blue}{color}.
+
+La \textcolor{blue}{cama} es \textcolor{orange}{muy} \textcolor{red}{cómoda} y \textcolor{green}{es} \textcolor{orange}{donde} \textcolor{green}{he colocado} unos \textcolor{blue}{juguetes} que me \textcolor{green}{recuerdan} a mi \textcolor{blue}{infancia}. \textcolor{orange}{Encima} de la \textcolor{blue}{cama} \textcolor{green}{es} el \textcolor{red}{mejor} \textcolor{blue}{lugar} para \textcolor{green}{leer} mis \textcolor{blue}{novelas} \textcolor{red}{preferidas}. Me \textcolor{green}{gusta} \textcolor{orange}{mucho} \textcolor{green}{estirarme} \textcolor{orange}{encima} de la \textcolor{blue}{cama} y \textcolor{green}{contemplar} los \textcolor{blue}{cuadros} de las \textcolor{blue}{paredes} de mi \textcolor{blue}{habitación}.
+
+En una \textcolor{blue}{esquina} de la \textcolor{blue}{habitación} \textcolor{green}{he colocado} un \textcolor{blue}{escritorio} con una \textcolor{blue}{silla} que \textcolor{green}{es} el \textcolor{blue}{lugar} \textcolor{orange}{donde} \textcolor{green}{estudio} o \textcolor{orange}{donde} \textcolor{green}{utilizo} mi \textcolor{blue}{libro} de \textcolor{blue}{ejercicios} para \textcolor{green}{aprender} \textcolor{orange}{mejor} el \textcolor{blue}{español}. El \textcolor{blue}{escritorio} \textcolor{green}{es} \textcolor{red}{grande}, \textcolor{green}{tengo} \textcolor{blue}{espacio} para todas mis \textcolor{blue}{cosas}. \textcolor{orange}{Encima} del \textcolor{blue}{escritorio} \textcolor{green}{tengo} un \textcolor{blue}{estante} \textcolor{orange}{donde} \textcolor{green}{almaceno} todos mis \textcolor{blue}{libros} y \textcolor{orange}{también} otros \textcolor{blue}{objetos} que me \textcolor{green}{gustan}.

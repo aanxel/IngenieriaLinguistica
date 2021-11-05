@@ -1,0 +1,11 @@
+[S:1]
+{org}
+Uno de mis lugares favoritos de mi hogar es mi habitación.
+{/org}
+{unl}
+pof(bedroom.@entry, home)
+obj(be, bedroom.@entry)
+aoj(be, place)
+mod(place, favorite)
+{/unl}
+[/S]
