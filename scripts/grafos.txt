@@ -3,9 +3,9 @@
 Uno de mis lugares favoritos de mi hogar es mi habitación.
 {/org}
 {unl}
-pof(bedroom.@entry, home)
-obj(be, bedroom.@entry)
-aoj(be, place)
-mod(place, favorite)
+pof(bedroom.@entry.@sg, home.@sg)
+obj(be.@present, bedroom.@entry.@sg)
+aoj(be.@present, place.@pl)
+mod(place.@pl, favorite)
 {/unl}
 [/S]

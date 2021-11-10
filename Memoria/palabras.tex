@@ -85,9 +85,9 @@
 
 \textcolor{orange}{Adverbios}
 
-Uno de mis \textcolor{blue}{lugares} \textcolor{red}{favoritos} de mi \textcolor{blue}{hogar} \textcolor{teal}{es} mi \textcolor{blue}{habitación}. \textcolor{orange}{Siempre} que \textcolor{teal}{llego} a \textcolor{blue}{casa} \textcolor{teal}{voy} \textcolor{orange}{directamente} a mi \textcolor{blue}{habitación} para \textcolor{teal}{descansar} y \textcolor{teal}{divertirme}. \textcolor{orange}{Allí} \textcolor{teal}{paso} la \textcolor{red}{mayor} \textcolor{blue}{parte} de mi \textcolor{blue}{tiempo} \textcolor{red}{libre}, \textcolor{teal}{escuchando} \textcolor{blue}{música}, \textcolor{teal}{leyendo} \textcolor{blue}{libros} \textcolor{red}{interesantes} o \textcolor{teal}{dibujando} todo lo que \textcolor{teal}{puedo imaginar}.
+Uno de mis \textcolor{blue}{lugares} \textcolor{red}{favoritos} de mi \textcolor{blue}{hogar} \textcolor{teal}{es} mi \textcolor{blue}{habitación}. \textcolor{orange}{Siempre} que \textcolor{teal}{llego} a \textcolor{blue}{casa} \textcolor{teal}{voy} \textcolor{orange}{directamente} a mi \textcolor{blue}{habitación} para \textcolor{teal}{descansar} y \textcolor{teal}{divertirme}. \textcolor{orange}{Allí} \textcolor{teal}{paso} la \textcolor{red}{mayor} \textcolor{blue}{parte} de mi \textcolor{blue}{tiempo} \textcolor{blue}{libre}, \textcolor{teal}{escuchando} \textcolor{blue}{música}, \textcolor{teal}{leyendo} \textcolor{blue}{libros} \textcolor{red}{interesantes} o \textcolor{teal}{dibujando} todo lo que \textcolor{teal}{puedo imaginar}.
 
-Me \textcolor{teal}{siento} \textcolor{orange}{muy} \textcolor{red}{cómodo} en mi \textcolor{blue}{habitación}. \textcolor{orange}{Nada más} \textcolor{teal}{entrar} por la \textcolor{blue}{puerta} \textcolor{teal}{se ve} al \textcolor{blue}{fondo} la \textcolor{blue}{ventana} que \textcolor{teal}{deja} \textcolor{teal}{entrar} una \textcolor{red}{agradable} \textcolor{blue}{luz}. Las \textcolor{blue}{paredes} \textcolor{teal}{están} \textcolor{red}{pintadas} en un \textcolor{blue}{tono} \textcolor{red}{claro} y la \textcolor{blue}{lámpara} del \textcolor{blue}{techo} y la \textcolor{blue}{alfombra} \textcolor{teal}{tienen} el \textcolor{red}{mismo} \textcolor{blue}{color}.
+Me \textcolor{teal}{siento} \textcolor{orange}{muy} \textcolor{red}{cómodo} en mi \textcolor{blue}{habitación}. \textcolor{orange}{Nada más} \textcolor{teal}{entrar} por la \textcolor{blue}{puerta} \textcolor{teal}{se ve} al \textcolor{blue}{fondo} la \textcolor{blue}{ventana} que \textcolor{teal}{deja} \textcolor{teal}{entrar} una \textcolor{red}{agradable} \textcolor{blue}{luz}. Las \textcolor{blue}{paredes} \textcolor{teal}{están} \textcolor{teal}{pintadas} en un \textcolor{blue}{tono} \textcolor{red}{claro} y la \textcolor{blue}{lámpara} del \textcolor{blue}{techo} y la \textcolor{blue}{alfombra} \textcolor{teal}{tienen} el \textcolor{red}{mismo} \textcolor{blue}{color}.
 
 La \textcolor{blue}{cama} \textcolor{teal}{es} \textcolor{orange}{muy} \textcolor{red}{cómoda} y \textcolor{teal}{es} \textcolor{orange}{donde} \textcolor{teal}{he colocado} unos \textcolor{blue}{juguetes} que me \textcolor{teal}{recuerdan} a mi \textcolor{blue}{infancia}. \textcolor{orange}{Encima} de la \textcolor{blue}{cama} \textcolor{teal}{es} el \textcolor{red}{mejor} \textcolor{blue}{lugar} para \textcolor{teal}{leer} mis \textcolor{blue}{novelas} \textcolor{red}{preferidas}. Me \textcolor{teal}{gusta} \textcolor{orange}{mucho} \textcolor{teal}{estirarme} \textcolor{orange}{encima} de la \textcolor{blue}{cama} y \textcolor{teal}{contemplar} los \textcolor{blue}{cuadros} de las \textcolor{blue}{paredes} de mi \textcolor{blue}{habitación}.
 
@@ -110,7 +110,7 @@ En una \textcolor{blue}{esquina} de la \textcolor{blue}{habitación} \textcolor{
     {house(icl>home)}
     {}
     \uw
-    {Color *(Argumentos?)}
+    {Color}
     {colour(icl>visual\_property, aoj>concrete\_thing, obj>colour)}
     {El libro[aoj] es de color rojo[obj]}
     \uw
@@ -122,9 +122,9 @@ En una \textcolor{blue}{esquina} de la \textcolor{blue}{habitación} \textcolor{
     {painting(icl>graphic\_art)}
     {}
     \uw
-    {Ejercicios *(Argumentos?, propósito pur?)}
-    {exercise(icl>lesson, aoj>abstract\_thing)}
-    {Utilizo mi libro de ejercicios de español [aoj] para facilitir el aprendizaje.}
+    {Ejercicios}
+    {exercise(icl>lesson, agt>human, pur>abstract\_thing)}
+    {Yo[agt] utilizo mi libro de ejercicios de español [pur].}
     \uw
     {Escritorio}
     {desk(icl>table)}
@@ -146,12 +146,12 @@ En una \textcolor{blue}{esquina} de la \textcolor{blue}{habitación} \textcolor{
     {shelf(icl>support)}
     {}
     \uw
-    {Fondo *(Argumentos?)}
-    {background(icl>view, aoj>concrete\_thing)}
-    {Se ve al fondo (de la habitación)[aoj] la ventana.}
+    {Fondo}
+    {background(icl>view, obj>concrete\_thing)}
+    {Se ve al fondo (de la habitación)[obj] la ventana.}
     \uw
-    {Habitación *(parte de la casa? Realmente es necesario para definir la uw?)}
-    {bedroom(icl>room, pof>house)}
+    {Habitación}
+    {bedroom(icl>room)}
     {}
     \uw
     {Hogar}
@@ -166,13 +166,17 @@ En una \textcolor{blue}{esquina} de la \textcolor{blue}{habitación} \textcolor{
     {toy(icl>artifact)}
     {}
     \uw
-    {Libro, Libros *(Argumentos? )}
-    {book(icl>publication, aoj>abstract\_thing)}
-    {Leo un libro del español (aoj)}
+    {Libro, Libros}
+    {book(icl>publication, agt>human, obj>abstract\_thing)}
+    {Leo un libro (escrito por Cervantes[agt]) del español (obj)}
     \uw
-    {Lugar, Lugares *(Argumentos? lugar donde ...)}
-    {place(icl>point)}
-    {}
+    {Lugar}
+    {place(icl>point, plc>place, obj>action)}
+    {La cama[plc] es un lugar para dormir[obj]}
+    \uw
+    {Lugares}
+    {place(icl>point, plc>place)}
+    {El baño es uno de mis lugares favoritos de la casa[plc].}
     \uw
     {Luz}
     {light(icl>ilumination)}
@@ -187,20 +191,20 @@ En una \textcolor{blue}{esquina} de la \textcolor{blue}{habitación} \textcolor{
     {}
     \uw
     {Novelas}
-    {novel(icl>book)}
-    {}
+    {novel(icl>book, agt>human, obj>abstract\_thing)}
+    {Leo una novela de Cervantes[agt] de caballerías[obj].}
     \uw
     {Objetos}
     {object(icl>physical\_entity)}
     {}
     \uw
-    {Paredes *(Argumentos? Parte de habitación para semántica?)}
+    {Paredes}
     {wall(icl>divider, pof>room)}
     {}
     \uw
-    {Parte* (Argumento?)}
-    {part(icl>relation, aoj>abstract\_thing)}
-    {Cierta parte de mi tiempo (aoj)}
+    {Parte}
+    {part(icl>relation, aoj>thing, obj>thing)}
+    {La habitación[aoj] es parte de la casa[obj]}
     \uw
     {Puerta}
     {door(icl>movable\_barrier)}
@@ -210,15 +214,15 @@ En una \textcolor{blue}{esquina} de la \textcolor{blue}{habitación} \textcolor{
     {chair(icl>seat)}
     {}
     \uw
-    {Techo *(Argumento pof...)}
-    {roof(icl>protective\_covering, pof>house)}
+    {Techo}
+    {roof(icl>protective\_covering)}
     {}
     \uw
-    {Tiempo *(unir con libre->tiempo libre->free time)}
-    {time(icl>time\_period)}
+    {Tiempo libre}
+    {free\_time(icl>time\_period)}
     {}
     \uw
-    {Tono *(Argumentos? clase más concreta para el objeto)}
+    {Tono}
     {tone(icl>colour, aoj>concrete\_thing, obj>abstract\_thing)}
     {El libro[aoj] es de un tono oscuro[obj] }
     \uw
@@ -230,83 +234,86 @@ En una \textcolor{blue}{esquina} de la \textcolor{blue}{habitación} \textcolor{
 \uwlist{Listado de Verbos:}
 {
     \uw
-    {Almaceno *(plc>thing o plc>place?)}
-    {store(icl>do, agt>animal, obj>concrete\_thing, plc>thing)}
-    {Yo[agt] almaceno cocacola[obj] en la *despensa[plc].}
+    {Almaceno}
+    {store(icl>do, agt>animal, obj>concrete\_thing, plc>place)}
+    {Yo[agt] almaceno cocacola[obj] en la despensa[plc].}
     \uw
     {Aprender}
     {learn(icl>do, agt>animal, obj>abstract\_thing)}
     {Yo[agt] quiero aprender UNL[obj].}
     \uw
-    {Contemplar *Formas impersonales}
-    {contemplate(icl>do, agt>animal, *obj>concrete\_thing)}
-    {Es divertido contemplar *(Alguien)[agt] el paisaje[obj].}
+    {Contemplar}
+    {contemplate(icl>do, agt>human, obj>concrete\_thing)}
+    {Manuel[agt] contempla el paisaje[obj].}
     \uw
-    {Descansar *tipo be}
+    {Descansar}
     {rest(icl>do, agt>animal)}
-    {Al panda[agt] le gusta descansar.}
+    {El panda[agt] descansa.}
     \uw
-    {Dibujando *argumento concreto}
-    {draw(icl>do, agt>human, obj>thing*)}
+    {Dibujando}
+    {draw(icl>do, agt>human, obj>thing)}
     {Yo[agt] estoy dibujando un perro[obj].}
     \uw
-    {Divertirme *(do con agt>human?)}
-    {have\_fun(icl>be, aoj>human)}
-    {Yo[aoj] quiero divertirme.}
+    {Divertirme}
+    {have\_fun(icl>do, agt>human)}
+    {Yo[agt] quiero divertirme.}
     \uw
-    {Deja entrar *(occur? ventana=obj, luz=cob)}
-    {let\_in(icl>do, agt>thing, obj>thing, plt>thing)}
-    {La ventana[agt] deja (entrar la luz)[obj] a la habitación[plt].}
+    {Deja entrar}
+    {let\_in(icl>be, aoj>thing, obj>thing, plt>thing)}
+    {La ventana[aoj] deja (entrar la luz)[obj] a la habitación[plt].}
     \uw
-    {Es, Están *(Distintos verbos en español misma UW)}
+    {Es, Están}
     {be(icl>be, obj>uw, aoj>uw)}
     {El coche[aoj] es azul[obj].\\
     Los niños[aoj] están felices[obj].}
     \uw
-    {Escuchando *(escuchar a alguien vs sonido). Gerundio en español adverbio}
-    {listen(icl>do, agt>animal, obj>sound)}
+    {Escuchando}
+    {listen(icl>do, agt>animal, obj>thing)}
     {Javier[agt] está escuchando música[obj].}
     \uw
     {Estirarme}
-    {stretch(icl>be, aoj>animal)}
-    {Yo[aoj] voy a estirarme.}
+    {stretch(icl>do, agt>animal)}
+    {Yo[agt] voy a estirarme.}
     \uw
     {Estudio}
     {study(icl>do, agt>human, obj>thing)}
-    {Yo[agt] estudio redes bayesianas[obj].}
+    {Yo[agt] estudio las Redes Bayesianas[obj].}
     \uw
     {Gusta, Gustan}
     {like(icl>be, aoj>animal, obj>thing)}
     {A María[aoj] le gustan las galletas María[obj].}
     \uw
-    {He colocado *(plc (thing o uw?))}
-    {place(icl>do, agt>animal, obj>concrete\_thing, plc>thing)}
+    {He colocado}
+    {place(icl>do, agt>animal, obj>concrete\_thing, plc>place)}
     {Yo[agt] he colocado mi ratón[obj] en el escritorio[plc].}
     \uw
     {Leer, Leyendo}
     {read(icl>do, agt>human, obj>information)}
     {Yo[agt] estoy leyendo un libro[obj].}
     \uw
-    {Llego *(plc (thing o uw?))}
-    {arrive(icl>do, agt>animal, plc>thing)}
-    {Yo[agt] llego a casa[plc] tarde.}
+    {Llego}
+    {arrive(icl>do, agt>animal, plf>place, plt>place)}
+    {Yo[agt] llego a casa[plt] desde el trabajo[plf]}
     \uw
-    {Paso *(dur o tim, be o do)}
+    {Paso}
     {spend(icl>do, agt>concrete\_thing, dur>abstract\_thing, obj>process)}
     {El ordenador[agt] pasa 5 minutos[dur] computando[obj] cada día.}
     \uw
-    {Puedo imaginar *(una sola uw (+atributo luego @possibility?), obj$>$abstract\_thing (imagino un libro), thing/uw?)}
+    {Pintadas}
+    {paint(icl>do, agt>human, obj>thing)}
+    {El niño[agt] pinta un cuadro[obj]}
+    \uw
+    {Puedo imaginar}
     {imagine(icl>do, obj>thing, agt>human)}
-    {Juan[agt] imagina una historia[obj].\\
-    Yo[agt] imagino que querrás irte[obj]. -> Sería uw, no thing, pero cambia el sentido}
+    {Juan[agt] imagina una historia[obj].}
     \uw
     {Recuerdan}
     {remind(icl>be, obj>thing, aoj>human, cob>thing)}
     {Las montañas[obj] me[aoj] recuerdan a mi infancia[cob].}
     \uw
-    {Se ve *(be? estado de visibilidad)}
-    {see(icl>occur, obj>concret\_thing, plc>thing)}
-    {La casa[obj] se ve en la colina[plc].}
+    {Se ve}
+    {see(icl>be, aoj>animal, obj>concret\_thing, plc>thing)}
+    {La casa[obj] se ve (por alguien[aoj]) en la colina[plc].}
     \uw
     {Siento}
     {feel(icl>be, aoj>human, obj>abstract\_thing)}
@@ -321,52 +328,52 @@ En una \textcolor{blue}{esquina} de la \textcolor{blue}{habitación} \textcolor{
     {use(icl>do, agt>animal, ins>thing, pur>uw)}
     {Yo[agt] utilizo la cama[ins] para dormir[pur].}
     \uw
-    {Voy *(plc thing)}
-    {go(icl>do, agt>animal, plc>thing)}
-    {}
+    {Voy}
+    {go(icl>do, agt>animal, plf>place, plt>place)}
+    {Yo[agt] voy de mi casa[plf] al campo[plt]}
 }
 
 \uwlist{Listado de Adverbios:}
 {
     \uw
-    {Allí *(Descartar y utilizar plc)}
-    {there(icl>where)}
+    {Allí}
+    {there(icl>adv)}
     {}
     \uw
     {Directamente}
-    {directly(icl>how)}
+    {directly(icl>adv)}
     {}
     \uw
-    {Donde *(Descartar y utilizar plc)}
-    {where(icl>where)}
+    {Donde}
+    {where(icl>adv)}
     {}
     \uw
     {Encima}
-    {above(icl>where)}
-    {}
+    {above(icl>adv, obj>concrete\_thing)}
+    {El plato esta enicima de la mesa[obj].}
     \uw
     {Mejor}
-    {better(icl>how)}
+    {better(icl>adv)}
     {}
     \uw
     {Mucho}
-    {a\_lot(icl>quantity)}
+    {a\_lot(icl>adv)}
     {}
     \uw
     {Muy}
-    {very(icl>how)}
+    {very(icl>adv)}
     {}
     \uw
     {Nada más}
-    {as\_soon\_as(icl>how)}
+    {as\_soon\_as(icl>adv)}
     {}
     \uw
     {Siempre}
-    {always(icl>at\_any\_time>how)}
+    {always(icl>adv)}
     {}
     \uw
     {También}
-    {also(icl>how)}
+    {also(icl>adv)}
     {}
 }
 
@@ -397,10 +404,6 @@ En una \textcolor{blue}{esquina} de la \textcolor{blue}{habitación} \textcolor{
     {interesting(icl>adj)}
     {}
     \uw
-    {Libre *(unir con tiempo -> free\_time)}
-    {available(icl>adj)}
-    {}
-    \uw
     {Mayor}
     {most(icl>adj)}
     {}
@@ -410,12 +413,8 @@ En una \textcolor{blue}{esquina} de la \textcolor{blue}{habitación} \textcolor{
     {}
     \uw
     {Mismo}
-    {same(icl>adj)}
-    {}
-    \uw
-    {Pintadas}
-    {painted(icl>adj)}
-    {}
+    {same(icl>adj, aoj>uw, obj>uw)}
+    {Eso[aoj] es del mismo color que lo otro[obj]}
 }
 
 \end{document}

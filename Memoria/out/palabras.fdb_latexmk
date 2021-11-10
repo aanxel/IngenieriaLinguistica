@@ -1,16 +1,16 @@
 # Fdb version 3
-["biber /home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras"] 1636143953 "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.bcf" "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.bbl" "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras" 1636144103
-  "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.bcf" 1636144103 101281 40b75eb02b7a498b41bfec24130488b5 "pdflatex"
+["biber /home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras"] 1636556606 "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.bcf" "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.bbl" "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras" 1636557275
+  "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.bcf" 1636557275 101281 40b75eb02b7a498b41bfec24130488b5 "pdflatex"
   (generated)
   "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.blg"
   "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.bbl"
-["pdflatex"] 1636144102 "/home/joaquin/upm/IngenieriaLinguistica/Memoria/palabras.tex" "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.pdf" "palabras" 1636144103
+["pdflatex"] 1636557274 "/home/joaquin/upm/IngenieriaLinguistica/Memoria/palabras.tex" "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.pdf" "palabras" 1636557275
   "/etc/texmf/web2c/texmf.cnf" 1615565774 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.aux" 1636144103 1606 d8c35e9268259d9d0a77f13b0ed68bfb "pdflatex"
-  "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.bbl" 1636143954 466 f7f239c736cf01ac6ce7bd829f9b3c7b "biber /home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras"
-  "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.out" 1636144103 102 fd8009ba5e2777c0fce5cd616e93f52c "pdflatex"
-  "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.run.xml" 1636144103 2367 eccffb24fff420f987914bbc96cfc44d "pdflatex"
-  "/home/joaquin/upm/IngenieriaLinguistica/Memoria/palabras.tex" 1636144101 13118 c87055dd142cf24b129edd81cc50f308 ""
+  "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.aux" 1636557275 1606 d8c35e9268259d9d0a77f13b0ed68bfb "pdflatex"
+  "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.bbl" 1636556607 466 f7f239c736cf01ac6ce7bd829f9b3c7b "biber /home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras"
+  "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.out" 1636557275 102 fd8009ba5e2777c0fce5cd616e93f52c "pdflatex"
+  "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.run.xml" 1636557275 2367 eccffb24fff420f987914bbc96cfc44d "pdflatex"
+  "/home/joaquin/upm/IngenieriaLinguistica/Memoria/palabras.tex" 1636557273 12632 c51884758dd09302c7a7896dddc0179b ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/xcharter/xch_uy5hgr.enc" 1574460897 3245 d735d31466b80f6ab81d4d1111f2e3b0 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
@@ -45,7 +45,6 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/xcharter/XCharter-Italic-tlf-t1.tfm" 1564781382 23860 8124e4cb0838aee7e31cc360936cd452 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/xcharter/XCharter-Roman-tlf-t1--base.tfm" 1564781382 1668 2cf09136c2996ba963336b8035b8664f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/xcharter/XCharter-Roman-tlf-t1.tfm" 1566161149 24984 356f790d893f1f8551afe67e64da7286 ""
-  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold.pfb" 1566161149 216320 c27d3cda06ff347222b9f79a199897f3 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/xcharter/XCharter-Italic.pfb" 1566161149 182125 ca29d20355ad42e3adcb2cf6d5209b75 ""
@@ -242,9 +241,9 @@
   "logo.png" 1631642588 79453 8318bb5d620f4f00891ef805f0837808 ""
   "structure.tex" 1633432107 7925 da518916b63432546717d12581e47e43 ""
   (generated)
-  "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.pdf"
-  "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.out"
   "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.log"
+  "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.out"
   "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.aux"
+  "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.pdf"
   "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.bcf"
   "/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.run.xml"

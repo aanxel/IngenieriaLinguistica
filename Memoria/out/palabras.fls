@@ -426,7 +426,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/xcharter/xch_uy5hgr.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/xcharter/XCharter-Italic.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/xcharter/XCharter-Roman.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sftt0900.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb
