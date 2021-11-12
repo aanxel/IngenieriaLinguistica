@@ -1,0 +1,15 @@
+digraph unl_10 {
+	e [label="be.@present"]
+	b [label="big.@entry"]
+	d [label="desk.@sg.@def"]
+	g [label="have.@present"]
+	i [label="space.@sg.@indef"]
+	k [label="thing.@pl.@def"]
+	l [label=all]
+	e -> b [label=obj]
+	e -> d [label=aoj]
+	e -> g [label=and]
+	g -> i [label=obj]
+	i -> k [label=pur]
+	k -> l [label=mod]
+}

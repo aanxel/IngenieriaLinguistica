@@ -1,0 +1,17 @@
+digraph unl_7 {
+	c [label="be.@present"]
+	i [label="place.@sg.@def"]
+	e [label=above]
+	f [label="bed.@sg.@def"]
+	h [label=best]
+	k [label=read]
+	m [label="novel.@pl.@def"]
+	n [label=favorite]
+	c -> i [label=obj]
+	c -> e [label=aoj]
+	e -> f [label=obj]
+	i -> h [label=man]
+	i -> k [label=pur]
+	k -> m [label=obj]
+	m -> n [label=mod]
+}

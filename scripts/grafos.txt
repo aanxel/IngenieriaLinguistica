@@ -3,9 +3,186 @@
 Uno de mis lugares favoritos de mi hogar es mi habitación.
 {/org}
 {unl}
-pof(bedroom.@entry.@sg, home.@sg)
-obj(be.@present, bedroom.@entry.@sg)
-aoj(be.@present, place.@pl)
-mod(place.@pl, favorite)
+pof(bedroom.@sg.@def, home.@sg.@def)
+aoj(be.@present, bedroom.@sg.@def)
+obj(be.@present, place.@entry.@pl.@indef)
+mod(place.@entry.@pl.@indef, favorite)
+{/unl}
+[/S]
+
+[S:2]
+{org}
+Siempre que llego a casa voy directamente a mi habitación para descansar y divertirme.
+{/org}
+{unl}
+man(go.@entry.@present, directly)
+plt(go.@entry.@present, bedroom.@sg.@def)
+pur(go.@entry.@present, rest)
+and(rest, have_fun)
+tim(go.@entry.@present, arrive.@present)
+man(arrive.@present, always)
+plt(arrive.@present, house.@sg.@def)
+{/unl}
+[/S]
+
+[S:3]
+{org}
+Allí paso la mayor parte de mi tiempo libre, escuchando música, leyendo libros interesantes o dibujando todo lo que puedo imaginar.
+{/org}
+{unl}
+plc(spend.@entry.@present, there)
+dur(spend.@entry.@present, free_time.@def)
+qua(free_time.@def, part.@sg.@def)
+mod(part.@sg.@def, most)
+obj(spend.@entry.@present, listen.@progress)
+obj(listen.@progress, music.@indef)
+or(listen.@progress, read.@progress)
+obj(read.@progress, book.@pl.@indef)
+mod(book.@pl.@indef, interesting)
+or(read.@progress, draw.@progress)
+obj(draw.@progress, all)
+qua(all, imagine.@possibility)
+{/unl}
+[/S]
+
+[S:4]
+{org}
+Me siento muy cómodo en mi habitación.
+{/org}
+{unl}
+obj(feel.@present, comfortable.@entry.@sg)
+man(comfortable.@entry.@sg, very)
+plc(comfortable.@entry.@sg, bedroom.@sg.@def)
+{/unl}
+[/S]
+
+[S:5]
+{org}
+Nada más entrar por la puerta se ve al fondo la ventana que deja entrar una agradable luz.
+{/org}
+{unl}
+tim(see.@entry.@present, enter)
+man(enter, as_soon_as)
+plf(enter, door.@sg.@def)
+plc(see.@entry.@present, background.@def)
+obj(see.@entry.@present, window.@sg.@def)
+mod(window.@sg.@def, let_in.@present)
+obj(let_in.@present, light.@sg.@indef)
+mod(light.@sg.@indef, pleasant)
+{/unl}
+[/S]
+
+[S:6]
+{org}
+Las paredes están pintadas en un tono claro y la lámpara del techo y la alfombra tienen el mismo color.
+{/org}
+{unl}
+and(be.@present, have.@present)
+obj(be.@present, paint.@entry)
+aoj(be.@present, wall.@pl.@def)
+man(paint.@entry, tone.@sg.@indef)
+mod(tone.@sg.@indef, light)
+obj(have.@present, same)
+bas(same, colour.@sg.@def)
+aoj(have.@present, lamp.@sg.@def)
+pof(lamp.@sg.@def, roof.@sg.@def)
+and(lamp.@sg.@def, carpet.@sg.@def)
+{/unl}
+[/S]
+
+[S:7]
+{org}
+La cama es muy cómoda y es donde he colocado unos juguetes que me recuerdan a mi infancia.
+{/org}
+{unl}
+aoj(be.@present, bed.@sg.@def)
+obj(be.@present, comfortable.@entry)
+man(comfortable.@entry, very)
+and(comfortable.@entry, place.@past)
+plc(place.@past, where)
+obj(place.@past, toy.@pl.@indef)
+obj(remind.@present, toy.@pl.@indef)
+cob(remind.@present, childhood.@sg.@def)
+{/unl}
+[/S]
+
+[S:8]
+{org}
+Encima de la cama es el mejor lugar para leer mis novelas preferidas.
+{/org}
+{unl}
+obj(be.@present, place.@sg.@def)
+aoj(be.@present, above)
+obj(above, bed.@sg.@def)
+man(place.@sg.@def, best)
+pur(place.@sg.@def, read)
+obj(read, novel.@pl.@def)
+mod(novel.@pl.@def, favorite)
+{/unl}
+[/S]
+
+[S:9]
+{org}
+Me gusta mucho estirarme encima de la cama y contemplar los cuadros de las paredes de mi habitación.
+{/org}
+{unl}
+obj(like.@entry, stretch)
+plc(stretch, above)
+obj(above, bed.@sg.@def)
+man(like.@entry, very)
+and(stretch, contemplate)
+obj(contemplate, painting.@pl.@def)
+plc(painting.@pl.@def, wall.@pl.@def)
+pof(wall.@pl.@def, bedroom.@sg.@def)
+{/unl}
+[/S]
+
+[S:10]
+{org}
+En una esquina de la habitación he colocado un escritorio con una silla que es el lugar donde estudio o donde utilizo mi libro de ejercicios para aprender mejor el español.
+{/org}
+{unl}
+plc(place.@entry.@past, corner.@sg.@indef)
+pof(corner.@sg.@indef, bedroom.@sg.@def)
+obj(place.@entry.@past, desk.@sg.@indef)
+and(desk.@sg.@indef, chair.@sg.@indef)
+plc(study.@present, desk.@sg.@indef)
+or(study.@present, use.@present)
+ins(use.@present, book.@sg.@def)
+obj(book.@sg.@def, exercise.@pl.@def)
+pur(exercise.@pl.@def, learn)
+man(learn, better)
+obj(learn, spanish.@sg.@def)
+{/unl}
+[/S]
+
+[S:11]
+{org}
+El escritorio es grande, tengo espacio para todas mis cosas.
+{/org}
+{unl}
+obj(be.@present, big.@entry)
+aoj(be.@present, desk.@sg.@def)
+and(be.@present, have.@present)
+obj(have.@present, space.@sg.@indef)
+pur(space.@sg.@indef, thing.@pl.@def)
+mod(thing.@pl.@def, all)
+{/unl}
+[/S]
+
+[S:12]
+{org}
+Encima del escritorio tengo un estante donde almaceno todos mis libros y también otros objetos que me gustan.
+{/org}
+{unl}
+plc(shelf.@sg.@indef, above)
+obj(above, desk.@sg.@def)
+obj(have.@entry.@present, shelf.@sg.@indef)
+plc(store.@present, shelf.@sg.@indef)
+obj(store.@present, book.@pl.@def)
+mod(book.@pl.@def, all)
+and(book.@pl.@def, object.@pl.@indef)
+obj(like.@present, object.@pl.@indef)
+man(like.@present, also)
 {/unl}
 [/S]

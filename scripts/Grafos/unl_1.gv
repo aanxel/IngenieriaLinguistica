@@ -1,0 +1,17 @@
+digraph unl_1 {
+	i [label="go.@entry.@present"]
+	b [label=directly]
+	d [label="bedroom.@sg.@def"]
+	g [label=rest]
+	h [label=have_fun]
+	m [label="arrive.@present"]
+	l [label=always]
+	n [label="house.@sg.@def"]
+	i -> b [label=man]
+	i -> d [label=plt]
+	i -> g [label=pur]
+	g -> h [label=and]
+	i -> m [label=tim]
+	m -> l [label=man]
+	m -> n [label=plt]
+}

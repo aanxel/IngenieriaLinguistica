@@ -1,11 +1,11 @@
 digraph unl_0 {
-	d [label="bedroom.@entry"]
-	b [label=home]
-	e [label=be]
-	g [label=place]
+	d [label="bedroom.@sg.@def"]
+	b [label="home.@sg.@def"]
+	e [label="be.@present"]
+	g [label="place.@entry.@pl.@indef"]
 	h [label=favorite]
 	d -> b [label=pof]
-	e -> d [label=obj]
-	e -> g [label=aoj]
+	e -> d [label=aoj]
+	e -> g [label=obj]
 	g -> h [label=mod]
 }
