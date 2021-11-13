@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 regex = "*"
 graphviz = "*"
+cairosvg = "*"
 
 [dev-packages]
 

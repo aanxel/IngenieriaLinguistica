@@ -1,6 +1,26 @@
 import string
+
+# Librerias adicionales a instalar
 import regex as re
 from graphviz import Digraph
+from cairosvg import svg2png
+
+# Fichero de entrada, listado de expresiones UNL:
+# [S:<número de oración>]
+# {org}
+# <oración original>
+# {/org}
+# {unl}
+# <contenido>
+# {/unl}
+# [/S]
+#
+# [S:<número siguiente oración>]
+# ...
+input_file = 'grafos.txt'
+
+# Directorio de salida
+output_dir = '../Memoria/images'
 
 
 def make_graph(edges, name):
@@ -13,7 +33,10 @@ def make_graph(edges, name):
         e_label = extract_edge_label(e)
         e_nodes = extract_edge_nodes(e)
         dot.edge(nodes[e_nodes[0]], nodes[e_nodes[1]], label=e_label)
-    dot.render(directory='Grafos', format='png')
+    dot.render(directory=output_dir, format='svg')
+    svg2png(url=f'{output_dir}{name}.gv.svg',
+            write_to=f'{output_dir}{name}.gv.png',
+            dpi=200)
 
 
 def clean_empty_edges(edges):
@@ -40,8 +63,8 @@ def extract_edge_label(edge):
     return edge[:edge.index('(')]
 
 
-with open('grafos.txt', 'r') as f:
+with open(input_file, 'r') as f:
     text = ''.join(f.readlines())
     graphs = re.findall(r'\{unl\}(.*?)\{/unl\}', text, re.DOTALL)
     for i, g in enumerate(graphs):
-        make_graph(g.splitlines(), f'unl_{i}')
+        make_graph(g.splitlines(), f'unl_{i+1}')
