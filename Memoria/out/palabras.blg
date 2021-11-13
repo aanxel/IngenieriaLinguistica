@@ -1,9 +1,9 @@
 [0] Config.pm:304> INFO - This is Biber 2.14 (beta)
 [0] Config.pm:307> INFO - Logfile is '/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.blg'
-[83] biber:322> INFO - === mié nov 10, 2021, 16:03:27
-[97] Biber.pm:415> INFO - Reading '/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.bcf'
-[171] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
-[176] Utils.pm:293> WARN - The file '/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.bcf' does not contain any citations!
-[184] bbl.pm:652> INFO - Writing '/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.bbl' with encoding 'UTF-8'
-[184] bbl.pm:755> INFO - Output to /home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.bbl
-[184] Biber.pm:128> INFO - WARNINGS: 1
+[92] biber:322> INFO - === sáb nov 13, 2021, 12:10:56
+[105] Biber.pm:415> INFO - Reading '/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.bcf'
+[172] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[178] Utils.pm:293> WARN - The file '/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.bcf' does not contain any citations!
+[185] bbl.pm:652> INFO - Writing '/home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.bbl' with encoding 'UTF-8'
+[185] bbl.pm:755> INFO - Output to /home/joaquin/upm/IngenieriaLinguistica/Memoria/out/palabras.bbl
+[186] Biber.pm:128> INFO - WARNINGS: 1

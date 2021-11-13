@@ -1,0 +1,9 @@
+digraph unl_4 {
+	a [label="feel.@present"]
+	e [label="comfortable.@entry.@sg"]
+	d [label=very]
+	f [label="bedroom.@sg.@def"]
+	a -> e [label=obj]
+	e -> d [label=man]
+	e -> f [label=plc]
+}
