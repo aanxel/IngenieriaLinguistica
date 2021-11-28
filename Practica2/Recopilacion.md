@@ -126,6 +126,9 @@
 
 
 # Salud
+1-30 noticias de El País
+31-60 noticias de El Mundo
+
 
 - text1.txt( palabras): 
 
@@ -249,126 +252,129 @@
 
 
 # Política
+1-30 noticias de El País
+31-60 noticias de El Mundo
 
-- text1.txt( palabras): 
 
-- text2.txt( palabras):
+- text1.txt(232 palabras): El conservador Petr Fiala, nombrado primer ministro de la República Checa - https://elpais.com/internacional/2021-11-28/el-conservador-petr-fiala-nombrado-primer-ministro-de-la-republica-checa.html
 
-- text3.txt( palabras): 
+- text2.txt(611 palabras): Los límites de la democracia - https://elpais.com/babelia/2021-11-27/los-limites-de-la-democracia.html
 
-- text4.txt( palabras): 
+- text3.txt(436 palabras): María Jesús Montero niega que Bildu sea "socio prioritario" del Gobierno - https://elpais.com/espana/2021-11-26/maria-jesus-montero-niega-que-bildu-sea-socio-prioritario-del-gobierno.html
 
-- text5.txt( palabras): 
+- text4.txt(464 palabras): La justicia europea descarta devolver la inmunidad parlamentaria a Puigdemont - https://elpais.com/espana/2021-11-26/la-justicia-europea-descarta-devolver-la-inmunidad-parlamentaria-a-puigdemont.html
 
-- text6.txt( palabras): 
+- text5.txt(255 palabras): El PSOE pide que Mañueco dimita tras la imputación del PP salmantino - https://elpais.com/espana/2021-11-25/el-psoe-pide-que-manueco-dimita-tras-la-imputacion-del-pp-salmantino.html
 
-- text7.txt( palabras): 
+- text6.txt(411 palabras): PSC, ERC, Junts y comunes aprueban el presupuesto de la Diputación de Barcelona - https://elpais.com/espana/catalunya/2021-11-25/psc-erc-junts-y-comunes-aprueban-el-presupuesto-de-la-diputacion-de-barcelona.html
 
-- text8.txt( palabras): 
+- text7.txt(468 palabras): Ada Colau se abre a reformar La Rambla tras el 'sí' de ERC al presupuesto - https://elpais.com/espana/catalunya/2021-11-23/ada-colau-se-abre-a-reformar-la-rambla-tras-el-si-de-erc-al-presupuesto.html
 
-- text9.txt( palabras): 
+- text8.txt(680 palabras): La estrategia de Casado no logra frenar la rebelión interna de una parte del PP - https://elpais.com/espana/2021-11-23/la-estrategia-de-casado-no-logra-frenar-la-rebelion-interna-de-una-parte-del-pp.html
 
-- text10.txt( palabras): 
+- text9.txt(586 palabras): Ada Colau a Yolanda Díaz: "Nunca quisiste ser presidenta ni líder mundial, pero te ha tocado. España te necesita" - https://elpais.com/espana/catalunya/2021-11-21/colau-a-yolanda-diaz-nunca-quisiste-ser-presidenta-ni-lider-mundial-pero-te-ha-tocado-espana-te-necesita.html
 
-- text11.txt( palabras): 
+- text10.txt(374 palabras): El PSOE canario reelige a Ángel Víctor Torres para un nuevo mandato - https://elpais.com/espana/2021-11-21/el-psoe-canario-reelige-a-angel-victor-torres-para-un-nuevo-mandato.html
 
-- text12.txt( palabras): 
+- text11.txt(683 palabras): La hipótesis España vaciada - https://elpais.com/espana/2021-11-21/la-hipotesis-espana-vaciada.html
 
-- text13.txt( palabras): 
+- text12.txt(515 palabras): Ingeniería política en la España vacía - https://elpais.com/opinion/2021-11-21/ingenieria-politica-en-la-espana-vacia.html
 
-- text14.txt( palabras): 
+- text13.txt(397 palabras): Kamala Harris, presidenta de Estados Unidos durante un rato - https://elpais.com/internacional/2021-11-19/kamala-harris-se-convierte-en-la-primera-presidenta-en-funciones-de-estados-unidos.html
 
-- text15.txt( palabras): 
+- text14.txt(508 palabras): Almeida afirma que Álvarez de Toledo "está en su derecho" de mantener el escaño - https://elpais.com/espana/2021-11-19/almeida-dice-que-alvarez-de-toledo-esta-en-su-derecho-de-mantener-el-escano.html
 
-- text16.txt( palabras): 
+- text15.txt(555 palabras): López Obrador agita de nuevo la carrera presidencial a 2024: "Apoyaré a quien gane la encuesta de Morena" - https://elpais.com/mexico/2021-11-17/lopez-obrador-agita-de-nuevo-la-carrera-presidencial-a-2024-apoyare-a-quien-gane-la-encuesta-de-morena.html
 
-- text17.txt( palabras): 
+- text16.txt(395 palabras): Carlos Mazón ante un posible pacto electoral con Ciudadanos: "Siempre que podamos unir, lo vamos a hacer" - https://elpais.com/espana/comunidad-valenciana/2021-11-16/carlos-mazon-ante-un-posible-pacto-electoral-con-ciudadanos-siempre-que-podamos-unir-lo-vamos-a-hacer.html
 
-- text18.txt( palabras): 
+- text17.txt(414 palabras): Los independentistas piden que la ley de memoria retire el título al Rey - https://elpais.com/espana/2021-11-15/los-independentistas-piden-que-la-ley-de-memoria-retire-el-titulo-al-rey.html
 
-- text19.txt( palabras): 
+- text18.txt(532 palabras): Un nuevo partido anticorrupción gana las elecciones en Bulgaria según los primeros resultados oficiales - https://elpais.com/internacional/2021-11-15/un-nuevo-partido-anticorrupcion-gana-las-elecciones-en-bulgaria-segun-los-primeros-resultados-oficiales.html
 
-- text20.txt( palabras): 
+- text19.txt(608 palabras): Famosos que quieren hacer política - https://elpais.com/eps/2021-11-15/los-famosos-que-quieren-hacer-politica.html
 
-- text21.txt( palabras): 
+- text20.txt(598 palabras): El precedente de la descentralización de organismos que puso a León en el mapa - https://elpais.com/espana/2021-11-15/el-precedente-que-puso-a-leon-en-el-mapa.html
 
-- text22.txt( palabras): 
+- text21.txt(490 palabras): La ultraderecha entra en el Congreso de Argentina - https://elpais.com/internacional/2021-11-15/la-ultraderecha-entra-en-el-congreso-argentino.html
 
-- text23.txt( palabras): 
+- text22.txt(467 palabras): La polémica frase de Pablo Casado sobre la energía solar: "A las ocho de la tarde no había posibilidad de que la solar emitiera porque era de noche" - https://elpais.com/espana/2021-11-14/la-polemica-frase-de-pablo-casado-sobre-la-energia-solar-a-las-ocho-de-la-tarde-no-habia-posibilidad-de-que-la-solar-emitiera-porque-era-de-noche.html
 
-- text24.txt( palabras): 
+- text23.txt(464 palabras): Ximo Puig se lanza a la búsqueda de una mayoría con la intolerancia como único límite - https://elpais.com/espana/comunidad-valenciana/2021-11-14/ximo-puig-se-lanza-a-la-busqueda-de-una-mayoria-con-la-intolerancia-como-unico-limite.html
 
-- text25.txt( palabras): 
+- text24.txt(526 palabras): Los socialistas valencianos viven el congreso más pacífico de los últimas dos décadas tras la salida de Ábalos - https://elpais.com/espana/2021-11-12/los-socialistas-valencianos-viven-el-congreso-mas-pacifico-de-los-ultimas-dos-decadas-tras-la-salida-de-abalos.html
 
-- text26.txt( palabras): 
+- text25.txt(367 palabras): Casado reaparece tras dos semanas de perfil bajo por la crisis del PP de Madrid - https://elpais.com/espana/2021-11-12/casado-reaparece-tras-dos-semanas-de-perfil-bajo-por-la-crisis-del-pp-de-madrid.html
 
-- text27.txt( palabras): 
+- text26.txt(546 palabras): Barones del PP proponen un acuerdo con Almeida de 'número dos' de Ayuso - https://elpais.com/espana/2021-11-11/barones-del-pp-proponen-un-acuerdo-con-almeida-de-numero-dos-de-ayuso.html
 
-- text28.txt( palabras): 
+- text27.txt(453 palabras): Dirigentes de Podemos y de Esquerra Unida acudirán como "invitadas preferentes" al acto de Mónica Oltra con Yolanda Díaz - https://elpais.com/espana/comunidad-valenciana/2021-11-10/dirigentes-de-podemos-y-de-eu-acudiran-como-invitadas-preferentes-al-acto-de-monica-oltra-con-yolanda-diaz.html
 
-- text29.txt( palabras): 
+- text28.txt(444 palabras): Alberto Rodríguez reclama al Supremo que anule su condena porque vulnera ocho derechos fundamentales - https://elpais.com/espana/2021-11-10/alberto-rodriguez-reclama-al-supremo-que-anule-su-condena-porque-vulnera-siete-derechos-fundamentales.html
 
-- text30.txt( palabras): 
+- text29.txt(443 palabras): La boda que provocó una crisis en el Gobierno de López Obrador - https://elpais.com/mexico/2021-11-09/la-boda-que-provoco-una-crisis-en-el-gobierno-de-lopez-obrador.html
 
-- text31.txt( palabras): 
+- text30.txt(500 palabras): El PSOE expedienta a un alcalde que se despeñó cuando conducía ebrio - https://elpais.com/espana/2021-11-05/el-psoe-expedienta-a-un-alcalde-que-se-despeno-cuando-conducia-ebrio.html
 
-- text32.txt( palabras): 
+- text31.txt(398 palabras): Carrasco asume el PP-Castellón para renovar la capital - https://www.elmundo.es/comunidad-valenciana/castellon/2021/11/19/61980a88e4d4d84f6d8b45f0.html
 
-- text33.txt( palabras): 
+- text32.txt(375 palabras): Alertan de la 'fuga' de sanitarios ante la excesiva burocracia en las bolsas de empleo de la Comunidad Valenciana - https://www.elmundo.es/comunidad-valenciana/castellon/2021/11/11/618d186ce4d4d82d3a8b45f7.html
 
-- text34.txt( palabras): 
+- text33.txt(381 palabras): Una encuesta da un vuelco a la Generalitat: el PP gobernaría con su 'socio' Vox - https://www.elmundo.es/comunidad-valenciana/castellon/2021/11/05/618581dffdddff0e958b45b4.html
 
-- text35.txt( palabras): 
+- text34.txt(426 palabras): Almassora no subirá los impuestos en 2022 pese a la anulación de la plusvalía y el aumento de los gastos - https://www.elmundo.es/comunidad-valenciana/castellon/2021/11/05/61856f97e4d4d8c4428b45c7.html
 
-- text36.txt( palabras): 
+- text35.txt(479 palabras): El presupuesto del Consell para 2022 mete a Castellón en el furgón de cola - https://www.elmundo.es/comunidad-valenciana/castellon/2021/11/05/61843955e4d4d86c668b458b.html
 
-- text37.txt( palabras): 
+- text36.txt(540 palabras): Ni el homenaje a los represaliados del franquismo une al tripartito - https://www.elmundo.es/comunidad-valenciana/castellon/2021/11/02/61805b7be4d4d8932b8b45b5.html
 
-- text38.txt( palabras): 
+- text37.txt(455 palabras): Vila-real aprueba 170.000 euros para la expropiación del suelo de la nueva depuradora - https://www.elmundo.es/comunidad-valenciana/castellon/2021/10/27/6179216afdddff07718b4595.html
 
-- text39.txt( palabras): 
+- text38.txt(329 palabras): El Parlament debatirá este martes sobre la posibilidad de eliminar la existencia de un juicio por corrupción como causa de suspensión de un diputado - https://www.elmundo.es/cataluna/2021/10/26/6177a3c021efa0e11c8b459f.html
 
-- text40.txt( palabras): 
+- text39.txt(102 palabras): El PSC liderará un gobierno multipartito en Badalona tras la moción a Albiol - https://www.elmundo.es/cataluna/2021/10/25/61771468fc6c83e1718b45a6.html
 
-- text41.txt( palabras): 
+- text40.txt(389 palabras): PSOE y PP acuerdan que Ángel Gabilondo sea el nuevo Defensor del Pueblo y Teresa Jiménez-Becerril, su 'número dos' - https://www.elmundo.es/espana/2021/10/21/61715ce2e4d4d8fe0e8b45ce.html
 
-- text42.txt( palabras): 
+- text41.txt(166 palabras): Podemos ve en la monarquía una institución "corrupta, obsoleta y anacrónica" - https://www.elmundo.es/espana/2021/10/11/61643253fdddffd5538b45df.html
 
-- text43.txt( palabras): 
+- text42.txt(536 palabras): La Vilavella sube el sueldo a la alcaldesa por un 'fallo' en el IRPF que Hacienda le ha "penalizado" - https://www.elmundo.es/comunidad-valenciana/castellon/2021/10/05/615c0a32fc6c83bf038b45a3.html
 
-- text44.txt( palabras): 
+- text43.txt(383 palabras): El PNV pretende convertir el País Vasco en una "nación europea" en 2050 y llevar al Pueblo Vasco a "la libertad" - https://www.elmundo.es/pais-vasco/2021/11/28/61a369f6fc6c83e9178b45c9.html
 
-- text45.txt( palabras): 
+- text44.txt(553 palabras): Los fiscales y el PP exigen la dimisión de Dolores Delgado por ser "incompatible con la imparcialidad" - https://www.elmundo.es/espana/2021/11/27/61a2a470fdddff9a128b459f.html
 
-- text46.txt( palabras): 
+- text45.txt(512 palabras): Esperanza Aguirre, Francisco Vázquez y Ortega Lara arropan en su estreno a NEOS, la plataforma de Mayor Oreja - https://www.elmundo.es/espana/2021/11/26/61a13f23fc6c83e2618b456e.html
 
-- text47.txt( palabras): 
+- text46.txt(569 palabras): El 'caso Primarias' del PP de Salamanca incentiva el adelanto electoral en Castilla y León - https://www.elmundo.es/espana/2021/11/26/619fd587fdddff00438b4593.html
 
-- text48.txt( palabras): 
+- text47.txt(307 palabras): El Supremo confirma la prisión para el juez Alba por conspirar contra Victoria Rosell - https://www.elmundo.es/espana/2021/11/25/619f7d8521efa0cf328b458d.html
 
-- text49.txt( palabras): 
+- text48.txt(520 palabras): Siete de cada diez casos de violencia sexual revisados por el Supremo en 2020 tenían como víctimas a niños - https://www.elmundo.es/espana/2021/11/25/619f7a8121efa078168b45db.html
 
-- text50.txt( palabras): 
+- text49.txt(282 palabras): La alcaldesa de Béjar en Salamanca dimite tras su incidente con la Policía Local - https://diariodecastillayleon.elmundo.es/articulo/salamanca/alcaldesa-bejar-salamanca-dimite/20211125102909036641.html
 
-- text51.txt( palabras): 
+- text50.txt(618 palabras): La 'vía valenciana' es el modelo que más gusta en Hacienda para reformar la financiación autonómica - https://www.elmundo.es/espana/2021/11/25/619e7b1ffdddfff0938b45f9.html
 
-- text52.txt( palabras): 
+- text51.txt(376 palabras): El PSOE protege a Marlaska y descarga en el operativo policial de Cádiz la decisión de sacar la tanqueta - https://www.elmundo.es/espana/2021/11/24/619e4cc621efa0767a8b4600.html
 
-- text53.txt( palabras): 
+- text52.txt(457 palabras): El conservador Petr Fiala, nombrado primer ministro de la República Checa - https://www.elmundo.es/internacional/2021/11/28/61a3ad09fc6c83180c8b45b9.html
 
-- text54.txt( palabras): 
+- text53.txt(295 palabras): Un avión de Frontex reforzará el control migratorio en el Canal de la Mancha - https://www.elmundo.es/internacional/2021/11/28/61a3beaafdddff32838b45a0.html
 
-- text55.txt( palabras): 
+- text54.txt(348 palabras): Boris Johnson vuelve a amenazar con romper el protocolo de Irlanda del Norte - https://www.elmundo.es/internacional/2021/11/25/619ee56ae4d4d82f6c8b45d0.html
 
-- text56.txt( palabras): 
+- text55.txt(379 palabras): Francia e Italia firman un nuevo tratado de cooperación - https://www.elmundo.es/internacional/2021/11/26/61a0b62cfdddffe2b08b45b1.html
 
-- text57.txt( palabras): 
+- text56.txt(597 palabras): El PSOE demanda cambios en los presupuestos de la Junta para 2022 por valor de 767 millones de euros - https://www.elmundo.es/andalucia/2021/11/15/6192b19921efa0a4618b45a0.html
 
-- text58.txt( palabras): 
+- text57.txt(269 palabras): El PP critica la "hipocresía" de Vox al hablar de las necesidades de Burgos sin presentar enmiendas a los Presupuestos - https://diariodecastillayleon.elmundo.es/articulo/politica/pp-critica-hipocresia-vox-hablar-necesidades-burgos-presentar-enmiendas-presupuestos/20211121191035036327.html
 
-- text59.txt( palabras): 
+- text58.txt(484 palabras): El PSOE presenta un millar de enmiendas a los Presupuestos para 2022 - https://diariodecastillayleon.elmundo.es/articulo/politica/psoe-presenta-millar-enmiendas-presupuestos-2022/20211119183613036251.html
 
-- text60.txt( palabras): 
+- text59.txt(487 palabras): PP y Cs presentan 23 enmiendas a sus propios presupuestos para 2022 - https://diariodecastillayleon.elmundo.es/articulo/politica/pp-y-cs-presentan/20211119183127036249.html
+
+- text60.txt( palabras): Marta Sanz (Cs): "Viva España, viva el rey, viva el orden y la ley" - https://diariodecastillayleon.elmundo.es/articulo/politica/marta-sanz-cs-viva-espana-viva-rey-viva-orden-ley/20210414160240025665.html
 
 
 # Otra categoría
