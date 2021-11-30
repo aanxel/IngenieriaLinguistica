@@ -130,65 +130,65 @@
 31-60 noticias de El Mundo
 
 
-- text1.txt( palabras): 
+- text1.txt(592 palabras): Los pacientes por coronavirus aumentan un 35% en la Atención Primaria de Cataluña - https://elpais.com/espana/catalunya/2021-11-24/los-pacientes-por-coronavirus-aumentan-un-35-en-la-atencion-primaria-de-cataluna.html
 
-- text2.txt( palabras): 
+- text2.txt(557 palabras): Los alergólogos aconsejan vacunar contra la gripe a los niños con asma para evitar complicaciones - https://elpais.com/mamas-papas/expertos/2021-11-24/los-alergologos-aconsejan-vacunar-contra-la-gripe-a-los-ninos-con-asma-para-evitar-complicaciones.html
 
-- text3.txt( palabras): 
+- text3.txt(485 palabras): Un jurado popular considera a tres grandes cadenas de farmacia responsables de la crisis de opioides en EE UU - https://elpais.com/sociedad/2021-11-23/un-jurado-popular-considera-a-tres-grandes-cadenas-de-farmacia-responsables-de-la-crisis-de-opioides-en-ee-uu.html
 
-- text4.txt( palabras): 
+- text4.txt(611 palabras): Barcelona señala los comercios de alimentación no saludables - https://elpais.com/espana/catalunya/2021-11-18/barcelona-senala-los-comercios-de-alimentacion-no-saludables.html
 
-- text5.txt( palabras): 
+- text5.txt(395 palabras): La epidemia de drogas lleva a EE UU a alcanzar un récord de muertos por sobredosis - https://elpais.com/internacional/2021-11-17/la-epidemia-de-drogas-en-ee-uu-es-ya-la-mas-mortifera-jamas-vivida-en-el-pais.html
 
-- text6.txt( palabras): 
+- text6.txt(719 palabras): México empieza a vacunar contra la covid a todos los menores de 15 a 17 años - https://elpais.com/mexico/2021-11-16/inicia-el-turno-para-vacunar-contra-la-covid-a-todos-los-menores-de-15-a-17-anos.html
 
-- text7.txt( palabras): 
+- text7.txt(424 palabras): Los positivos aumentan un 52% en Cataluña en una semana - https://elpais.com/espana/catalunya/2021-11-14/los-positivos-aumentan-un-52-en-cataluna-en-una-semana.html
 
-- text8.txt( palabras): 
+- text8.txt(536 palabras): ¿Qué relación tiene el frío con el catarro y la gripe? - https://elpais.com/ciencia/las-cientificas-responden/2021-11-12/que-relacion-tiene-el-frio-con-el-catarro-y-la-gripe.html
 
-- text9.txt( palabras): 
+- text9.txt(571 palabras): Úlceras célebres - https://elpais.com/ciencia/el-hacha-de-piedra/2021-11-11/ulceras-celebres.html
 
-- text10.txt( palabras): 
+- text10.txt(921 palabras): Inteligencia artificial para predecir un ictus con dos años de antelación - https://elpais.com/tecnologia/2021-11-04/inteligencia-artificial-para-predecir-un-ictus-con-dos-anos-de-antelacion.html
 
-- text11.txt( palabras): 
+- text11.txt(598 palabras): Un médico canadiense inseminó a un centenar de mujeres con esperma no seleccionado por los padres - https://elpais.com/sociedad/2021-11-02/un-medico-canadiense-insemino-a-un-centenar-de-mujeres-con-esperma-no-seleccionado-por-los-padres.html
 
-- text12.txt( palabras): 
+- text12.txt(676 palabras): México concluye su plan de vacunación: un 83% de la población mayor de edad tiene al menos la primera dosis - https://elpais.com/mexico/2021-10-29/mexico-concluye-su-plan-de-vacunacion-un-83-de-la-poblacion-mayor-de-edad-tiene-al-menos-la-primera-dosis.html
 
-- text13.txt( palabras): 
+- text13.txt(587 palabras): Ciudad de México concluye la vacunación de los mayores de 18 años - https://elpais.com/mexico/2021-10-28/ciudad-de-mexico-concluye-la-vacunacion-de-los-mayores-de-18-anos.html
 
-- text14.txt( palabras): 
+- text14.txt(444 palabras): Así puedes pedir cita online en el CAP en Cataluña - https://elpais.com/espana/catalunya/2021-10-28/asi-puedes-pedir-cita-online-en-el-cap-en-cataluna.html
 
-- text15.txt( palabras): 
+- text15.txt(680 palabras): El óxido de etileno, el compuesto cancerígeno desapercibido en México - https://elpais.com/mexico/2021-10-25/el-oxido-de-etileno-el-compuesto-cancerigeno-desapercibido-en-mexico.html
 
-- text16.txt( palabras): 
+- text16.txt(481 palabras): EE UU aprueba la dosis de refuerzo de Moderna y Janssen, y respalda la mezcla de vacunas - https://elpais.com/sociedad/2021-10-21/la-agencia-del-medicamento-de-ee-uu-aprueba-la-dosis-de-refuerzo-de-moderna-y-janssen-y-respalda-la-mezcla-de-vacunas.html
 
-- text17.txt( palabras): 
+- text17.txt(776 palabras): La cebolla de Chihuahua provoca alerta por un brote de salmonela en Estados Unidos - https://elpais.com/mexico/2021-10-21/la-cebolla-de-chihuahua-provoca-alerta-por-un-brote-de-salmonela-en-estados-unidos.html
 
-- text18.txt( palabras): 
+- text18.txt(433 palabras): EE UU planea autorizar la administración de una marca de vacuna diferente de la inicial en las dosis de refuerzo - https://elpais.com/sociedad/2021-10-19/ee-uu-planea-autorizar-la-administracion-de-una-marca-de-vacuna-diferente-de-la-inicial-en-las-dosis-de-refuerzo.html
 
-- text19.txt( palabras): 
+- text19.txt(673 palabras): La mortalidad por coronavirus cae al mínimo de la pandemia en Cataluña - https://elpais.com/espana/catalunya/2021-10-15/la-mortalidad-por-coronavirus-cae-al-minimo-de-la-pandemia-en-cataluna.html
 
-- text20.txt( palabras): 
+- text20.txt(568 palabras): La Ciudad de México pasará este lunes a semáforo verde ante la disminución de contagios - https://elpais.com/mexico/2021-10-15/la-ciudad-de-mexico-pasara-este-lunes-a-semaforo-verde-ante-la-disminucion-de-contagios.html
 
-- text21.txt( palabras): 
+- text21.txt(596 palabras): Hospitales de Cataluña: una década para crecer - https://elpais.com/espana/catalunya/2021-10-14/hospitales-de-cataluna-una-decada-para-crecer.html
 
-- text22.txt( palabras): 
+- text22.txt(373 palabras): Los valencianos aún son reticentes a participar en actividades en interiores por el coronavirus - https://elpais.com/espana/comunidad-valenciana/2021-10-02/los-valencianos-aun-son-reticentes-a-participar-en-actividades-en-interiores-por-el-coronavirus.html
 
-- text23.txt( palabras): 
+- text23.txt(438 palabras): Corre, corre y (de paso) vence al cáncer de pecho - https://elpais.com/planeta-futuro/alterconsumismo/2021-09-24/corre-corre-y-de-paso-vence-al-cancer-de-pecho.html
 
-- text24.txt( palabras): 
+- text24.txt(630 palabras): La autoridad sanitaria de EE UU recomienda una tercera dosis de la vacuna contra la covid para adultos mayores y enfermos - https://elpais.com/sociedad/2021-09-23/las-autoridades-sanitarias-de-ee-uu-recomiendan-una-tercera-dosis-de-la-vacuna-contra-la-covid-para-adultos-mayores-y-enfermos.html
 
-- text25.txt( palabras): 
+- text25.txt(527 palabras): La agencia del medicamento de EE UU aprueba la tercera dosis solo para mayores de 65 años y personas en riesgo - https://elpais.com/america/internacional/2021-09-23/la-agencia-del-medicamento-de-ee-uu-aprueba-administrar-la-tercera-dosis-de-la-vacuna-contra-la-covid-a-los-mayores-de-65-anos.html
 
-- text26.txt( palabras): 
+- text26.txt(499 palabras): Alzhéimer: Un año para recordar - https://elpais.com/espana/catalunya/2021-09-21/alzheimer-un-ano-para-recordar.html
 
-- text27.txt( palabras): 
+- text27.txt(421 palabras): El PSC culpa a la Generalitat de tener un millón de vacunas en riesgo de caducar - https://elpais.com/espana/catalunya/2021-09-17/el-psc-culpa-a-la-generalitat-de-tener-un-millon-de-vacunas-en-riesgo-de-caducar.html
 
-- text28.txt( palabras): 
+- text28.txt(589 palabras): La Junta de Extremadura prohíbe a dos hermanas entrar en el colegio sin mascarilla - https://elpais.com/educacion/2021-09-15/la-junta-de-extremadura-prohibe-a-dos-hermanas-entrar-en-el-colegio-sin-mascarilla.html
 
-- text29.txt( palabras): 
+- text29.txt(484 palabras): Nomura prohíbe fumar a sus empleados incluso cuando teletrabajan - https://elpais.com/economia/2021-09-15/nomura-prohibe-fumar-a-sus-empleados-incluso-cuando-teletrabajan.html
 
-- text30.txt( palabras): 
+- text30.txt(324 palabras): Cataluña empezará a desmantelar los puntos de vacunación masiva contra la covid - https://elpais.com/espana/catalunya/2021-09-10/cataluna-empezara-a-desmantelar-los-puntos-de-vacunacion-masiva-contra-la-covid.html
 
 - text31.txt( palabras): 
 
