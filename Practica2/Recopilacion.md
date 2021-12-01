@@ -1,4 +1,5 @@
 # Deportes
+1-60 noticias de El Marca
 1-20 noticias de Fútbol (19 y 20 fútbol femenino)
 21-40 noticias de Baloncesto
 41-60 noticias de Atletismo
@@ -374,7 +375,7 @@
 
 - text59.txt(487 palabras): PP y Cs presentan 23 enmiendas a sus propios presupuestos para 2022 - https://diariodecastillayleon.elmundo.es/articulo/politica/pp-y-cs-presentan/20211119183127036249.html
 
-- text60.txt( palabras): Marta Sanz (Cs): "Viva España, viva el rey, viva el orden y la ley" - https://diariodecastillayleon.elmundo.es/articulo/politica/marta-sanz-cs-viva-espana-viva-rey-viva-orden-ley/20210414160240025665.html
+- text60.txt(173 palabras): Marta Sanz (Cs): "Viva España, viva el rey, viva el orden y la ley" - https://diariodecastillayleon.elmundo.es/articulo/politica/marta-sanz-cs-viva-espana-viva-rey-viva-orden-ley/20210414160240025665.html
 
 
 # Otra categoría
