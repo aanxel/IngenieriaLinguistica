@@ -191,65 +191,68 @@
 
 - text30.txt(324 palabras): Cataluña empezará a desmantelar los puntos de vacunación masiva contra la covid - https://elpais.com/espana/catalunya/2021-09-10/cataluna-empezara-a-desmantelar-los-puntos-de-vacunacion-masiva-contra-la-covid.html
 
-- text31.txt( palabras): 
+- text31.txt(528 palabras): España supera los 200 casos hasta llegar a los 208 tras notificar 10.261 contagios - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/30/61a6469021efa0bb418b45be.html
 
-- text32.txt( palabras): 
+- text32.txt(255 palabras): Las vacunas para menores no llegarán antes de segunda quincena de diciembre - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/30/61a600a621efa015548b45db.html
 
-- text33.txt( palabras): 
+- text33.txt(291 palabras): Los relojes inteligentes, a un paso de detectar el Covid-19 - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/30/61a606bd21efa07d118b45b0.html
 
-- text34.txt( palabras): 
+- text34.txt(324 palabras): Moderna alerta de que las vacunas "podrían ser ineficaces contra la variante ómicron" - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/30/61a5ea1421efa07d118b45a7.html
 
-- text35.txt( palabras): 
+- text35.txt(290 palabras): Biden: "La variante ómicron es motivo de preocupación, pero no de pánico" - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/29/61a52b9ffdddffc1bd8b459f.html
 
-- text36.txt( palabras): 
+- text36.txt(301 palabras): Los asesores del Gobierno británico proponen la vacuna de refuerzo para mayores de 18 y a los tres meses de la segunda dosis - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/29/61a516d821efa0dd3f8b45aa.html
 
-- text37.txt( palabras): 
+- text37.txt(218 palabras): El G7 advierte que la variante ómicron es "altamente transmisible" y requiere "medidas urgentes" - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/29/61a500fc21efa0d92a8b4599.html
 
-- text38.txt( palabras): 
+- text38.txt(526 palabras): El Hospital Gregorio Marañón confirma el primer caso de la variante ómicron en España - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/29/61a5025f21efa0dd3f8b45a1.html
 
-- text39.txt( palabras): 
+- text39.txt(558 palabras): Detenida una pareja que se saltó la cuarentena en Ámsterdam para ir a Barcelona - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/29/61a4a8cf21efa0e64d8b457a.html
 
-- text40.txt( palabras): 
+- text40.txt(484 palabras): La OMS pide a los países prepararse porque la variante ómicron presenta "un riesgo muy elevado" a nivel mundial - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/29/61a496d7fdddff32838b45bd.html
 
-- text41.txt( palabras): 
+- text41.txt(326 palabras): La primera imagen de la variante ómicron del coronavirus - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/28/61a3c404fc6c8324408b458d.html
 
-- text42.txt( palabras): 
+- text42.txt(488 palabras): El presidente alemán llama a reducir los contactos para evitar el cierre de la vida pública: "Hagámoslo para salvar vidas" - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/28/61a34c3221efa0d84e8b4592.html
 
-- text43.txt( palabras): 
+- text43.txt(386 palabras): Reino Unido vuelve a los PCR y cuarentenas a la llegada tras los dos casos de la nueva variante - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/27/61a27077fdddff02ae8b459b.html
 
-- text44.txt( palabras): 
+- text44.txt(260 palabras): Alerta para los alérgicos al cacahuete por la presencia no declarada de este producto en una barritas de chocolate - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/27/61a26a9ae4d4d8de7b8b45bb.html
 
-- text45.txt( palabras): 
+- text45.txt(297 palabras): 61 pasajeros procedentes de Sudáfrica dan positivo al coronavirus a su llegada a Holanda - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/27/61a1f94cfdddffc4948b457f.html
 
-- text46.txt( palabras): 
+- text46.txt(321 palabras): Moderna desarrollará un refuerzo específico de la vacuna contra la nueva variante Ómicron - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/26/61a15a27fdddffe2b08b45e2.html
 
-- text47.txt( palabras): 
+- text47.txt(350 palabras): Niegan la entrada de un crucero con 300 pasajeros a un puerto argentino por un positivo de la variante Ómicron - https://www.elmundo.es/internacional/2021/12/01/61a72d7bfc6c830f788b45a7.html
 
-- text48.txt( palabras): 
+- text48.txt(307 palabras): Suiza aprueba en referéndum el pasaporte Covid tras una campaña muy agitada - https://www.elmundo.es/internacional/2021/11/28/61a36ef0fdddff3d3e8b4574.html
 
-- text49.txt( palabras): 
+- text49.txt(406 palabras): La OMS avisa que Europa afronta un "invierno duro" por el repunte de la pandemia de coronavirus - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/10/618b71d421efa09c1e8b456d.html
 
-- text50.txt( palabras): 
+- text50.txt(391 palabras): La OMS advierte de que Europa registra la mayor subida de nuevos casos de Covid-19 - https://www.elmundo.es/ciencia-y-salud/salud/2021/10/28/617a5095fdddff442f8b45cc.html
 
-- text51.txt( palabras): 
+- text51.txt(413 palabras): Uno de los 150 españoles atrapados en Sudáfrica: "Todo el mundo busca vuelos para salir y no hay, es un caos" - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/28/61a3873521efa056018b458b.html
 
-- text52.txt( palabras): 
+- text52.txt(377 palabras): La variante ómicron del coronavirus en Europa: ya en siete países y pendiente de confirmación en Francia - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/27/61a24a52e4d4d8401a8b45c9.html
 
-- text53.txt( palabras): 
+- text53.txt(380 palabras): ¿Por qué hay que vacunar a los niños contra el Covid? "La vacuna es segura y tienen derecho a recibirla" - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/30/61a5cbee21efa003278b45be.html
 
-- text54.txt( palabras): 
+- text54.txt(468 palabras): Los médicos de urgencias, clave para detectar los casos silenciosos de VIH - https://www.elmundo.es/ciencia-y-salud/salud/2021/12/01/61a609bde4d4d800208b4588.html
 
-- text55.txt( palabras): 
+- text55.txt(430 palabras): La vacuna de Pfizer para menores de 12 años estará disponible en menos de dos semanas - https://www.elmundo.es/ciencia-y-salud/salud/2021/12/01/61a770edfdddffdb8e8b4595.html
 
-- text56.txt( palabras): 
+- text56.txt(462 palabras): La OMS califica de 'preocupante' la variante ómicron: ¿es tan fiera como la pintan?
+ - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/27/61a14a37fc6c83d3438b45ba.html
 
-- text57.txt( palabras): 
+- text57.txt(413 palabras): La UE cierra sus puertas a los viajeros del Sur de África - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/26/61a10218fc6c8338698b458c.html
 
-- text58.txt( palabras): 
+- text58.txt(500 palabras): La OMS nombra Ómicron a la nueva variante del coronavirus y advierte de un posible "mayor riesgo de reinfección" - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/26/61a12593e4d4d874228b45c1.html
 
-- text59.txt( palabras): 
+- text59.txt(413 palabras): ¿Cómo es la nueva variante hallada en Sudáfrica? Mutaciones nunca vistas antes y una positividad del 1 al 30% en sólo tres semanas - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/26/61a0944b21efa072088b45ac.html
 
-- text60.txt( palabras): 
+- text60.txt(353 palabras): La incidencia alcanza los 171 puntos tras sumar casi 10.000 contagios en 24 horas - https://www.elmundo.es/ciencia-y-salud/salud/2021/11/26/61a0e0b5e4d4d81f068b45a5.html
+
+
 
 
 # Política
