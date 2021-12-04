@@ -4,11 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-regex = "*"
-spacy = "*"
-numpy = "*"
 
 [dev-packages]
+ipykernel = "*"
 
 [requires]
-python_version = "3"
+python_version = "3.9"
