@@ -2,7 +2,7 @@ import os
 import statistics 
 
 temas = ('Deportes', 'Politica', 'Salud')
-dir_docs = "../Datos/Original"
+dir_docs = os.path.join(os.path.pardir, 'Datos')
 
 if __name__ == '__main__':
     for tema in temas:
