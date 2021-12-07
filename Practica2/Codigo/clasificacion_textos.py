@@ -7,8 +7,7 @@ from collections import Counter
 from functools import reduce
 import random
 
-dir_documentos = os.path.join(
-    os.path.join(os.path.pardir, 'Datos'), 'Original')
+dir_documentos = os.path.join(os.path.pardir, 'Datos')
 temas = ('Deportes', 'Politica', 'Salud')
 
 def generar_particion_train_test(f_salida='particion_train_test.json',
