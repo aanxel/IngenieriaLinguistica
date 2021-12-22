@@ -1,0 +1,49 @@
+{
+    "web": "https://www.lg.com/es/monitores/lg-27up850-w",
+    "marca": "LG",
+    "modelo": "27UP850-W",
+    "pantalla": {
+        "tamanioPulgadas": {
+            "cuanto": "27"
+        },
+        "resolucion": "3840x2160",
+        "ratioAspecto": "16:9",
+        "tecnologiaRetroiluminacion": "LED",
+        "brilloMin": "320 cd/m^2",
+        "brilloTip": "400 cd/m^2",
+        "ratioContrasteMin": "1000:1",
+        "ratioContrasteTip": "1200:1",
+        "velocidadRespuesta": "5 ms",
+        "profundidadColor": "1.07B",
+        "tipoPanel": "IPS",
+        "curva": false,
+        "anguloVisionR/L": "178",
+        "anguloVisionU/D": "178"
+    },
+    "atributos": {
+        "HDR": true,
+        "tipoHDR": "10",
+        "FreeSync": true,
+        "GSync": false,
+        "overclock": false,
+        "ahorroEnergia": true,
+        "microfono": false,
+        "webCam": false,
+        "FPSCounter": false
+    },
+    "conectividad": {
+        "HDMI": {
+            "tiene": true,
+            "entradas": 2,
+        }
+    }
+}
+
+{
+
+    "modelos": {
+        "27UP...": {
+            
+        }
+    }
+}
