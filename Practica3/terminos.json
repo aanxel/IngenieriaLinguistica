@@ -1,0 +1,126 @@
+{
+    "cual": ["cual", "tipo", "que"], 
+    "cuanto": ["cuanto", "cantidad", "numero"],
+    "de cuanto": ["cuanto", "cantidad", "numero"],
+    "tiene": ["tiene", "hay", "es"],
+
+    "pantalla": {
+        "verbose": "la pantalla",
+        "etiquetas": ["pantalla", "monitor", "display"]
+    },
+    "atributos": {
+        "verbose": "los atributos",
+        "etiquetas": ["atributo", "propiedad", "caracteristica"]
+    },
+    "conectividad": {
+        "verbose": "la conectividad",
+        "etiquetas": ["conectividad", "conexion"]
+    },
+
+    "modelo": {
+        "verbose": "El modelo",
+        "etiquetas": ["modelo", "version", "tipo"]
+    },
+    "fabricante": {
+        "verbose": "El fabricante",
+        "etiquetas": ["fabricante", "marca", "productor", "empresa"]
+    },
+    "web": {
+        "verbose": "La web de referencia",
+        "etiquetas": ["web", "pagina", "url"]
+    },
+    
+    "resolucion": {
+        "verbose": "La resolución",
+        "etiquetas": ["resolucion", "pixel"]
+    },
+    "tamanio": {
+        "verbose": "El tamaño",
+        "etiquetas": ["tamaño", "dimension", "pulgada"]
+    },
+    "ratioAspecto": {
+        "verbose": "El ratio de aspecto",
+        "etiquetas": ["ratio aspecto", "proporcion", "escalado"]
+    },
+    "tecnologiaRetroiluminacion": {
+        "verbose": "La tecnología de retroiluminación",
+        "etiquetas": ["retroiluminacion"]
+    },
+    "brilloMin": {
+        "verbose": "El brillo mínimo",
+        "etiquetas": ["brillo minimo"]
+    },
+    "brilloTip": {
+        "verbose": "El brillo típico",
+        "etiquetas": ["brillo tipico"]
+    },
+    "ratioContrasteMin": {
+        "verbose": "El ratio de contraste mínimo",
+        "etiquetas": ["ratio contraste minimo"]
+    },
+    "ratioContrasteTip": {
+        "verbose": "El ratio de contraste típico",
+        "etiquetas": ["ratio contraste tipico"]
+    },
+    "velocidadRespuesta": {
+        "verbose": "La velocidad de respuesta",
+        "etiquetas": ["velocidad respuesta", "tiempo respuesta"]
+    },
+    "profundidadColor": {
+        "verbose": "La profundidad del color",
+        "etiquetas": ["profundidad color", "numero color", "cantidad color"]
+    },
+    "tipoPanel": {
+        "verbose": "El tipo de panel",
+        "etiquetas": ["panel"]
+    },
+    "curva": {
+        "verbose": "pantalla curva",
+        "etiquetas": ["curva", "plana"]
+    },
+    "anguloVisionR/L": {
+        "verbose": "El ángulo de visión R/L",
+        "etiquetas": ["angulo vision R/L", "angulo vision D/I", "angulo vision derecha izquierda"]
+    },
+    "anguloVisionU/D": {
+        "verbose": "El ángulo de visión U/D",
+        "etiquetas": ["angulo vision U/D", "angulo vision A/A", "angulo vision arriba abajo"]
+    },
+    "HDR": {
+        "verbose": "HDR",
+        "etiquetas": ["hdr", "tipo hdr"]
+    },
+    "FreeSync": {
+        "verbose": "tencología FreeSync",
+        "etiquetas": ["freesync", "free sync", "free-sync"]
+    },
+    "GSync": {
+        "verbose": "tencología G-Sync",
+        "etiquetas": ["gsync", "g sync", "g-sync"]
+    },
+    "overclock": {
+        "verbose": "overclock",
+        "etiquetas": ["overclock"]
+    },
+    "ahorroEnergia": {
+        "verbose": "un sistema de ahorro de energía",
+        "etiquetas": ["ahorro energia", "energy saving"]
+    },
+    "microfono": {
+        "verbose": "un micrófono incorporado",
+        "etiquetas": ["microfono"]
+    },
+    "webCam": {
+        "verbose": "una cámara web incorporada",
+        "etiquetas": ["webcam", "camara web", "camara"]
+    },
+    "FPSCounter": {
+        "verbose": "un contandor de FPS",
+        "etiquetas": ["fps counter", "contador fps", "contador frames segundo"]
+    },
+
+    "entradasHDMI": {
+        "verbose": "entradas de HDMI",
+        "etiquetas": ["hdmi", "entradas hdmi", "high definition multimedia interface", "high-definition multimedia interface"]
+    }
+}
