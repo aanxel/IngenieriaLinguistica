@@ -1,8 +1,8 @@
 {
-    "cual": ["cual", "tipo", "que"], 
-    "cuanto": ["cuanto", "cantidad", "numero"],
-    "de cuanto": ["cuanto", "cantidad", "numero"],
-    "tiene": ["tiene", "hay", "es"],
+    "cual": {"etiquetas": ["cual", "tipo", "que"]}, 
+    "cuanto": {"etiquetas": ["cuanto", "cantidad", "numero"]},
+    "de cuanto": {"etiquetas": ["cuanto", "cantidad", "numero"]},
+    "tiene": {"etiquetas": ["tiene", "hay", "es"]},
 
     "pantalla": {
         "verbose": "la pantalla",
@@ -16,7 +16,10 @@
         "verbose": "la conectividad",
         "etiquetas": ["conectividad", "conexion"]
     },
-
+    "valoracion": {
+        "verbose": "La valoración",
+        "etiquetas": ["valoracion", "puntuacion", "estrella"]
+    },
     "modelo": {
         "verbose": "El modelo",
         "etiquetas": ["modelo", "version", "tipo"]
