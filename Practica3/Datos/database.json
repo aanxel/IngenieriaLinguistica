@@ -163,6 +163,50 @@
                     "de cuanto": "Tipo A"
                 }
             }
+        },
+        "sonido": {
+            "entradaAudio": {
+                "tiene": false
+            },
+            "entradaMicrofono": {
+                "tiene": false
+            },
+            "salidaAuriculares": {
+                "tiene": true
+            },
+            "altavoces": {
+                "numeroCanales": {
+                    "cuanto": 2
+                },
+                "potencia": {
+                    "de cuanto": "5 W"
+                },
+                "conectividadBluetooth": {
+                    "tiene": false
+                }
+            }
+        },
+        "alimentacion": {
+            "tipoAlimentacion": {
+                "cual": "Alimentación Externa (Adaptador a Red)" 
+            },
+            "consumoPotencia": {
+                "consumoPotenciaTipico": {
+                    "de cuanto": "44 W"
+                },
+                "consumoPotenciaMaximo": {
+                    "de cuanto": "185 W"
+                },
+                "consumoPotenciaEnergyStar": {
+                    "de cuanto": "25.4 W"
+                },
+                "consumoPotenciaReposo": {
+                    "de cuanto": "< 0.5 W (HDMI/DP input condition)"
+                },
+                "consumoPotenciaDCOff": {
+                    "de cuanto": "< 0.3 W"
+                }
+            }
         }
     }
 }
