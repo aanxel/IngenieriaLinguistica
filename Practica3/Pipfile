@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 spacy = "*"
 unidecode = "*"
+editdistance = "*"
 
 [dev-packages]
 

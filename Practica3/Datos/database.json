@@ -1,4 +1,12 @@
 {
+    "preguntasGenerales": {
+        "frecuencia": {
+            "de cuanto": [
+                ["conectividad", "HDMI", "frecuenciaHDMI"],
+                ["conectividad", "DP", "frecuenciaDP"]
+            ]
+        }
+    },
     "27UP850-W": {
         "valoracion": {
             "de cuanto": "3/5 estrellas (1 valoración)"
@@ -22,17 +30,21 @@
             "tecnologiaRetroiluminacion": {
                 "cual": "LED"
             },
-            "brilloMin": {
-                "de cuanto": "320 cd/m^2"
+            "brillo": {
+                "brilloMin": {
+                    "de cuanto": "320 cd/m^2"
+                },
+                "brilloTip": {
+                    "de cuanto": "400 cd/m^2"
+                }
             },
-            "brilloTip": {
-                "de cuanto": "400 cd/m^2"
-            },
-            "ratioContrasteMin": {
-                "de cuanto": "1000:1"
-            },
-            "ratioContrasteTip": {
-                "de cuanto": "1200:1"
+            "ratioContraste": {
+                "ratioContrasteMin": {
+                    "de cuanto": "1000:1"
+                },
+                "ratioContrasteTip": {
+                    "de cuanto": "1200:1"
+                }
             },
             "velocidadRespuesta": {
                 "de cuanto": "5 ms"
@@ -46,11 +58,13 @@
             "curva": {
                 "tiene": false
             },
-            "anguloVisionR/L": {
-                "de cuanto": "178"
-            },
-            "anguloVisionU/D": {
-                "de cuanto": "178"
+            "anguloVision": {
+                "anguloVisionR/L": {
+                    "de cuanto": "178"
+                },
+                "anguloVisionU/D": {
+                    "de cuanto": "178"
+                }
             }
         },
         "atributos": {
@@ -80,8 +94,74 @@
             }
         },
         "conectividad": {
-            "entradasHDMI": {
-                "cuanto": "2"
+            "HDMI": {
+                "entradasHDMI": {
+                    "cuanto": 2
+                },
+                "frecuenciaHDMI": {
+                    "de cuanto": "40~60Hz"
+                },
+                "resolucionHDMI": {
+                    "de cuanto": "3840x2160 px a 60Hz"
+                },
+                "versionHDMI": {
+                    "de cuanto": 2.0
+                }
+            },
+            "DP": {
+                "entradasDP": {
+                    "cuanto": 1
+                },
+                "frecuenciaDP": {
+                    "de cuanto": "40~60Hz"
+                },
+                "resolucionDP": {
+                    "de cuanto": "3840x2160 px a 60Hz"
+                },
+                "versionDP": {
+                    "de cuanto": 1.4
+                }
+            },
+            "miniDP": {
+                "entradasminiDP": {
+                    "cuanto": 0
+                }
+            },
+            "VGA": {
+                "entradasVGA": {
+                    "cuanto": 0
+                }
+            },
+            "DVI": {
+                "entradasDVI": {
+                    "cuanto": 0
+                }
+            },
+            "Thunderbolt": {
+                "entradasThunderbolt": {
+                    "cuanto": 0
+                }
+            },
+            "USB-C": {
+                "entradasUSB-C": {
+                    "cuanto": 1
+                },
+                "resolucionUSB-C": {
+                    "de cuanto": "3840x2160 px a 60Hz"
+                }
+            },
+            "USBinput": {
+                "entradasUSBinput": {
+                    "cuanto": 0
+                }
+            },
+            "outputUSB": {
+                "entradasUSBoutput": {
+                    "cuanto": 2
+                },
+                "versionUSBoutput": {
+                    "de cuanto": "Tipo A"
+                }
             }
         }
     }

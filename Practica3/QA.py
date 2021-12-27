@@ -2,6 +2,7 @@ import json
 from unidecode import unidecode
 import spacy as spa
 import numpy as np
+import editdistance 
 
 class Concepto:
     def __init__(self, terminos, tipo_pregunta, valor):
@@ -183,13 +184,29 @@ class QA:
         Returns:
             [float]: Lista de pesos de cada termino de un conpeto
         """   
-        peso = 1
-        pesos = np.zeros(len(concepto.terminos))
-        for i in range(len(pesos) - 1):
-            pesos[i] = peso
-            peso *= 0.5
-        pesos[-1] = peso
-        return list(reversed(pesos))
+        return [1.0] * len(concepto.terminos)
+
+    def terminos_comunes(self, c_1, c_2):
+        comun = []
+        for t_1, t_2 in zip(c_1.terminos, c_2.terminos):
+            if t_1 == t_2:
+                comun.append(t_1)
+            else:
+                break
+        return comun
+
+    def respuesta_concepto(self, concepto, n_modelo):
+        descripcion = self.tesauro[concepto.terminos[-1]]['verbose']
+        valor = concepto.valor
+        modelo = n_modelo
+        if concepto.tipo_pregunta == self.TP_TIENE:
+            if type(concepto.valor) == bool:
+                valor = ('no ', '')[int(concepto.valor)]
+            else:
+                descripcion = descripcion + ' ' + valor
+                valor = ''
+        return self.respuestas[concepto.tipo_pregunta].format(
+            descripcion=descripcion, modelo=modelo, valor=valor)
 
     def responder_pregunta(self, texto, fn_pesos=None):
         if fn_pesos is None:
@@ -200,31 +217,40 @@ class QA:
         if modelo is not None:  # Pregunta sobre modelo concreto
             conceptos = self.scores_conceptos(palabras, modelo, fn_pesos)
             s_0 = conceptos[0].s_terminos
-            if s_0 > 0:
+            if s_0 > 0.5:
                 # Comprobar si hay empates
                 candidatos = [c for c in conceptos if c.s_terminos == s_0]
+                if len(candidatos) == 1:
+                    return self.respuesta_concepto(candidatos[0], n_modelo)
                 # Intentar desambiguar por el tipo de pregunta
-                if len(candidatos) > 1:
-                    candidatos.sort(key=lambda c: -1 * c.s_tipo_pregunta)
-                    s_0_tp = candidatos[0].s_tipo_pregunta
+                candidatos.sort(key=lambda c: -1 * c.s_tipo_pregunta)
+                s_0_tp = candidatos[0].s_tipo_pregunta
+                candidatos = [c for c in candidatos
+                                if c.s_tipo_pregunta == s_0_tp]
+                if len(candidatos) == 1:
+                    return self.respuesta_concepto(candidatos[0], n_modelo)
+                else:  # Responder por concepto general
+                    min_terminos = min(len(c.terminos) for c in candidatos)
                     candidatos = [c for c in candidatos
-                                  if c.s_tipo_pregunta == s_0_tp]
-                if len(candidatos) > 1:
-                    # @TODO Desambiguar por valor? responder varios?
-                    return 'Perdón, no te he entendido'
-                # Buscar respuesta correcta
-                match = candidatos[0]
-                descripcion = self.tesauro[match.terminos[-1]]['verbose']
-                valor = match.valor
-                modelo = n_modelo
-                if match.tipo_pregunta == self.TP_TIENE:
-                    if type(match.valor) == bool:
-                        valor = ('no ', '')[int(match.valor)]
-                    else:
-                        descripcion = descripcion + ' ' + valor
-                        valor = ''
-                return self.respuestas[match.tipo_pregunta].format(
-                    descripcion=descripcion, modelo=modelo, valor=valor)
+                                  if len(c.terminos) == min_terminos]
+                    if len(candidatos) == 1:
+                        return self.respuesta_concepto(candidatos[0], n_modelo)
+                    comun = self.terminos_comunes(candidatos[0], candidatos[1])
+                    if not comun:
+                        return 'Perdón, no te he entendido'
+                    grado_generalidad = len(comun)/len(candidatos[0].terminos)
+                    ret = ''
+                    if grado_generalidad <= 0.5:
+                        ret = 'No estoy seguro de haber entendido tu pregunta. '
+                    dic = modelo
+                    for t in comun:
+                        dic = dic[t]
+                    concepto_gen = self.tesauro[comun[-1]]['verbose']
+                    concepto_gen = concepto_gen[0].lower() + concepto_gen[1:]
+                    ret = f'{ret}Esto es lo que se sobre {concepto_gen}:'
+                    for c in self.listar_conceptos_modelo(dic):
+                        ret = ret + f'\n{self.respuesta_concepto(c, n_modelo)}'
+                    return ret
             else:
                 return 'Perdón, no te he entendido'
 
@@ -232,7 +258,7 @@ if __name__ == '__main__':
     
     qa = QA()
     while True:
-        entrada = input('Introduce una pregunta: ')
+        entrada = input('\nIntroduce una pregunta: ')
         respuesta = qa.responder_pregunta(entrada)
         print(respuesta)
         

@@ -49,6 +49,12 @@
         "verbose": "La tecnología de retroiluminación",
         "etiquetas": ["retroiluminacion"]
     },
+
+    "brillo": {
+        "verbose": "El brillo",
+        "etiquetas": ["brillo"]
+    },
+
     "brilloMin": {
         "verbose": "El brillo mínimo",
         "etiquetas": ["brillo minimo"]
@@ -56,6 +62,10 @@
     "brilloTip": {
         "verbose": "El brillo típico",
         "etiquetas": ["brillo tipico"]
+    },
+    "ratioContraste": {
+        "verbose": "El ratio de contraste",
+        "etiquetas": ["ratio contraste"]
     },
     "ratioContrasteMin": {
         "verbose": "El ratio de contraste mínimo",
@@ -80,6 +90,10 @@
     "curva": {
         "verbose": "pantalla curva",
         "etiquetas": ["curva", "plana"]
+    },
+    "anguloVision": {
+        "verbose": "El ángulo de visión",
+        "etiquetas": ["angulo vision"]
     },
     "anguloVisionR/L": {
         "verbose": "El ángulo de visión R/L",
@@ -118,12 +132,19 @@
         "etiquetas": ["webcam", "camara web", "camara"]
     },
     "FPSCounter": {
-        "verbose": "un contandor de FPS",
+        "verbose": "un contador de FPS",
         "etiquetas": ["fps counter", "contador fps", "contador frames segundo"]
     },
-
+    "HDMI": {
+        "verbose": "HDMI",
+        "etiquetas": ["high definition multimedia interface", "high-definition multimedia interface", "hdmi"]
+    },
     "entradasHDMI": {
         "verbose": "entradas de HDMI",
-        "etiquetas": ["hdmi", "entradas hdmi", "high definition multimedia interface", "high-definition multimedia interface"]
+        "etiquetas": ["entradas hdmi"]
+    },
+    "frecuenciaHDMI": {
+        "verbose": "frecuencia de HDMI:",
+        "etiquetas": ["frecuencia", "frecuencia HDMI"]
     }
 }
