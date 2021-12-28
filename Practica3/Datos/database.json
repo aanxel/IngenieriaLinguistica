@@ -88,7 +88,7 @@
         "conectividad": {
             "HDMI": {
                 "entradas": {
-                    "cuanto": 2
+                    "cuanto": "2"
                 },
                 "frecuencia": {
                     "de cuanto": "40~60Hz"
@@ -134,25 +134,27 @@
                     "cuanto": "0"
                 }
             },
-            "USB-C": {
-                "entradas": {
-                    "cuanto": "1"
+            "USB": {
+                "USB-C": {
+                    "entradas": {
+                        "cuanto": "1"
+                    },
+                    "resolucion": {
+                        "de cuanto": "3840x2160 px a 60Hz"
+                    }
                 },
-                "resolucion": {
-                    "de cuanto": "3840x2160 px a 60Hz"
-                }
-            },
-            "USBinput": {
-                "entradas": {
-                    "cuanto": "0"
-                }
-            },
-            "USBoutput": {
-                "entradas": {
-                    "cuanto": "2"
+                "USBinput": {
+                    "entradas": {
+                        "cuanto": "0"
+                    }
                 },
-                "version": {
-                    "de cuanto": "Tipo A"
+                "USBoutput": {
+                    "entradas": {
+                        "cuanto": "2"
+                    },
+                    "version": {
+                        "de cuanto": "Tipo A"
+                    }
                 }
             }
         },
@@ -180,7 +182,7 @@
         },
         "alimentacion": {
             "tipo": {
-                "cual": "Alimentación Externa (Adaptador a Red)" 
+                "cual": "Alimentación Externa (Adaptador a Red)"
             },
             "consumoPotencia": {
                 "tipico": {
@@ -194,6 +196,204 @@
                 },
                 "reposo": {
                     "de cuanto": "< 0.5 W (HDMI/DP input condition)"
+                },
+                "DCOff": {
+                    "de cuanto": "< 0.3 W"
+                }
+            }
+        }
+    },
+    "34WN80C": {
+        "valoracion": {
+            "de cuanto": "4.6/5 estrellas (57 valoraciones)"
+        },
+        "fabricante": {
+            "cual": "LG"
+        },
+        "web": {
+            "cual": "https://www.lg.com/es/monitores/lg-34wn80c-b"
+        },
+        "pantalla": {
+            "tamanio": {
+                "de cuanto": "34 pulgadas"
+            },
+            "resolucion": {
+                "de cuanto": "3440x1440"
+            },
+            "ratioAspecto": {
+                "de cuanto": "21:9"
+            },
+            "tecnologiaRetroiluminacion": {
+                "cual": "LED"
+            },
+            "brillo": {
+                "minimo": {
+                    "de cuanto": "240 cd/m^2"
+                },
+                "tipico": {
+                    "de cuanto": "300 cd/m^2"
+                }
+            },
+            "ratioContraste": {
+                "minimo": {
+                    "de cuanto": "700:1"
+                },
+                "tipico": {
+                    "de cuanto": "1000:1"
+                }
+            },
+            "velocidadRespuesta": {
+                "de cuanto": "5 ms"
+            },
+            "profundidadColor": {
+                "de cuanto": "1.07B"
+            },
+            "tipo": {
+                "cual": "IPS"
+            },
+            "curva": {
+                "tiene": true
+            },
+            "anguloVision": {
+                "R/L": {
+                    "de cuanto": "178"
+                },
+                "U/D": {
+                    "de cuanto": "178"
+                }
+            }
+        },
+        "atributos": {
+            "HDR": {
+                "tiene": "10"
+            },
+            "FreeSync": {
+                "tiene": false
+            },
+            "GSync": {
+                "tiene": false
+            },
+            "overclock": {
+                "tiene": false
+            },
+            "ahorroEnergia": {
+                "tiene": true
+            },
+            "microfono": {
+                "tiene": false
+            },
+            "webCam": {
+                "tiene": false
+            },
+            "FPSCounter": {
+                "tiene": false
+            }
+        },
+        "conectividad": {
+            "HDMI": {
+                "entradas": {
+                    "cuanto": "2"
+                },
+                "frecuencia": {
+                    "de cuanto": "56~61Hz"
+                },
+                "resolucion": {
+                    "de cuanto": "3440x1440 a 60Hz"
+                },
+                "version": {
+                    "de cuanto": "2.0"
+                }
+            },
+            "DP": {
+                "entradas": {
+                    "cuanto": "1"
+                },
+                "frecuencia": {
+                    "de cuanto": "56~61Hz"
+                },
+                "resolucion": {
+                    "de cuanto": "3440x1440 a 60Hz"
+                },
+                "version": {
+                    "de cuanto": "1.4"
+                }
+            },
+            "miniDP": {
+                "entradas": {
+                    "cuanto": "0"
+                }
+            },
+            "VGA": {
+                "entradas": {
+                    "cuanto": "0"
+                }
+            },
+            "DVI": {
+                "entradas": {
+                    "cuanto": "0"
+                }
+            },
+            "Thunderbolt": {
+                "entradas": {
+                    "cuanto": "0"
+                }
+            },
+            "USB": {
+                "USB-C": {
+                    "entradas": {
+                        "cuanto": "1"
+                    }
+                },
+                "USBinput": {
+                    "entradas": {
+                        "cuanto": "0"
+                    }
+                },
+                "USBoutput": {
+                    "entradas": {
+                        "cuanto": "2"
+                    },
+                    "version": {
+                        "de cuanto": "Tipo A v3.0"
+                    }
+                }
+            }
+        },
+        "sonido": {
+            "entradaAudio": {
+                "tiene": false
+            },
+            "entradaMicrofono": {
+                "tiene": false
+            },
+            "salidaAuriculares": {
+                "tiene": true
+            },
+            "altavoces": {
+                "altavoces": {
+                    "tiene": false,
+                    "numeroCanales": {
+                        "cuanto": "0"
+                    },
+                    "Bluetooth": {
+                        "tiene": false
+                    }
+                }
+            }
+        },
+        "alimentacion": {
+            "tipo": {
+                "cual": "Alimentación Externa (Adaptador a Red)"
+            },
+            "consumoPotencia": {
+                "tipico": {
+                    "de cuanto": "60 W"
+                },
+                "maximo": {
+                    "de cuanto": "140 W"
+                },
+                "reposo": {
+                    "de cuanto": "< 0.5 W"
                 },
                 "DCOff": {
                     "de cuanto": "< 0.3 W"

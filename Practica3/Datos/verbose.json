@@ -1,278 +1,121 @@
 {
-    "cual": {
-        "etiquetas": [
-            "cual",
-            "tipo",
-            "que"
-        ]
-    },
-    "cuanto": {
-        "etiquetas": [
-            "tener",
-            "cuanto",
-            "cantidad",
-            "numero"
-        ]
-    },
-    "de cuanto": {
-        "etiquetas": [
-            "ser",
-            "que",
-            "cuanto",
-            "cantidad",
-            "numero"
-        ]
-    },
-    "tiene": {
-        "etiquetas": [
-            "tener",
-            "haber",
-            "ser"
-        ]
-    },
-    "valoracion": {
-        "verbose": "La valoración",
-        "etiquetas": [
-            "valoracion",
-            "puntuacion",
-            "estrella"
-        ]
-    },
-    "fabricante": {
-        "verbose": "El fabricante",
-        "etiquetas": ["fabricante", "marca", "productor", "empresa"]
-    },
-    "web": {
-        "verbose": "La web de referencia",
-        "etiquetas": ["web", "pagina", "url"]
-    },
+    "valoracion": "La valoración",
+    "fabricante": "El fabricante",
+    "web": "La web de referencia",
     "pantalla": {
-        "tamanio": {
-            "verbose": "",
-            "etiquetas": [
-                ""
-            ]
-        },
-        "resolucion": {
-            "verbose": "",
-            "etiquetas": [
-                ""
-            ]
-        },
-        "ratioAspecto": {
-            "verbose": "",
-            "etiquetas": [
-                ""
-            ]
-        },
-        "tecnologiaRetroiluminacion": {
-            "verbose": "",
-            "etiquetas": [
-                ""
-            ]
-        },
+        "tamanio": "El tamaño",
+        "resolucion": "La resolución",
+        "ratioAspecto": "El ratio de aspecto",
+        "tecnologiaRetroiluminacion": "La tecnología de retroiluminación",
         "brillo": {
-            "minimo": {
-                "verbose": "",
-                "etiquetas": [
-                    ""
-                ]
-            },
-            "tipico": {
-                "verbose": "",
-                "etiquetas": [
-                    ""
-                ]
-            }
+            "minimo": "El brillo mínimo",
+            "tipico": "El brillo típico"
         },
         "ratioContraste": {
-            "minimo": {
-                "verbose": "",
-                "etiquetas": [
-                    ""
-                ]
-            },
-            "tipico": {
-                "verbose": "",
-                "etiquetas": [
-                    ""
-                ]
-            }
+            "minimo": "El ratio de contraste mínimo",
+            "tipico": "El ratio de contraste típico"
         },
-        "velocidadRespuesta": {
-            "verbose": "",
-            "etiquetas": [
-                ""
-            ]
-        },
-        "profundidadColor": {
-            "verbose": "",
-            "etiquetas": [
-                ""
-            ]
-        },
-        "tipo": {
-            "verbose": "",
-            "etiquetas": [
-                ""
-            ]
-        },
-        "curva": {
-            "verbose": "",
-            "etiquetas": [
-                ""
-            ]
-        },
+        "velocidadRespuesta": "La velocidad de respuesta",
+        "profundidadColor": "La profundidad del color",
+        "tipo": "El tipo de panel",
+        "curva": "pantalla curva",
         "anguloVision": {
-            "R/L": {
-                "verbose": "",
-                "etiquetas": [
-                    ""
-                ]
-            },
-            "U/D": {
-                "verbose": ""
-            }
+            "R/L": "El ángulo de visión R/L",
+            "U/D": "El ángulo de visión U/D"
         }
     },
     "atributos": {
-        "HDR": {
-            "verbose": "HDR"
-        },
-        "FreeSync": {
-            "verbose": "tencología FreeSync"
-        },
-        "GSync": {
-            "verbose": "tencología G-Sync"
-        },
-        "overclock": {
-            "verbose": "overclock"
-        },
-        "ahorroEnergia": {
-            "verbose": "un sistema de ahorro de energía"
-        },
-        "microfono": {
-            "verbose": "un micrófono incorporado"
-        },
-        "webCam": {
-            "verbose": "una cámara web incorporada"
-        },
-        "FPSCounter": {
-            "verbose": "un sistema de conteo de FPS llamado FPSCounter"
-        }
+        "HDR": "HDR",
+        "FreeSync": "tencología FreeSync",
+        "GSync": "tencología G-Sync",
+        "overclock": "overclock",
+        "ahorroEnergia": "un sistema de ahorro de energía",
+        "microfono": "un micrófono incorporado",
+        "webCam": "una cámara web incorporada",
+        "FPSCounter": "un sistema de conteo de FPS llamado FPSCounter"
     },
     "conectividad": {
         "HDMI": {
-            "entradas": {
-                "verbose": "conexión/es de entrada HDMI"
-            },
-            "frecuencia": {
-                "verbose": "La frecuencia del conector HDMI"
-            },
-            "resolucion": {
-                "verbose": "La resolución máxima del conector HDMI"
-            },
-            "version": {
-                "verbose": "La versión del conector HDMI"
-            }
+            "entradas": "conexión/es de entrada HDMI",
+            "frecuencia": "La frecuencia del conector HDMI",
+            "resolucion": "La resolución máxima del conector HDMI",
+            "version": "La versión del conector HDMI"
         },
         "DP": {
-            "entradas": {
-                "verbose": "conexión/es de entrada DP"
-            },
-            "frecuencia": {
-                "verbose": "La frecuencia del conector DP"
-            },
-            "resolucion": {
-                "verbose": "La resolución máxima del conector DP"
-            },
-            "version": {
-                "verbose": "La versión del conector DP"
-            }
+            "entradas": "conexión/es de entrada DP",
+            "frecuencia": "La frecuencia del conector DP",
+            "resolucion": "La resolución máxima del conector DP",
+            "version": "La versión del conector DP"
         },
         "miniDP": {
-            "entradas": {
-                "verbose": "conexión/es de entrada miniDP"
-            }
+            "entradas": "conexión/es de entrada miniDP"
         },
         "VGA": {
-            "entradas": {
-                "verbose": "conexión/es de entrada VGA"
-            }
+            "entradas": "conexión/es de entrada VGA"
         },
         "DVI": {
-            "entradas": {
-                "verbose": "conexión/es de entrada DVI"
-            }
+            "entradas": "conexión/es de entrada DVI"
         },
         "Thunderbolt": {
-            "entradas": {
-                "verbose": "conexión/es de entrada Thunderbolt"
-            }
+            "entradas": "conexión/es de entrada Thunderbolt"
         },
-        "USB-C": {
-            "entradas": {
-                "verbose": "conexión/es de entrada USB-C"
+        "USB": {
+            "USB-C": {
+                "entradas": "conexión/es de entrada USB-C",
+                "resolucion": "La resolución máxima del conector USB-C"
             },
-            "resolucion": {
-                "verbose": "La resolución máxima del conector USB-C"
-            }
-        },
-        "USBinput": {
-            "entradas": {
-                "verbose": "conexión/es de entrada USB"
-        },
-        "USBoutput": {
-            "entradas": {
-                "verbose": "conexión/es de salida USB"
+            "USBinput": {
+                "entradas": "conexión/es de entrada USB"
             },
-            "version": {
-                "verbose": "La versión del conector de salida USB"
+            "USBoutput": {
+                "entradas": "conexión/es de salida USB",
+                "version": "La versión del conector de salida USB"
             }
         }
     },
     "sonido": {
-        "entradaAudio": {
-            "verbose": "entrada de audio"
-        },
-        "entradaMicrofono": {
-            "verbose": "entrada de micrófono"
-        },
-        "salidaAuriculares": {
-            "verbose": "salida de auriculares"
-        },
+        "entradaAudio": "entrada de audio",
+        "entradaMicrofono": "entrada de micrófono",
+        "salidaAuriculares": "salida de auriculares",
         "altavoces": {
-            "numeroCanales": {
-                "verbose": "canal/es de altavoces incorporados"
-            },
-            "potencia": {
-                "verbose": "La potencia de los altavoces"
-            },
-            "Bluetooth": {
-                "verbose": "incorporado Bluetooth en los altavoces"
-            }
+            "numeroCanales": "canal/es de altavoces incorporados",
+            "potencia": "La potencia de los altavoces",
+            "Bluetooth": "incorporado Bluetooth en los altavoces"
         }
     },
     "alimentacion": {
-        "tipo": {
-            "verbose": "El tipo de alimentación"
-        },
+        "tipo": "El tipo de alimentación",
         "consumoPotencia": {
-            "tipico": {
-                "verbose": "El consumo de potencia típico"
-            },
-            "maximo": {
-                "verbose": "El consumo de potencia máximo"
-            },
-            "EnergyStar": {
-                "verbose": "El consumo de potencia con EnergyStar (ahorro de energía)"
-            },
-            "reposo": {
-                "verbose": "El consumo de potencia en reposo (monitor suspendido)"
-            },
-            "DCOff": {
-                "verbose": "El consumo de potencia con DCOff (monitor apagado)"
-            }
+            "tipico": "El consumo de potencia típico",
+            "maximo": "El consumo de potencia máximo",
+            "EnergyStar": "El consumo de potencia con EnergyStar (ahorro de energía)",
+            "reposo": "El consumo de potencia en reposo (monitor suspendido)",
+            "DCOff": "El consumo de potencia con DCOff (monitor apagado)"
         }
+    },
+    "conceptosGen": {
+        "frecuencia": "la frecuencia",
+        "entradas": "las entradas",
+        "resolucion": "la resolución",
+        "brillo": "el brillo",
+        "ratioContraste": "el ratio de contraste",
+        "anguloVision": "el ángulo de visión",
+        "alimentacion": "la alimentación",
+        "HDMI": "la entrada HDMI",
+        "DP": "la entrada DP",
+        "miniDP": "la entrada miniDP",
+        "VGA": "la entrada VGA",
+        "DVI": "la entrada DVI",
+        "Thunderbolt": "la entrada Thunderbolt",
+        "USB-C": "la entrada USB-C",
+        "USBinput": "la entrada USB",
+        "USBoutput": "la salida USB",
+        "USB": "USB",
+        "sonido": "sonido",
+        "atributos": "atributos",
+        "conectividad": "la conectividad",
+        "altavoces": "altavoces",
+        "consumoPotencia": "el consumo de potencia",
+        "pantalla": "la pantalla"
     }
 }

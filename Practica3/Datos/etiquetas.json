@@ -22,6 +22,22 @@
         "haber",
         "ser"
     ],
+    "valoracion": [
+        "valoracion",
+        "puntuacion",
+        "estrella"
+    ],
+    "fabricante": [
+        "fabricante",
+        "marca",
+        "empresa"
+    ],
+    "web": [
+        "web",
+        "url",
+        "link",
+        "enlace"
+    ],
     "pantalla": [
         "pantalla",
         "monitor",
@@ -41,6 +57,10 @@
         "version",
         "tipo"
     ],
+    "version": [
+        "tipo",
+        "version"
+    ],
     "resolucion": [
         "resolucion",
         "pixel"
@@ -56,10 +76,11 @@
         "escalado"
     ],
     "tecnologiaRetroiluminacion": [
-        "retroiluminacion"
+        "retroiluminacion", "led", "microled", "miniled", "qned", "crystal led"
     ],
     "brillo": [
-        "brillo", "iluminacion"
+        "brillo",
+        "iluminacion"
     ],
     "minimo": [
         "minimo",
@@ -72,7 +93,10 @@
         "grande"
     ],
     "tipico": [
-        "tipico", "habitual", "promedio", "normal"
+        "tipico",
+        "habitual",
+        "promedio",
+        "normal"
     ],
     "ratioContraste": [
         "ratio contraste"
@@ -99,17 +123,26 @@
     "R/L": [
         "r/l",
         "d/i",
+        "r / l",
+        "d / i",
         "derecha izquierda",
-        "left right"
+        "left right",
+        "horizontal",
+        "h"
     ],
     "U/D": [
         "u/d",
         "a/a",
+        "u / d",
+        "a / a",
         "arriba abajo",
-        "up down"
+        "up down",
+        "vertical",
+        "v"
     ],
     "HDR": [
-        "hdr", "high dynamic range"
+        "hdr",
+        "high dynamic range"
     ],
     "FreeSync": [
         "freesync",
@@ -129,7 +162,8 @@
         "energy saving"
     ],
     "microfono": [
-        "microfono", "micro"
+        "microfono",
+        "micro"
     ],
     "webCam": [
         "webcam",
@@ -148,12 +182,107 @@
         "hdmi"
     ],
     "entradas": [
-        "entrada", "input", "inputs"
+        "entrada",
+        "input",
+        "inputs"
     ],
     "frecuencia": [
-        "frecuencia", "tasa refresco", "ratio respuesta"
+        "frecuencia",
+        "tasa refresco",
+        "ratio respuesta"
     ],
-    "DCOff": ["dcoff", "apagado"],
-    "reposo": ["reposo", "descanso", "sleep"],
-    "EnergyStar": ["energystar", "energy star"]
+    "DCOff": [
+        "dcoff",
+        "apagado"
+    ],
+    "reposo": [
+        "reposo",
+        "descanso",
+        "sleep"
+    ],
+    "EnergyStar": [
+        "energystar",
+        "energy star"
+    ],
+    "tipo": [
+        "tipo",
+        "variedad"
+    ],
+    "Bluetooth": [
+        "bluetooth"
+    ],
+    "potencia": [
+        "potencia",
+        "watios",
+        "watio",
+        "w"
+    ],
+    "numeroCanales": [
+        "numero canal",
+        "cantidad canal",
+        "numero altavoz"
+    ],
+    "salidaAuriculares": [
+        "salida auricular",
+        "output auricular"
+    ],
+    "entradaMicrofono": [
+        "entrada microfono",
+        "input microfono",
+        "jack entrada"
+    ],
+    "entradaAudio": [
+        "entrada audio",
+        "input audio",
+        "jack microfono"
+    ],
+    "altavoces": [
+        "altavoz",
+        "speaker"
+    ],
+    "USBoutput": [
+        "usb output",
+        "salida usb"
+    ],
+    "USBinput": [
+        "entrada usb",
+        "input usb"
+    ],
+    "USB": [
+        "usb"
+    ],
+    "USB-C": [
+        "usb-c",
+        "usbc",
+        "usb c"
+    ],
+    "Thunderbolt": [
+        "thunderbolt"
+    ],
+    "DVI": [
+        "dvi"
+    ],
+    "VGA": [
+        "vga"
+    ],
+    "miniDP": [
+        "minidp", "mini-dp"
+    ],
+    "DP": [
+        "dp"
+    ],
+    "sonido": [
+        "sonido",
+        "audio"
+    ],
+    "alimentacion": [
+        "alimentacion",
+        "energia"
+    ],
+    "consumoPotencia": [
+        "consumo potencia",
+        "consumo energia",
+        "consumo watios",
+        "consumo watio"
+    ]
 }

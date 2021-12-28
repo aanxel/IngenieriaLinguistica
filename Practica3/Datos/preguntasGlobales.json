@@ -1,70 +1,27 @@
 {
-    "preguntasGenerales": {
-        "frecuencia": {
-            "prioridad": 1
-        },
-        "entradas": {
-            "prioridad": 1
-        },
-        "resolucion": {
-            "prioridad": 1
-        },
-        "brillo": {
-            "prioridad": 1
-        },
-        "ratioContraste": {
-            "prioridad": 0
-        },
-        "anguloVision": {
-            "prioridad": 0
-        },
-        "alimentacion": {
-            "prioridad": 1
-        },
-        "HDMI": {
-            "prioridad": 0
-        },
-        "DP": {
-            "prioridad": 0
-        },
-        "miniDP": {
-            "prioridad": 0
-        },
-        "VGA": {
-            "prioridad": 0
-        },
-        "DVI": {
-            "prioridad": 0
-        },
-        "Thunderbolt": {
-            "prioridad": 0
-        },
-        "USB-C": {
-            "prioridad": 0
-        },
-        "USBinput": {
-            "prioridad": 0
-        },
-        "USBoutput": {
-            "prioridad": 0
-        },
-        "sonido": {
-            "prioridad": 2
-        },
-        "atributos": {
-            "prioridad": 3
-        },
-        "conectividad": {
-            "prioridad": 2
-        },
-        "altavoces": {
-            "prioridad": 1
-        },
-        "consumoPotencia": {
-            "prioridad": 1
-        },
-        "pantalla": {
-            "prioridad": 3
-        }
+    "conceptosGen": {
+        "frecuencia": 1,
+        "entradas": 1,
+        "resolucion": 1,
+        "brillo": 1,
+        "ratioContraste": 0,
+        "anguloVision": 0,
+        "alimentacion": 1,
+        "HDMI": 0,
+        "DP": 0,
+        "miniDP": 0,
+        "VGA": 0,
+        "DVI": 0,
+        "Thunderbolt": 0,
+        "USB-C": 0,
+        "USBinput": 0,
+        "USBoutput": 0,
+        "USB": 1,
+        "sonido": 2,
+        "atributos": 3,
+        "conectividad": 2,
+        "altavoces": 1,
+        "consumoPotencia": 1,
+        "pantalla": 4
     }
 }

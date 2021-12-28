@@ -7,10 +7,27 @@ class Concepto:
         self.terminos = terminos
         self.tipo_pregunta = tipo_pregunta
         self.valor = valor
+        self.s_terminos = 0
+        self.s_tipo_pregunta = 0
 
     def __str__(self):
         return (f'{self.terminos}:{self.s_terminos}, {self.tipo_pregunta}'
                 f':{self.s_tipo_pregunta}, {self.valor}\n')
+
+
+class ConceptoGeneral:
+    def __init__(self, termino, prioridad):
+        self.termino = termino
+        self.prioridad = prioridad
+        self.score = 0
+
+    def __str__(self):
+        return f'{self.termino}:{self.score}, {self.prioridad}\n'
+
+    def __lt__(self, other):
+        if self.score == other.score:
+            return self.prioridad > other.prioridad
+        return self.score < other.score
 
 
 class QA:
@@ -19,21 +36,30 @@ class QA:
     TP_CUANTO = 'cuanto'
     TP_DE_CUANTO = 'de cuanto'
     TP_TIENE = 'tiene'
+    TP_AGRUPACION = 'agrupacion'
 
     # Plantillas para respuestas
     respuestas = {
         TP_CUAL: '{descripcion} del monitor {modelo} es {valor}.',
         TP_CUANTO: 'El monitor {modelo} tiene {valor} {descripcion}.',
         TP_DE_CUANTO: '{descripcion} del monitor {modelo} es de {valor}.',
-        TP_TIENE: 'El monitor {modelo} {valor}tiene {descripcion}.'
+        TP_TIENE: 'El monitor {modelo} {valor}tiene {descripcion}.',
+        TP_AGRUPACION:
+            'Esto es lo que sé sobre {descripcion} para el monitor {modelo}:',
     }
     
 
-    def __init__(self, f_tesauro='terminos.json', f_bd='Datos/database.json'):
+    def __init__(self, f_tesauro='Datos/etiquetas.json',
+                 f_preguntas='Datos/preguntasGlobales.json',
+                 f_verbose='Datos/verbose.json', f_bd='Datos/database.json'):
         with open(f_tesauro, 'r') as f:
             self.tesauro = json.load(f)
+        with open(f_verbose, 'r') as f:
+            self.verbose = json.load(f)
         with open(f_bd, 'r') as f:
             self.bd = json.load(f)
+        with open(f_preguntas, 'r') as f:
+            self.pg = json.load(f)
         self.parser = spa.load('es_core_news_md')
 
     def score_etiqueta(self, etiqueta, palabras):
@@ -84,7 +110,7 @@ class QA:
         """
         return sum(
             pesos[i] * self.score_etiquetas(
-            self.tesauro[terminos[i]]['etiquetas'], palabras)
+            self.tesauro[terminos[i]], palabras)
             for i in range(len(terminos)))
 
 
@@ -124,7 +150,7 @@ class QA:
         Yields:
             Concepto: Instancia de Concepto que contiene los terminos, el tipo
             de pregunta y su valor específico
-        """  
+        """
         for k, v in modelo.items():
             for ks in self._listar_conceptos_modelo_rec(v):
                 ks.insert(0, k)
@@ -138,7 +164,7 @@ class QA:
 
         Yields:
             [str]: recorrido en profundidad por claves del diccionario
-        """        
+        """
         if type(dic) != dict:
             yield [dic]
         else:
@@ -160,7 +186,7 @@ class QA:
         Returns:
             [Concepto]: Lista de los conceptos, que contienen adicionalmente
             las puntuaciones calculadas
-        """   
+        """
         conceptos = []
         for c in self.listar_conceptos_modelo(modelo):
             pesos = fn_pesos(c)
@@ -172,7 +198,7 @@ class QA:
         conceptos.sort(key=lambda c: -1 * c.s_terminos)
         return conceptos
 
-    def fn_pesos_exp(self, concepto):
+    def fn_pesos_unos(self, concepto):
         """
         Generador de pesos para cada termino de un concepto con decrecimiento
         exponencial
@@ -181,7 +207,7 @@ class QA:
 
         Returns:
             [float]: Lista de pesos de cada termino de un conpeto
-        """   
+        """
         return [1.0] * len(concepto.terminos)
 
     def terminos_comunes(self, c_1, c_2):
@@ -193,8 +219,38 @@ class QA:
                 break
         return comun
 
+    @staticmethod
+    def get_by_keys(dic, keys, default=None):
+        """
+        Obtiene el valor de un diccionario compuesto a su vez más diccionarios, 
+        dado un conjunto de claves
+        Args:
+            keys ([str]): Claves ordenadas por oden de apliación
+            default: Valor por defecto en caso de que no exista una clave
+
+        Returns:
+            str: Texto del valor buscado en el diccionario
+        """
+        for k in keys:
+            dic = dic.get(k, default)
+            if type(dic) != dict:
+                return dic
+        return dic
+
     def respuesta_concepto(self, concepto, n_modelo):
-        descripcion = self.tesauro[concepto.terminos[-1]]['verbose']
+        """
+        Genera la respuesta a una pregunta dado un concepto y un modelo
+        específico
+        Args:
+            concepto (Concepto): Concepto
+            n_modelo (str): Nombre del modelo por el que se pregunta
+
+        Returns:
+            str: Texto con la respuesta generada
+        """
+        descripcion = self.get_by_keys(self.verbose, concepto.terminos)
+        if type(descripcion) == dict:
+            descripcion = self.verbose['conceptosGen'][concepto.terminos[-1]]
         valor = concepto.valor
         modelo = n_modelo
         if concepto.tipo_pregunta == self.TP_TIENE:
@@ -206,51 +262,71 @@ class QA:
         return self.respuestas[concepto.tipo_pregunta].format(
             descripcion=descripcion, modelo=modelo, valor=valor)
 
+    def listar_conceptos_gen(self):
+        """
+        Lista el conjunto de conceptos generales
+        Args:
+
+        Returns:
+            [ConceptoGeneral]: Cada uno de los conceptos generales
+        """
+        l = []
+        for k, v in self.pg['conceptosGen'].items():
+            l.append(ConceptoGeneral(k, v))
+        return l
+            
+    def scores_conceptos_gen(self, palabras):
+        """
+        Indica la puntuación de cada uno de los conceptos generales
+        Args:
+            palabras ([str]): Lista de las palabras que contenía la pregunta
+
+        Returns:
+            [ConceptoGeneral]: Cada uno de los conceptos generales con sus 
+            respectivos scores
+        """
+        conceptos_gen = self.listar_conceptos_gen()
+        for c in conceptos_gen:
+            c.score = self.score_etiquetas(self.tesauro[c.termino], palabras)
+        conceptos_gen.sort(reverse=True)
+        return conceptos_gen
+
     def responder_pregunta(self, texto, fn_pesos=None):
         if fn_pesos is None:
-            fn_pesos = self.fn_pesos_exp
+            fn_pesos = self.fn_pesos_unos
         palabras = self.parsear_palabras(texto)
         n_modelo = self.detectar_modelo(palabras)
         modelo = self.bd[n_modelo] if n_modelo else None
-        if modelo is not None:  # Pregunta sobre modelo concreto
+        if modelo is not None:
             conceptos = self.scores_conceptos(palabras, modelo, fn_pesos)
             s_0 = conceptos[0].s_terminos
-            if s_0 > 0.5:
-                # Comprobar si hay empates
-                candidatos = [c for c in conceptos if c.s_terminos == s_0]
-                if len(candidatos) == 1:
-                    return self.respuesta_concepto(candidatos[0], n_modelo)
-                # Intentar desambiguar por el tipo de pregunta
-                candidatos.sort(key=lambda c: -1 * c.s_tipo_pregunta)
-                s_0_tp = candidatos[0].s_tipo_pregunta
-                candidatos = [c for c in candidatos
-                                if c.s_tipo_pregunta == s_0_tp]
-                if len(candidatos) == 1:
-                    return self.respuesta_concepto(candidatos[0], n_modelo)
-                else:  # Responder por concepto general
-                    min_terminos = min(len(c.terminos) for c in candidatos)
-                    candidatos = [c for c in candidatos
-                                  if len(c.terminos) == min_terminos]
-                    if len(candidatos) == 1:
-                        return self.respuesta_concepto(candidatos[0], n_modelo)
-                    comun = self.terminos_comunes(candidatos[0], candidatos[1])
-                    if not comun:
-                        return 'Perdón, no te he entendido'
-                    grado_generalidad = len(comun)/len(candidatos[0].terminos)
-                    ret = ''
-                    if grado_generalidad <= 0.5:
-                        ret = 'No estoy seguro de haber entendido tu pregunta. '
-                    dic = modelo
-                    for t in comun:
-                        dic = dic[t]
-                    concepto_gen = self.tesauro[comun[-1]]['verbose']
-                    concepto_gen = concepto_gen[0].lower() + concepto_gen[1:]
-                    ret = f'{ret}Esto es lo que se sobre {concepto_gen}:'
-                    for c in self.listar_conceptos_modelo(dic):
-                        ret = ret + f'\n{self.respuesta_concepto(c, n_modelo)}'
-                    return ret
-            else:
+            if s_0 <= 0.5:
                 return 'Perdón, no te he entendido'
+            # Comprobar si hay empates
+            candidatos = [c for c in conceptos if c.s_terminos == s_0]
+            if len(candidatos) == 1:
+                return self.respuesta_concepto(candidatos[0], n_modelo)
+            # Intentar desambiguar por el tipo de pregunta
+            candidatos.sort(key=lambda c: -1 * c.s_tipo_pregunta)
+            s_0_tp = candidatos[0].s_tipo_pregunta
+            candidatos = [c for c in candidatos
+                            if c.s_tipo_pregunta == s_0_tp]
+            if len(candidatos) == 1:
+                return self.respuesta_concepto(candidatos[0], n_modelo)
+            # Desambiguar por agrupación de conceptos
+            conceptos_gen = self.scores_conceptos_gen(palabras)
+            c_1, c_2 = conceptos_gen[0], conceptos_gen[1]
+            # Pregunta demasiado ambigua
+            if c_1.score == c_2.score and c_1.prioridad == c_2.prioridad:
+                return 'Perdón, no te he entendido'
+            descripcion = self.verbose['conceptosGen'][c_1.termino]
+            ret = self.respuestas[self.TP_AGRUPACION].format(
+                modelo=n_modelo, descripcion=descripcion
+            )
+            for c in candidatos:
+                if c_1.termino in c.terminos:
+                    ret = ret + f'\n\t{self.respuesta_concepto(c, n_modelo)}'
+            return ret
 
 if __name__ == '__main__':
     
