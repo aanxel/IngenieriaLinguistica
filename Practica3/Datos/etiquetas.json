@@ -1,0 +1,159 @@
+{
+    "cual": [
+        "cual",
+        "tipo",
+        "que"
+    ],
+    "cuanto": [
+        "tener",
+        "cuanto",
+        "cantidad",
+        "numero"
+    ],
+    "de cuanto": [
+        "ser",
+        "que",
+        "cuanto",
+        "cantidad",
+        "numero"
+    ],
+    "tiene": [
+        "tener",
+        "haber",
+        "ser"
+    ],
+    "pantalla": [
+        "pantalla",
+        "monitor",
+        "display"
+    ],
+    "atributos": [
+        "atributo",
+        "propiedad",
+        "caracteristica"
+    ],
+    "conectividad": [
+        "conectividad",
+        "conexion"
+    ],
+    "modelo": [
+        "modelo",
+        "version",
+        "tipo"
+    ],
+    "resolucion": [
+        "resolucion",
+        "pixel"
+    ],
+    "tamanio": [
+        "tamaño",
+        "dimension",
+        "pulgada"
+    ],
+    "ratioAspecto": [
+        "ratio aspecto",
+        "proporcion",
+        "escalado"
+    ],
+    "tecnologiaRetroiluminacion": [
+        "retroiluminacion"
+    ],
+    "brillo": [
+        "brillo", "iluminacion"
+    ],
+    "minimo": [
+        "minimo",
+        "menor",
+        "pequeño"
+    ],
+    "maximo": [
+        "mayor",
+        "maximo",
+        "grande"
+    ],
+    "tipico": [
+        "tipico", "habitual", "promedio", "normal"
+    ],
+    "ratioContraste": [
+        "ratio contraste"
+    ],
+    "velocidadRespuesta": [
+        "velocidad respuesta",
+        "tiempo respuesta"
+    ],
+    "profundidadColor": [
+        "profundidad color",
+        "numero color",
+        "cantidad color"
+    ],
+    "tipoPanel": [
+        "panel"
+    ],
+    "curva": [
+        "curva",
+        "plana"
+    ],
+    "anguloVision": [
+        "angulo vision"
+    ],
+    "R/L": [
+        "r/l",
+        "d/i",
+        "derecha izquierda",
+        "left right"
+    ],
+    "U/D": [
+        "u/d",
+        "a/a",
+        "arriba abajo",
+        "up down"
+    ],
+    "HDR": [
+        "hdr", "high dynamic range"
+    ],
+    "FreeSync": [
+        "freesync",
+        "free sync",
+        "free-sync"
+    ],
+    "GSync": [
+        "gsync",
+        "g sync",
+        "g-sync"
+    ],
+    "overclock": [
+        "overclock"
+    ],
+    "ahorroEnergia": [
+        "ahorro energia",
+        "energy saving"
+    ],
+    "microfono": [
+        "microfono", "micro"
+    ],
+    "webCam": [
+        "webcam",
+        "camara web",
+        "camara"
+    ],
+    "FPSCounter": [
+        "fps counter",
+        "contador fps",
+        "contador frames segundo",
+        "contador frame segundo"
+    ],
+    "HDMI": [
+        "high definition multimedia interface",
+        "high-definition multimedia interface",
+        "hdmi"
+    ],
+    "entradas": [
+        "entrada", "input", "inputs"
+    ],
+    "frecuencia": [
+        "frecuencia", "tasa refresco", "ratio respuesta"
+    ],
+    "DCOff": ["dcoff", "apagado"],
+    "reposo": ["reposo", "descanso", "sleep"],
+    "EnergyStar": ["energystar", "energy star"]
+}

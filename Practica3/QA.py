@@ -1,8 +1,6 @@
 import json
 from unidecode import unidecode
 import spacy as spa
-import numpy as np
-import editdistance 
 
 class Concepto:
     def __init__(self, terminos, tipo_pregunta, valor):

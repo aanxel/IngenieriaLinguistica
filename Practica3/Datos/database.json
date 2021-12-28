@@ -1,12 +1,4 @@
 {
-    "preguntasGenerales": {
-        "frecuencia": {
-            "de cuanto": [
-                ["conectividad", "HDMI", "frecuenciaHDMI"],
-                ["conectividad", "DP", "frecuenciaDP"]
-            ]
-        }
-    },
     "27UP850-W": {
         "valoracion": {
             "de cuanto": "3/5 estrellas (1 valoración)"
@@ -31,18 +23,18 @@
                 "cual": "LED"
             },
             "brillo": {
-                "brilloMin": {
+                "minimo": {
                     "de cuanto": "320 cd/m^2"
                 },
-                "brilloTip": {
+                "tipico": {
                     "de cuanto": "400 cd/m^2"
                 }
             },
             "ratioContraste": {
-                "ratioContrasteMin": {
+                "minimo": {
                     "de cuanto": "1000:1"
                 },
-                "ratioContrasteTip": {
+                "tipico": {
                     "de cuanto": "1200:1"
                 }
             },
@@ -52,17 +44,17 @@
             "profundidadColor": {
                 "de cuanto": "1.07B"
             },
-            "tipoPanel": {
+            "tipo": {
                 "cual": "IPS"
             },
             "curva": {
                 "tiene": false
             },
             "anguloVision": {
-                "anguloVisionR/L": {
+                "R/L": {
                     "de cuanto": "178"
                 },
-                "anguloVisionU/D": {
+                "U/D": {
                     "de cuanto": "178"
                 }
             }
@@ -95,71 +87,71 @@
         },
         "conectividad": {
             "HDMI": {
-                "entradasHDMI": {
+                "entradas": {
                     "cuanto": 2
                 },
-                "frecuenciaHDMI": {
+                "frecuencia": {
                     "de cuanto": "40~60Hz"
                 },
-                "resolucionHDMI": {
+                "resolucion": {
                     "de cuanto": "3840x2160 px a 60Hz"
                 },
-                "versionHDMI": {
-                    "de cuanto": 2.0
+                "version": {
+                    "de cuanto": "2.0"
                 }
             },
             "DP": {
-                "entradasDP": {
-                    "cuanto": 1
+                "entradas": {
+                    "cuanto": "1"
                 },
-                "frecuenciaDP": {
+                "frecuencia": {
                     "de cuanto": "40~60Hz"
                 },
-                "resolucionDP": {
+                "resolucion": {
                     "de cuanto": "3840x2160 px a 60Hz"
                 },
-                "versionDP": {
-                    "de cuanto": 1.4
+                "version": {
+                    "de cuanto": "1.4"
                 }
             },
             "miniDP": {
-                "entradasminiDP": {
-                    "cuanto": 0
+                "entradas": {
+                    "cuanto": "0"
                 }
             },
             "VGA": {
-                "entradasVGA": {
-                    "cuanto": 0
+                "entradas": {
+                    "cuanto": "0"
                 }
             },
             "DVI": {
-                "entradasDVI": {
-                    "cuanto": 0
+                "entradas": {
+                    "cuanto": "0"
                 }
             },
             "Thunderbolt": {
-                "entradasThunderbolt": {
-                    "cuanto": 0
+                "entradas": {
+                    "cuanto": "0"
                 }
             },
             "USB-C": {
-                "entradasUSB-C": {
-                    "cuanto": 1
+                "entradas": {
+                    "cuanto": "1"
                 },
-                "resolucionUSB-C": {
+                "resolucion": {
                     "de cuanto": "3840x2160 px a 60Hz"
                 }
             },
             "USBinput": {
-                "entradasUSBinput": {
-                    "cuanto": 0
+                "entradas": {
+                    "cuanto": "0"
                 }
             },
-            "outputUSB": {
-                "entradasUSBoutput": {
-                    "cuanto": 2
+            "USBoutput": {
+                "entradas": {
+                    "cuanto": "2"
                 },
-                "versionUSBoutput": {
+                "version": {
                     "de cuanto": "Tipo A"
                 }
             }
@@ -176,34 +168,34 @@
             },
             "altavoces": {
                 "numeroCanales": {
-                    "cuanto": 2
+                    "cuanto": "2"
                 },
                 "potencia": {
                     "de cuanto": "5 W"
                 },
-                "conectividadBluetooth": {
+                "Bluetooth": {
                     "tiene": false
                 }
             }
         },
         "alimentacion": {
-            "tipoAlimentacion": {
+            "tipo": {
                 "cual": "Alimentación Externa (Adaptador a Red)" 
             },
             "consumoPotencia": {
-                "consumoPotenciaTipico": {
+                "tipico": {
                     "de cuanto": "44 W"
                 },
-                "consumoPotenciaMaximo": {
+                "maximo": {
                     "de cuanto": "185 W"
                 },
-                "consumoPotenciaEnergyStar": {
+                "EnergyStar": {
                     "de cuanto": "25.4 W"
                 },
-                "consumoPotenciaReposo": {
+                "reposo": {
                     "de cuanto": "< 0.5 W (HDMI/DP input condition)"
                 },
-                "consumoPotenciaDCOff": {
+                "DCOff": {
                     "de cuanto": "< 0.3 W"
                 }
             }

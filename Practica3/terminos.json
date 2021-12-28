@@ -1,8 +1,8 @@
 {
     "cual": {"etiquetas": ["cual", "tipo", "que"]}, 
-    "cuanto": {"etiquetas": ["cuanto", "cantidad", "numero"]},
-    "de cuanto": {"etiquetas": ["cuanto", "cantidad", "numero"]},
-    "tiene": {"etiquetas": ["tiene", "hay", "es"]},
+    "cuanto": {"etiquetas": ["tener", "cuanto", "cantidad", "numero"]},
+    "de cuanto": {"etiquetas": ["ser", "que", "cuanto", "cantidad", "numero"]},
+    "tiene": {"etiquetas": ["tener", "haber", "ser"]},
 
     "pantalla": {
         "verbose": "la pantalla",
@@ -16,21 +16,9 @@
         "verbose": "la conectividad",
         "etiquetas": ["conectividad", "conexion"]
     },
-    "valoracion": {
-        "verbose": "La valoración",
-        "etiquetas": ["valoracion", "puntuacion", "estrella"]
-    },
     "modelo": {
         "verbose": "El modelo",
         "etiquetas": ["modelo", "version", "tipo"]
-    },
-    "fabricante": {
-        "verbose": "El fabricante",
-        "etiquetas": ["fabricante", "marca", "productor", "empresa"]
-    },
-    "web": {
-        "verbose": "La web de referencia",
-        "etiquetas": ["web", "pagina", "url"]
     },
     
     "resolucion": {
@@ -55,26 +43,20 @@
         "etiquetas": ["brillo"]
     },
 
-    "brilloMin": {
-        "verbose": "El brillo mínimo",
-        "etiquetas": ["brillo minimo"]
+    "minimo": {
+        "verbose": "mínimo",
+        "etiquetas": ["minimo", "menor", "pequeño"]
     },
-    "brilloTip": {
-        "verbose": "El brillo típico",
-        "etiquetas": ["brillo tipico"]
+    "tipico": {
+        "verbose": "típico",
+        "etiquetas": ["tipico"]
     },
+
     "ratioContraste": {
         "verbose": "El ratio de contraste",
         "etiquetas": ["ratio contraste"]
     },
-    "ratioContrasteMin": {
-        "verbose": "El ratio de contraste mínimo",
-        "etiquetas": ["ratio contraste minimo"]
-    },
-    "ratioContrasteTip": {
-        "verbose": "El ratio de contraste típico",
-        "etiquetas": ["ratio contraste tipico"]
-    },
+
     "velocidadRespuesta": {
         "verbose": "La velocidad de respuesta",
         "etiquetas": ["velocidad respuesta", "tiempo respuesta"]
@@ -95,12 +77,12 @@
         "verbose": "El ángulo de visión",
         "etiquetas": ["angulo vision"]
     },
-    "anguloVisionR/L": {
-        "verbose": "El ángulo de visión R/L",
-        "etiquetas": ["angulo vision R/L", "angulo vision D/I", "angulo vision derecha izquierda"]
+    "R/L": {
+        "verbose": "R/L",
+        "etiquetas": ["R/L", "D/I", "derecha izquierda"]
     },
-    "anguloVisionU/D": {
-        "verbose": "El ángulo de visión U/D",
+    "U/D": {
+        "verbose": "U/D",
         "etiquetas": ["angulo vision U/D", "angulo vision A/A", "angulo vision arriba abajo"]
     },
     "HDR": {

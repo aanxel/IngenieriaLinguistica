@@ -1,0 +1,70 @@
+{
+    "preguntasGenerales": {
+        "frecuencia": {
+            "prioridad": 1
+        },
+        "entradas": {
+            "prioridad": 1
+        },
+        "resolucion": {
+            "prioridad": 1
+        },
+        "brillo": {
+            "prioridad": 1
+        },
+        "ratioContraste": {
+            "prioridad": 0
+        },
+        "anguloVision": {
+            "prioridad": 0
+        },
+        "alimentacion": {
+            "prioridad": 1
+        },
+        "HDMI": {
+            "prioridad": 0
+        },
+        "DP": {
+            "prioridad": 0
+        },
+        "miniDP": {
+            "prioridad": 0
+        },
+        "VGA": {
+            "prioridad": 0
+        },
+        "DVI": {
+            "prioridad": 0
+        },
+        "Thunderbolt": {
+            "prioridad": 0
+        },
+        "USB-C": {
+            "prioridad": 0
+        },
+        "USBinput": {
+            "prioridad": 0
+        },
+        "USBoutput": {
+            "prioridad": 0
+        },
+        "sonido": {
+            "prioridad": 2
+        },
+        "atributos": {
+            "prioridad": 3
+        },
+        "conectividad": {
+            "prioridad": 2
+        },
+        "altavoces": {
+            "prioridad": 1
+        },
+        "consumoPotencia": {
+            "prioridad": 1
+        },
+        "pantalla": {
+            "prioridad": 3
+        }
+    }
+}

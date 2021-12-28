@@ -1,0 +1,278 @@
+{
+    "cual": {
+        "etiquetas": [
+            "cual",
+            "tipo",
+            "que"
+        ]
+    },
+    "cuanto": {
+        "etiquetas": [
+            "tener",
+            "cuanto",
+            "cantidad",
+            "numero"
+        ]
+    },
+    "de cuanto": {
+        "etiquetas": [
+            "ser",
+            "que",
+            "cuanto",
+            "cantidad",
+            "numero"
+        ]
+    },
+    "tiene": {
+        "etiquetas": [
+            "tener",
+            "haber",
+            "ser"
+        ]
+    },
+    "valoracion": {
+        "verbose": "La valoración",
+        "etiquetas": [
+            "valoracion",
+            "puntuacion",
+            "estrella"
+        ]
+    },
+    "fabricante": {
+        "verbose": "El fabricante",
+        "etiquetas": ["fabricante", "marca", "productor", "empresa"]
+    },
+    "web": {
+        "verbose": "La web de referencia",
+        "etiquetas": ["web", "pagina", "url"]
+    },
+    "pantalla": {
+        "tamanio": {
+            "verbose": "",
+            "etiquetas": [
+                ""
+            ]
+        },
+        "resolucion": {
+            "verbose": "",
+            "etiquetas": [
+                ""
+            ]
+        },
+        "ratioAspecto": {
+            "verbose": "",
+            "etiquetas": [
+                ""
+            ]
+        },
+        "tecnologiaRetroiluminacion": {
+            "verbose": "",
+            "etiquetas": [
+                ""
+            ]
+        },
+        "brillo": {
+            "minimo": {
+                "verbose": "",
+                "etiquetas": [
+                    ""
+                ]
+            },
+            "tipico": {
+                "verbose": "",
+                "etiquetas": [
+                    ""
+                ]
+            }
+        },
+        "ratioContraste": {
+            "minimo": {
+                "verbose": "",
+                "etiquetas": [
+                    ""
+                ]
+            },
+            "tipico": {
+                "verbose": "",
+                "etiquetas": [
+                    ""
+                ]
+            }
+        },
+        "velocidadRespuesta": {
+            "verbose": "",
+            "etiquetas": [
+                ""
+            ]
+        },
+        "profundidadColor": {
+            "verbose": "",
+            "etiquetas": [
+                ""
+            ]
+        },
+        "tipo": {
+            "verbose": "",
+            "etiquetas": [
+                ""
+            ]
+        },
+        "curva": {
+            "verbose": "",
+            "etiquetas": [
+                ""
+            ]
+        },
+        "anguloVision": {
+            "R/L": {
+                "verbose": "",
+                "etiquetas": [
+                    ""
+                ]
+            },
+            "U/D": {
+                "verbose": ""
+            }
+        }
+    },
+    "atributos": {
+        "HDR": {
+            "verbose": "HDR"
+        },
+        "FreeSync": {
+            "verbose": "tencología FreeSync"
+        },
+        "GSync": {
+            "verbose": "tencología G-Sync"
+        },
+        "overclock": {
+            "verbose": "overclock"
+        },
+        "ahorroEnergia": {
+            "verbose": "un sistema de ahorro de energía"
+        },
+        "microfono": {
+            "verbose": "un micrófono incorporado"
+        },
+        "webCam": {
+            "verbose": "una cámara web incorporada"
+        },
+        "FPSCounter": {
+            "verbose": "un sistema de conteo de FPS llamado FPSCounter"
+        }
+    },
+    "conectividad": {
+        "HDMI": {
+            "entradas": {
+                "verbose": "conexión/es de entrada HDMI"
+            },
+            "frecuencia": {
+                "verbose": "La frecuencia del conector HDMI"
+            },
+            "resolucion": {
+                "verbose": "La resolución máxima del conector HDMI"
+            },
+            "version": {
+                "verbose": "La versión del conector HDMI"
+            }
+        },
+        "DP": {
+            "entradas": {
+                "verbose": "conexión/es de entrada DP"
+            },
+            "frecuencia": {
+                "verbose": "La frecuencia del conector DP"
+            },
+            "resolucion": {
+                "verbose": "La resolución máxima del conector DP"
+            },
+            "version": {
+                "verbose": "La versión del conector DP"
+            }
+        },
+        "miniDP": {
+            "entradas": {
+                "verbose": "conexión/es de entrada miniDP"
+            }
+        },
+        "VGA": {
+            "entradas": {
+                "verbose": "conexión/es de entrada VGA"
+            }
+        },
+        "DVI": {
+            "entradas": {
+                "verbose": "conexión/es de entrada DVI"
+            }
+        },
+        "Thunderbolt": {
+            "entradas": {
+                "verbose": "conexión/es de entrada Thunderbolt"
+            }
+        },
+        "USB-C": {
+            "entradas": {
+                "verbose": "conexión/es de entrada USB-C"
+            },
+            "resolucion": {
+                "verbose": "La resolución máxima del conector USB-C"
+            }
+        },
+        "USBinput": {
+            "entradas": {
+                "verbose": "conexión/es de entrada USB"
+        },
+        "USBoutput": {
+            "entradas": {
+                "verbose": "conexión/es de salida USB"
+            },
+            "version": {
+                "verbose": "La versión del conector de salida USB"
+            }
+        }
+    },
+    "sonido": {
+        "entradaAudio": {
+            "verbose": "entrada de audio"
+        },
+        "entradaMicrofono": {
+            "verbose": "entrada de micrófono"
+        },
+        "salidaAuriculares": {
+            "verbose": "salida de auriculares"
+        },
+        "altavoces": {
+            "numeroCanales": {
+                "verbose": "canal/es de altavoces incorporados"
+            },
+            "potencia": {
+                "verbose": "La potencia de los altavoces"
+            },
+            "Bluetooth": {
+                "verbose": "incorporado Bluetooth en los altavoces"
+            }
+        }
+    },
+    "alimentacion": {
+        "tipo": {
+            "verbose": "El tipo de alimentación"
+        },
+        "consumoPotencia": {
+            "tipico": {
+                "verbose": "El consumo de potencia típico"
+            },
+            "maximo": {
+                "verbose": "El consumo de potencia máximo"
+            },
+            "EnergyStar": {
+                "verbose": "El consumo de potencia con EnergyStar (ahorro de energía)"
+            },
+            "reposo": {
+                "verbose": "El consumo de potencia en reposo (monitor suspendido)"
+            },
+            "DCOff": {
+                "verbose": "El consumo de potencia con DCOff (monitor apagado)"
+            }
+        }
+    }
+}
