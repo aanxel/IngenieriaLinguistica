@@ -20,7 +20,13 @@
     "tiene": [
         "tener",
         "haber",
-        "ser"
+        "ser",
+        "existir",
+        "disponer"
+    ],
+    "monitor": [
+        "monitor",
+        "pantalla"
     ],
     "valoracion": [
         "valoracion",
@@ -76,7 +82,12 @@
         "escalado"
     ],
     "tecnologiaRetroiluminacion": [
-        "retroiluminacion", "led", "microled", "miniled", "qned", "crystal led"
+        "retroiluminacion",
+        "led",
+        "microled",
+        "miniled",
+        "qned",
+        "crystal led"
     ],
     "brillo": [
         "brillo",
@@ -85,12 +96,17 @@
     "minimo": [
         "minimo",
         "menor",
-        "pequeño"
+        "pequeño",
+        "menos",
+        "peor"
     ],
     "maximo": [
         "mayor",
         "maximo",
-        "grande"
+        "grande",
+        "alto",
+        "mas",
+        "mejor"
     ],
     "tipico": [
         "tipico",
@@ -284,5 +300,31 @@
         "consumo energia",
         "consumo watios",
         "consumo watio"
+    ],
+    "listar": [
+        "listar",
+        "lista",
+        "listado",
+        "enumerar",
+        "enumera",
+        "enumeracion",
+        "recopilar",
+        "recopila",
+        "recopilacion",
+        "enseñar",
+        "enseña"
+    ],
+    "recomendar": [
+        "recomendar",
+        "recomienda",
+        "recomendacion",
+        "aconsejar",
+        "aconseja",
+        "consejo",
+        "preferir",
+        "preferido",
+        "sugerir",
+        "sugiere",
+        "sugerencia"
     ]
 }

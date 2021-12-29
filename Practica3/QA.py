@@ -1,6 +1,7 @@
 import json
 from unidecode import unidecode
 import spacy as spa
+import editdistance
 
 class Concepto:
     def __init__(self, terminos, tipo_pregunta, valor):
@@ -14,8 +15,28 @@ class Concepto:
         return (f'{self.terminos}:{self.s_terminos}, {self.tipo_pregunta}'
                 f':{self.s_tipo_pregunta}, {self.valor}\n')
 
+    def __lt__(self, other):
+        return self.s_terminos < other.s_terminos
 
-class ConceptoGeneral:
+
+class ConceptoGlobal:
+    def __init__(self, terminos, tipo_pregunta, prioridad):
+        self.terminos = terminos
+        self.tipo_pregunta = tipo_pregunta
+        self.prioridad = prioridad
+        self.s_terminos = 0
+
+    def __str__(self):
+        return (f'{self.terminos}:{self.s_terminos}, {self.tipo_pregunta}, '
+                f'{self.prioridad}\n')
+
+    def __lt__(self, other):
+        if self.s_terminos == other.s_terminos:
+            return self.prioridad > other.prioridad
+        return self.s_terminos < other.s_terminos
+
+
+class ConceptoGrupo:
     def __init__(self, termino, prioridad):
         self.termino = termino
         self.prioridad = prioridad
@@ -32,11 +53,26 @@ class ConceptoGeneral:
 
 class QA:
 
+    # Preguntas específicas
     TP_CUAL = 'cual'
     TP_CUANTO = 'cuanto'
     TP_DE_CUANTO = 'de cuanto'
     TP_TIENE = 'tiene'
+
+    # Preguntas generales
     TP_AGRUPACION = 'agrupacion'
+    TP_LISTAR_MODELOS = 'listar_modelos'
+    TP_MAX_VALORACION = 'modelo_valoracion_maxima'
+
+    # Detección de modelos
+    RET_VARIOS_MODELOS = 1
+    RET_NO_HAY_MODELO = 2
+    RET_UN_MODELO_ERRATA = 3
+    
+    # Respuestas erroneas o con inseguridad
+    R_MOD_NO_ENTIENDO = 'r_mod_no_entiendo'
+    R_NO_ENTIENDO = 'r_no_entiendo'
+    R_NO_SEGURO = 'r_no_seguro'
 
     # Plantillas para respuestas
     respuestas = {
@@ -46,11 +82,22 @@ class QA:
         TP_TIENE: 'El monitor {modelo} {valor}tiene {descripcion}.',
         TP_AGRUPACION:
             'Esto es lo que sé sobre {descripcion} para el monitor {modelo}:',
+        RET_VARIOS_MODELOS:
+            'He detectado una pregunta sobre varios modelos de monitor:'
+            '{n_modelo}. Por favor, limita tu pregunta a un modelo.',
+        RET_UN_MODELO_ERRATA: 'Si te refieres al modelo {n_modelo}:\n{resto}',
+        R_MOD_NO_ENTIENDO: 'Lo siento, '
+            'no he entendido lo que quieres saber del modelo {n_modelo}',
+        R_NO_ENTIENDO:
+            'Lo siento, no he entendido tu pregunta,',
+        R_NO_SEGURO:
+            'No estoy seguro de que me hayas preguntado esto, pero {}',
+        TP_LISTAR_MODELOS: 'Este es el listado de modelos:{}'
     }
     
 
     def __init__(self, f_tesauro='Datos/etiquetas.json',
-                 f_preguntas='Datos/preguntasGlobales.json',
+                 f_preguntas='Datos/preguntasGenerales.json',
                  f_verbose='Datos/verbose.json', f_bd='Datos/database.json'):
         with open(f_tesauro, 'r') as f:
             self.tesauro = json.load(f)
@@ -61,6 +108,10 @@ class QA:
         with open(f_preguntas, 'r') as f:
             self.pg = json.load(f)
         self.parser = spa.load('es_core_news_md')
+        self.resp_lambda = {
+            self.TP_LISTAR_MODELOS: self.cb_listar_modelos,
+            self.TP_MAX_VALORACION: self.cb_modelo_recomendado,
+        }
 
     def score_etiqueta(self, etiqueta, palabras):
         """
@@ -124,22 +175,48 @@ class QA:
         Returns:
             [str]: Lista de las palabras que contenía la pregunta
         """
-        return [
-            unidecode(w.lemma_.lower()) for w in self.parser(texto)
-            if w.pos_ != 'PUNCT'
-        ]
+        doc = self.parser(texto)
+        ret = []
+        for w in doc:
+            if w.pos_ != 'PUNCT':
+                if w.pos_ == 'VERB' and str(w).endswith('me'):
+                    ret.append(str(w)[:-2])
+                elif w.pos_ == 'VERB' and str(w).endswith('nos'):
+                    ret.append(str(w)[:-3])
+                else:
+                    ret.append(w.lemma_)
+        return list(map(lambda p: unidecode(p.lower()), ret))
 
     def detectar_modelo(self, palabras):
         """
-        Indica el modelo del monitor por el que se pregunta
+        Indica el modelo del monitor por el que se pregunta y el tipo de error
+        en caso de que se detecte
 
         Args:
             palabras ([string]): Palabras de la pregunta
 
         Returns:
-            [type]: [description]
-        """        
-        return '27UP850-W'
+            (str, int): Nombre del modelo o None en caso de que no se detecte ninguno y
+            el tipo de error asociado
+        """
+        lista_modelos = self.bd.keys()
+        lista_candidatos = []
+        errata = 0
+        for modelo in lista_modelos:
+            modelo_lower = modelo.lower()
+            for p in palabras:
+                dist = editdistance.eval(modelo_lower, p)
+                if dist <= 2:
+                    lista_candidatos.append(modelo)
+                    errata = max(errata, dist)
+        if len(lista_candidatos) == 1 and errata == 0:
+            return lista_candidatos[0], None
+        elif len(lista_candidatos) == 1 and errata <= 2:
+            return lista_candidatos[0], self.RET_UN_MODELO_ERRATA
+        elif len(lista_candidatos) > 2:
+            return lista_candidatos, self.RET_VARIOS_MODELOS
+        elif len(lista_candidatos) == 0:
+            return None, self.RET_NO_HAY_MODELO
 
     def listar_conceptos_modelo(self, modelo):
         """
@@ -152,11 +229,17 @@ class QA:
             de pregunta y su valor específico
         """
         for k, v in modelo.items():
-            for ks in self._listar_conceptos_modelo_rec(v):
+            for ks in self._listar_dic_rec(v):
                 ks.insert(0, k)
                 yield Concepto(ks[:-2], ks[-2], ks[-1])
 
-    def _listar_conceptos_modelo_rec(self, dic):
+    def listar_conceptos_globales(self):
+        for k, v in self.pg['global'].items():
+            for ks in self._listar_dic_rec(v):
+                ks.insert(0, k)
+                yield ConceptoGlobal(ks[:-2], ks[-2], ks[-1])
+
+    def _listar_dic_rec(self, dic):
         """
         Recorrido recursivo por un diccionario en profundidad
         Args:
@@ -169,7 +252,7 @@ class QA:
             yield [dic]
         else:
             for k, v in dic.items():
-                for ks in self._listar_conceptos_modelo_rec(v):
+                for ks in self._listar_dic_rec(v):
                     ks.insert(0, k)
                     yield ks
 
@@ -193,10 +276,31 @@ class QA:
             c.s_terminos = self.score_terminos(c.terminos, pesos, palabras)
             c.s_tipo_pregunta = self.score_terminos([c.tipo_pregunta], [1],
                                                     palabras)
-            # c.s_valor = self.score_terminos([c.valor])
             conceptos.append(c)
-        conceptos.sort(key=lambda c: -1 * c.s_terminos)
+        conceptos.sort(reverse=True)
         return conceptos
+
+    def scores_conceptos_global(self, palabras, fn_pesos):
+        """
+        Indica la puntuación de cada uno de los conceptos globales y su 
+        prioridad
+        Args:
+            palabras ([str]): Lista de las palabras que contenía la pregunta
+            fn_pesos (function): Función que genera una lista de pesos para los
+            términos dado un concepto
+
+        Returns:
+            [ConceptoGlobal]: Lista de los conceptos globales, que contienen
+            adicionalmente las puntuaciones calculadas
+        """
+        conceptos = []
+        for c in self.listar_conceptos_globales():
+            pesos = fn_pesos(c)
+            c.s_terminos = self.score_terminos(c.terminos, pesos, palabras)
+            conceptos.append(c)
+        conceptos.sort(reverse=True)
+        return conceptos
+
 
     def fn_pesos_unos(self, concepto):
         """
@@ -250,7 +354,7 @@ class QA:
         """
         descripcion = self.get_by_keys(self.verbose, concepto.terminos)
         if type(descripcion) == dict:
-            descripcion = self.verbose['conceptosGen'][concepto.terminos[-1]]
+            descripcion = self.verbose['grupos'][concepto.terminos[-1]]
         valor = concepto.valor
         modelo = n_modelo
         if concepto.tipo_pregunta == self.TP_TIENE:
@@ -268,11 +372,11 @@ class QA:
         Args:
 
         Returns:
-            [ConceptoGeneral]: Cada uno de los conceptos generales
+            [ConceptoGrupo]: Cada uno de los conceptos generales
         """
         l = []
-        for k, v in self.pg['conceptosGen'].items():
-            l.append(ConceptoGeneral(k, v))
+        for k, v in self.pg['grupos'].items():
+            l.append(ConceptoGrupo(k, v))
         return l
             
     def scores_conceptos_gen(self, palabras):
@@ -282,7 +386,7 @@ class QA:
             palabras ([str]): Lista de las palabras que contenía la pregunta
 
         Returns:
-            [ConceptoGeneral]: Cada uno de los conceptos generales con sus 
+            [ConceptoGrupo]: Cada uno de los conceptos generales con sus 
             respectivos scores
         """
         conceptos_gen = self.listar_conceptos_gen()
@@ -291,42 +395,83 @@ class QA:
         conceptos_gen.sort(reverse=True)
         return conceptos_gen
 
+    def respuesta_modelo(self, modelo, n_modelo, palabras, fn_pesos):
+        conceptos = self.scores_conceptos(palabras, modelo, fn_pesos)
+        s_0 = conceptos[0].s_terminos
+        if s_0 <= 0.5:
+            return (self.respuestas[self.R_MOD_NO_ENTIENDO].format(
+                    n_modelo=n_modelo))
+        # Comprobar si hay empates
+        candidatos = [c for c in conceptos if c.s_terminos == s_0]
+        if len(candidatos) == 1:
+            return self.respuesta_concepto(candidatos[0], n_modelo)
+        # Intentar desambiguar por el tipo de pregunta
+        candidatos.sort(key=lambda c: -1 * c.s_tipo_pregunta)
+        s_0_tp = candidatos[0].s_tipo_pregunta
+        candidatos = [c for c in candidatos
+                        if c.s_tipo_pregunta == s_0_tp]
+        if len(candidatos) == 1:
+            return self.respuesta_concepto(candidatos[0], n_modelo)
+        # Desambiguar por agrupación de conceptos
+        conceptos_gen = self.scores_conceptos_gen(palabras)
+        c_1, c_2 = conceptos_gen[0], conceptos_gen[1]
+        # Pregunta demasiado ambigua
+        if c_1.score == c_2.score and c_1.prioridad == c_2.prioridad:
+            return (self.respuestas[self.R_MOD_NO_ENTIENDO].format(
+                    n_modelo=n_modelo))
+        descripcion = self.verbose['grupos'][c_1.termino]
+        ret = self.respuestas[self.TP_AGRUPACION].format(
+            modelo=n_modelo, descripcion=descripcion
+        )
+        for c in conceptos:
+            if c_1.termino in c.terminos:
+                ret = ret + f'\n\t{self.respuesta_concepto(c, n_modelo)}'
+        return ret
+
+    def respuesta_insegura(self, concepto, contenido):
+        if concepto.prioridad >= 3:
+            contenido = contenido[0].lower() + contenido[1:]
+            return self.respuestas[self.R_NO_SEGURO].format(contenido)
+        else:
+            return contenido
+
+    def respuesta_global(self, palabras, fn_pesos):
+        conceptos = self.scores_conceptos_global(palabras, fn_pesos)
+        c_1, c_2 = conceptos[0], conceptos[1]
+        # No se ha detectado una pregunta
+        if c_1.s_terminos == 0:
+            return self.respuestas[self.R_NO_ENTIENDO]
+        # Pregunta ambigua
+        if c_1.s_terminos == c_2.s_terminos and c_1.prioridad == c_2.prioridad:
+            return self.respuestas[self.R_NO_ENTIENDO]
+        return self.resp_lambda[c_1.tipo_pregunta](c_1)
+
+    def cb_listar_modelos(self, concepto, *args):
+        return self.respuesta_insegura(concepto,
+            self.respuestas[self.TP_LISTAR_MODELOS].format(
+                '\n\t- ' + ('\n\t- '.join(self.bd.keys()))))
+
+    def cb_modelo_recomendado(self, concepto, *args):
+        return ''
+
     def responder_pregunta(self, texto, fn_pesos=None):
         if fn_pesos is None:
             fn_pesos = self.fn_pesos_unos
         palabras = self.parsear_palabras(texto)
-        n_modelo = self.detectar_modelo(palabras)
-        modelo = self.bd[n_modelo] if n_modelo else None
+        n_modelo, err = self.detectar_modelo(palabras)
+        modelo = (self.bd[n_modelo] if err in (None, self.RET_UN_MODELO_ERRATA)
+                                    else None)
+
         if modelo is not None:
-            conceptos = self.scores_conceptos(palabras, modelo, fn_pesos)
-            s_0 = conceptos[0].s_terminos
-            if s_0 <= 0.5:
-                return 'Perdón, no te he entendido'
-            # Comprobar si hay empates
-            candidatos = [c for c in conceptos if c.s_terminos == s_0]
-            if len(candidatos) == 1:
-                return self.respuesta_concepto(candidatos[0], n_modelo)
-            # Intentar desambiguar por el tipo de pregunta
-            candidatos.sort(key=lambda c: -1 * c.s_tipo_pregunta)
-            s_0_tp = candidatos[0].s_tipo_pregunta
-            candidatos = [c for c in candidatos
-                            if c.s_tipo_pregunta == s_0_tp]
-            if len(candidatos) == 1:
-                return self.respuesta_concepto(candidatos[0], n_modelo)
-            # Desambiguar por agrupación de conceptos
-            conceptos_gen = self.scores_conceptos_gen(palabras)
-            c_1, c_2 = conceptos_gen[0], conceptos_gen[1]
-            # Pregunta demasiado ambigua
-            if c_1.score == c_2.score and c_1.prioridad == c_2.prioridad:
-                return 'Perdón, no te he entendido'
-            descripcion = self.verbose['conceptosGen'][c_1.termino]
-            ret = self.respuestas[self.TP_AGRUPACION].format(
-                modelo=n_modelo, descripcion=descripcion
-            )
-            for c in candidatos:
-                if c_1.termino in c.terminos:
-                    ret = ret + f'\n\t{self.respuesta_concepto(c, n_modelo)}'
+            ret = self.respuesta_modelo(modelo, n_modelo, palabras, fn_pesos)
+            if err == self.RET_UN_MODELO_ERRATA:
+                return self.respuestas[err].format(n_modelo=n_modelo,
+                                                   resto=ret)
             return ret
+        if err == self.RET_VARIOS_MODELOS:
+            return self.respuestas[err].format(n_modelo)
+        elif err == self.RET_NO_HAY_MODELO:
+            return self.respuesta_global(palabras, fn_pesos)
 
 if __name__ == '__main__':
     
