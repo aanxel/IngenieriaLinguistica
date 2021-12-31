@@ -1,0 +1,3 @@
+Url a copiar y pegar al navegador para introducir el bot al canal:
+
+https://discord.com/api/oauth2/authorize?client_id=926405257800605696&permissions=8&scope=bot

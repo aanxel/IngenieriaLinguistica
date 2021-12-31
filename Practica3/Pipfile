@@ -7,6 +7,10 @@ name = "pypi"
 spacy = "*"
 unidecode = "*"
 editdistance = "*"
+regex = "*"
+spanishconjugator = "*"
+discord = "*"
+python-dotenv = "*"
 
 [dev-packages]
 

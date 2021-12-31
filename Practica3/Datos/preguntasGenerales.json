@@ -25,6 +25,12 @@
         "pantalla": 4
     },
     "global": {
+        "saludo": {
+            "saludar": 5
+        },
+        "despedida": {
+            "salir": 6
+        },
         "monitor": {
             "modelo": {
                 "listar": {
@@ -32,6 +38,42 @@
                 },
                 "tiene": {
                     "listar_modelos": 4
+                },
+                "tipoPanel": {
+                    "_IPS": {
+                        "listar_paneles": 0
+                    },
+                    "_VA": {
+                        "listar_paneles": 0
+                    },
+                    "_TN": {
+                        "listar_paneles": 0
+                    }
+                },
+                "resolucion": {
+                    "_HD": {
+                        "listar_resoluciones": 0
+                    },
+                    "_FHD": {
+                        "listar_resoluciones": 0
+                    },
+                    "_4K": {
+                        "listar_resoluciones": 0
+                    },
+                    "_5K": {
+                        "listar_resoluciones": 0
+                    },
+                    "_8K": {
+                        "listar_resoluciones": 0
+                    }
+                },
+                "curva": {
+                    "_curva": {
+                        "listar_curvas": 0
+                    },
+                    "_plana": {
+                        "listar_curvas": 0
+                    }
                 },
                 "recomendar": {
                     "modelo_valoracion_maxima": 0

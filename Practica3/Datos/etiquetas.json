@@ -5,24 +5,24 @@
         "que"
     ],
     "cuanto": [
-        "tener",
+        "_tener",
         "cuanto",
         "cantidad",
         "numero"
     ],
     "de cuanto": [
-        "ser",
+        "_ser",
         "que",
         "cuanto",
         "cantidad",
         "numero"
     ],
     "tiene": [
-        "tener",
-        "haber",
-        "ser",
-        "existir",
-        "disponer"
+        "_tener",
+        "_haber",
+        "_ser",
+        "_existir",
+        "_disponer"
     ],
     "monitor": [
         "monitor",
@@ -127,11 +127,12 @@
         "cantidad color"
     ],
     "tipoPanel": [
-        "panel"
+        "panel",
+        "tipo panel"
     ],
     "curva": [
-        "curva",
-        "plana"
+        "curvo",
+        "plano"
     ],
     "anguloVision": [
         "angulo vision"
@@ -282,7 +283,8 @@
         "vga"
     ],
     "miniDP": [
-        "minidp", "mini-dp"
+        "minidp",
+        "mini-dp"
     ],
     "DP": [
         "dp"
@@ -302,29 +304,101 @@
         "consumo watio"
     ],
     "listar": [
-        "listar",
-        "lista",
+        "_listar",
         "listado",
-        "enumerar",
-        "enumera",
+        "_enumerar",
         "enumeracion",
-        "recopilar",
-        "recopila",
+        "_recopilar",
         "recopilacion",
-        "enseñar",
-        "enseña"
+        "_enseñar"
     ],
     "recomendar": [
-        "recomendar",
-        "recomienda",
+        "_recomendar",
         "recomendacion",
-        "aconsejar",
-        "aconseja",
+        "_aconsejar",
         "consejo",
-        "preferir",
+        "_preferir",
         "preferido",
-        "sugerir",
-        "sugiere",
+        "_sugerir",
         "sugerencia"
+    ],
+    "_IPS": [
+        "ips",
+        "in plane switching",
+        "in-plane switching"
+    ],
+    "_VA": [
+        "va",
+        "vertical alignment",
+        "vertical-alignment"
+    ],
+    "_TN": [
+        "tn",
+        "twisted nematic",
+        "twisted-nematic"
+    ],
+    "_HD": [
+        "hd",
+        "high definition",
+        "hd ready",
+        "high definition ready",
+        "720p",
+        "720i",
+        "1280x"
+    ],
+    "_FHD": [
+        "fhd",
+        "full hd",
+        "full-hd",
+        "fullhd",
+        "full high definition",
+        "2k",
+        "1080p",
+        "1080i",
+        "1920x"
+    ],
+    "_4K": [
+        "4k",
+        "2160p",
+        "4096x3112",
+        "3656x2664",
+        "4096x1714",
+        "3996x2160",
+        "2560x1440",
+        "uhd",
+        "ultra high definition"
+    ],
+    "_5K": [
+        "5k",
+        "5120x",
+        "4800x2700"
+    ],
+    "_8K": [
+        "8k",
+        "7680×4320",
+        "4320p",
+        "8192x"
+    ],
+    "_curva": [
+        "curvo"
+    ],
+    "_plana": [
+        "plano"
+    ],
+    "no": [
+        "no",
+        "sin"
+    ],
+    "saludo": [
+        "saludo",
+        "hola",
+        "buenos dias",
+        "que tal",
+        "como va"
+    ],
+    "despedida": [
+        "adios",
+        "hasta luego",
+        "hasta otra"
     ]
 }

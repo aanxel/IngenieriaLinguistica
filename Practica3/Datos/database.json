@@ -14,7 +14,7 @@
                 "de cuanto": "27 pulgadas"
             },
             "resolucion": {
-                "de cuanto": "3840x2160 px"
+                "de cuanto": "3840x2160 px (4K)"
             },
             "ratioAspecto": {
                 "de cuanto": "16:9"
@@ -44,7 +44,7 @@
             "profundidadColor": {
                 "de cuanto": "1.07B"
             },
-            "tipo": {
+            "tipoPanel": {
                 "cual": "IPS"
             },
             "curva": {
@@ -218,7 +218,7 @@
                 "de cuanto": "34 pulgadas"
             },
             "resolucion": {
-                "de cuanto": "3440x1440"
+                "de cuanto": "3440x1440 px (4K)"
             },
             "ratioAspecto": {
                 "de cuanto": "21:9"
@@ -248,7 +248,7 @@
             "profundidadColor": {
                 "de cuanto": "1.07B"
             },
-            "tipo": {
+            "tipoPanel": {
                 "cual": "IPS"
             },
             "curva": {

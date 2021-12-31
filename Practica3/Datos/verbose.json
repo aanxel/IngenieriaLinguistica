@@ -93,7 +93,7 @@
             "DCOff": "El consumo de potencia con DCOff (monitor apagado)"
         }
     },
-    "conceptosGen": {
+    "_gen": {
         "frecuencia": "la frecuencia",
         "entradas": "las entradas",
         "resolucion": "la resolución",
@@ -116,6 +116,16 @@
         "conectividad": "la conectividad",
         "altavoces": "altavoces",
         "consumoPotencia": "el consumo de potencia",
-        "pantalla": "la pantalla"
+        "pantalla": "la pantalla",
+        "_TN": "TN",
+        "_IPS": "IPS",
+        "_VA": "VA",
+        "_HD": "HD ready",
+        "_FHD": "FHD",
+        "_4K": "4K / UHD",
+        "_5K": "5K",
+        "_8K": "8K",
+        "_curva": "curva",
+        "_plana": "plana"
     }
 }
