@@ -2,31 +2,31 @@
     "cual": [
         "cual",
         "tipo",
-        "que"
+        ["que", 0.25]
     ],
     "cuanto": [
-        "_tener",
+        ["_tener", 0.25],
         "cuanto",
         "cantidad",
         "numero"
     ],
     "de cuanto": [
-        "_ser",
-        "que",
+        ["_ser", 0.25],
+        ["que", 0.25],
         "cuanto",
         "cantidad",
         "numero"
     ],
     "tiene": [
-        "_tener",
-        "_haber",
-        "_ser",
+        ["_tener", 0.25],
+        ["_haber", 0.25],
+        ["_ser", 0.25],
         "_existir",
         "_disponer"
     ],
     "monitor": [
-        "monitor",
-        "pantalla"
+        ["monitor", 0.25],
+        ["pantalla", 0.25]
     ],
     "valoracion": [
         "valoracion",
@@ -45,27 +45,27 @@
         "enlace"
     ],
     "pantalla": [
-        "pantalla",
-        "monitor",
-        "display"
+        ["monitor", 0.25],
+        ["pantalla", 0.25],
+        ["display", 0.25]
     ],
     "atributos": [
-        "atributo",
-        "propiedad",
-        "caracteristica"
+        ["atributo", 0.25],
+        ["propiedad", 0.25],
+        ["caracteristica", 0.25]
     ],
     "conectividad": [
         "conectividad",
         "conexion"
     ],
     "modelo": [
-        "modelo",
-        "version",
-        "tipo"
+        ["modelo", 0.25],
+        ["version", 0.25],
+        ["tipo", 0.25]
     ],
     "version": [
-        "tipo",
-        "version"
+        ["tipo", 0.25],
+        ["version", 0.25]
     ],
     "resolucion": [
         "resolucion",
@@ -94,19 +94,20 @@
         "iluminacion"
     ],
     "minimo": [
-        "minimo",
-        "menor",
-        "pequeño",
-        "menos",
-        "peor"
+        ["minimo", 0.5],
+        ["menor", 0.25],
+        ["pequeño", 0.25],
+        ["menos", 0.25],
+        ["peor", 0.25],
+        ["bajo", 0.25]
     ],
     "maximo": [
-        "mayor",
-        "maximo",
-        "grande",
-        "alto",
-        "mas",
-        "mejor"
+        ["mayor", 0.25],
+        ["maximo", 0.5],
+        ["grande", 0.25],
+        ["alto", 0.25],
+        ["mas", 0.25],
+        ["mejor", 0.25]
     ],
     "tipico": [
         "tipico",
@@ -128,11 +129,22 @@
     ],
     "tipoPanel": [
         "panel",
-        "tipo panel"
+        "tipo panel",
+        "ips",
+        "in plane switching",
+        "in-plane switching",
+        "va",
+        "vertical alignment",
+        "vertical-alignment",
+        "tn",
+        "twisted nematic",
+        "twisted-nematic"
     ],
     "curva": [
         "curvo",
-        "plano"
+        "curva",
+        "plano",
+        "plana"
     ],
     "anguloVision": [
         "angulo vision"
@@ -145,7 +157,7 @@
         "derecha izquierda",
         "left right",
         "horizontal",
-        "h"
+        ["h", 0.25]
     ],
     "U/D": [
         "u/d",
@@ -155,7 +167,7 @@
         "arriba abajo",
         "up down",
         "vertical",
-        "v"
+        ["v", 0.25]
     ],
     "HDR": [
         "hdr",
@@ -199,9 +211,9 @@
         "hdmi"
     ],
     "entradas": [
-        "entrada",
-        "input",
-        "inputs"
+        ["entrada", 0.25],
+        ["input", 0.25],
+        ["inputs", 0.25]
     ],
     "frecuencia": [
         "frecuencia",
@@ -222,8 +234,8 @@
         "energy star"
     ],
     "tipo": [
-        "tipo",
-        "variedad"
+        ["tipo", 0.25],
+        ["variedad", 0.25]
     ],
     "Bluetooth": [
         "bluetooth"
@@ -232,7 +244,7 @@
         "potencia",
         "watios",
         "watio",
-        "w"
+        ["w", 0.25]
     ],
     "numeroCanales": [
         "numero canal",
@@ -244,14 +256,14 @@
         "output auricular"
     ],
     "entradaMicrofono": [
-        "entrada microfono",
-        "input microfono",
-        "jack entrada"
+        ["entrada microfono", 1],
+        ["input microfono", 1],
+        ["jack microfono", 1]
     ],
     "entradaAudio": [
-        "entrada audio",
-        "input audio",
-        "jack microfono"
+        ["entrada audio", 1],
+        ["input audio", 1],
+        ["jack entrada", 1]
     ],
     "altavoces": [
         "altavoz",
@@ -271,7 +283,8 @@
     "USB-C": [
         "usb-c",
         "usbc",
-        "usb c"
+        "usb c",
+        "usb tipo c"
     ],
     "Thunderbolt": [
         "thunderbolt"
@@ -284,10 +297,16 @@
     ],
     "miniDP": [
         "minidp",
-        "mini-dp"
+        "mini-dp",
+        "mini displayport",
+        "mini display port",
+        "mini display-port"
     ],
     "DP": [
-        "dp"
+        "dp",
+        "displayport",
+        "display port",
+        "display-port"
     ],
     "sonido": [
         "sonido",
@@ -295,7 +314,7 @@
     ],
     "alimentacion": [
         "alimentacion",
-        "energia"
+        ["energia", 0.25]
     ],
     "consumoPotencia": [
         "consumo potencia",
@@ -314,12 +333,15 @@
     ],
     "recomendar": [
         "_recomendar",
+        "_recomiendar",
         "recomendacion",
         "_aconsejar",
         "consejo",
         "_preferir",
+        "_prefierir",
         "preferido",
         "_sugerir",
+        "_sugierir",
         "sugerencia"
     ],
     "_IPS": [
@@ -399,6 +421,8 @@
     "despedida": [
         "adios",
         "hasta luego",
-        "hasta otra"
-    ]
+        "hasta otra",
+        "nos vemos"
+    ],
+    "null": []
 }

@@ -17,7 +17,7 @@
         },
         "velocidadRespuesta": "La velocidad de respuesta",
         "profundidadColor": "La profundidad del color",
-        "tipo": "El tipo de panel",
+        "tipoPanel": "El tipo de panel",
         "curva": "pantalla curva",
         "anguloVision": {
             "R/L": "El ángulo de visión R/L",
@@ -32,7 +32,7 @@
         "ahorroEnergia": "un sistema de ahorro de energía",
         "microfono": "un micrófono incorporado",
         "webCam": "una cámara web incorporada",
-        "FPSCounter": "un sistema de conteo de FPS llamado FPSCounter"
+        "FPSCounter": "un sistema de conteo de FPS (FPSCounter)"
     },
     "conectividad": {
         "HDMI": {
@@ -65,7 +65,7 @@
                 "resolucion": "La resolución máxima del conector USB-C"
             },
             "USBinput": {
-                "entradas": "conexión/es de entrada USB"
+                "null": "conexión/es de entrada USB"
             },
             "USBoutput": {
                 "entradas": "conexión/es de salida USB",

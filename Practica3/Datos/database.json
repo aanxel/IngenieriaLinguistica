@@ -52,10 +52,10 @@
             },
             "anguloVision": {
                 "R/L": {
-                    "de cuanto": "178"
+                    "de cuanto": "178º"
                 },
                 "U/D": {
-                    "de cuanto": "178"
+                    "de cuanto": "178º"
                 }
             }
         },
@@ -97,7 +97,7 @@
                     "de cuanto": "3840x2160 px a 60Hz"
                 },
                 "version": {
-                    "de cuanto": "2.0"
+                    "cual": "2.0"
                 }
             },
             "DP": {
@@ -111,7 +111,7 @@
                     "de cuanto": "3840x2160 px a 60Hz"
                 },
                 "version": {
-                    "de cuanto": "1.4"
+                    "cual": "1.4"
                 }
             },
             "miniDP": {
@@ -144,7 +144,7 @@
                     }
                 },
                 "USBinput": {
-                    "entradas": {
+                    "null": {
                         "cuanto": "0"
                     }
                 },
@@ -153,7 +153,7 @@
                         "cuanto": "2"
                     },
                     "version": {
-                        "de cuanto": "Tipo A"
+                        "cual": "Tipo A"
                     }
                 }
             }
@@ -256,10 +256,10 @@
             },
             "anguloVision": {
                 "R/L": {
-                    "de cuanto": "178"
+                    "de cuanto": "178º"
                 },
                 "U/D": {
-                    "de cuanto": "178"
+                    "de cuanto": "178º"
                 }
             }
         },
@@ -301,7 +301,7 @@
                     "de cuanto": "3440x1440 a 60Hz"
                 },
                 "version": {
-                    "de cuanto": "2.0"
+                    "cual": "2.0"
                 }
             },
             "DP": {
@@ -315,7 +315,7 @@
                     "de cuanto": "3440x1440 a 60Hz"
                 },
                 "version": {
-                    "de cuanto": "1.4"
+                    "cual": "1.4"
                 }
             },
             "miniDP": {
@@ -342,10 +342,13 @@
                 "USB-C": {
                     "entradas": {
                         "cuanto": "1"
+                    },
+                    "resolucion": {
+                        "de cuanto": "3440x1440 a 60Hz"
                     }
                 },
                 "USBinput": {
-                    "entradas": {
+                    "null": {
                         "cuanto": "0"
                     }
                 },
@@ -354,7 +357,7 @@
                         "cuanto": "2"
                     },
                     "version": {
-                        "de cuanto": "Tipo A v3.0"
+                        "cual": "Tipo A v3.0"
                     }
                 }
             }

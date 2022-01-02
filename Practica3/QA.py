@@ -1,4 +1,5 @@
 import json
+from os import EX_PROTOCOL
 import spacy as spa
 import editdistance
 import regex as re
@@ -142,11 +143,12 @@ class QA:
 
     @staticmethod
     def quitar_ac(p):
-        return re.sub('áÁ', 'a',
-               re.sub('éÉ', 'e',
-               re.sub('íÍ', 'i',
-               re.sub('óÓ', 'o',
-               re.sub('úÚ', 'u', p)))))
+        p = re.sub('[áÁ]', 'a', p)
+        p = re.sub('[éÉ]', 'e', p)
+        p = re.sub('[íÍ]', 'i', p)
+        p = re.sub('[óÓ]', 'o', p)
+        p = re.sub('[úÚ]', 'u', p)
+        return p
 
     def expandir_tesauro(self):
         """
@@ -170,14 +172,20 @@ class QA:
         for termino, etiquetas in self.tesauro.items():
             n_etiquetas = []
             for e in etiquetas:
-                if e.startswith('_'):
+                if type(e) != list:
+                    e = [e, 1.0]
+                if e[0].startswith('_'):
+                    e[0] = e[0][1:]
+                    n_etiquetas.append(e)
                     for p in personas:
                         for c in conjugaciones:
-                            nuevo = conj.conjugate(e[1:],
+                            nuevo = conj.conjugate(e[0],
                                         *(c + (p,))).replace('ñ', '.')
-                            n_etiquetas.append(self.quitar_ac(bytes(nuevo,
-                            'latin-1').decode('utf-8').replace('.', 'ñ')))
-                        n_etiquetas.append(e[1:])
+                            
+                            n_etiquetas.append([
+                                self.quitar_ac(bytes(nuevo, 'latin-1').decode(
+                                    'utf-8').replace('.', 'ñ')),
+                                e[1]])
                 else:
                     n_etiquetas.append(e)
             self.tesauro[termino] = n_etiquetas
@@ -195,13 +203,12 @@ class QA:
         Returns:
             int: Puntuación de la etiqueta en la frase
         """    
-        subetiquetas = etiqueta.split()
+        subetiquetas = etiqueta[0].split()
         score = 0
         for e in subetiquetas:
             ed = min(editdistance.eval(e, p) for p in palabras)
-            if ed <= umbral_ed:
-                print(e)
-                score += 1
+            if (ed <= umbral_ed and len(e) >= 5) or ed == 0:
+                score += etiqueta[1]
         return score / len(subetiquetas)
 
 
@@ -219,6 +226,8 @@ class QA:
         Returns:
             int: Puntuación del ajuste de unas etiquetas a una frase
         """
+        if not etiquetas:
+            return 0
         return max(self.score_etiqueta(e, palabras, umbral_ed)
                    for e in etiquetas)
 
@@ -289,6 +298,7 @@ class QA:
                 if dist <= 2:
                     lista_candidatos.append(modelo)
                     errata = max(errata, dist)
+        lista_candidatos = list(set(lista_candidatos))
         if len(lista_candidatos) == 1 and errata == 0:
             return lista_candidatos[0], None
         elif len(lista_candidatos) == 1 and errata <= 2:
@@ -422,7 +432,13 @@ class QA:
         for k in keys:
             dic = dic.get(k, default)
             if type(dic) != dict:
+                if dic is None:
+                    print(dic)
+                    print(keys)
                 return dic
+        if dic is None:
+            print(dic)
+            print(keys)
         return dic
 
     def respuesta_concepto(self, concepto, n_modelo):
@@ -490,8 +506,9 @@ class QA:
             if umbral_ed >= self.MAX_ED:
                 return (self.respuestas[self.R_MOD_NO_ENTIENDO].format(
                         n_modelo=n_modelo))        
-            return self.respuesta_modelo(modelo, n_modelo, palabras,
-                                         fn_pesos, umbral_ed + 1)
+            r = self.respuesta_modelo(modelo, n_modelo, palabras, fn_pesos,
+                                      umbral_ed + 1)
+            return self._respuesta_insegura_ed(r)
         # Comprobar si hay empates
         candidatos = [c for c in conceptos if c.s_terminos == s_0]
         if len(candidatos) == 1:
@@ -510,39 +527,49 @@ class QA:
             if umbral_ed >= self.MAX_ED:
                 return (self.respuestas[self.R_MOD_NO_ENTIENDO].format(
                         n_modelo=n_modelo))        
-            return self.respuesta_modelo(modelo, n_modelo, palabras,
-                                         fn_pesos, umbral_ed + 1)
+            r = self.respuesta_modelo(modelo, n_modelo, palabras, fn_pesos,
+                                      umbral_ed + 1)
+            return self._respuesta_insegura_ed(r)
         descripcion = self.verbose['_gen'][c_1.termino]
         ret = self.respuestas[self.TP_AGRUPACION].format(
             modelo=n_modelo, descripcion=descripcion)
         for c in conceptos:
             if c_1.termino in c.terminos:
                 ret = ret + f'\n\t{self.respuesta_concepto(c, n_modelo)}'
-        return self.respuesta_insegura(c_1, ret)
+        return self._respuesta_insegura(c_1, ret)
 
-    def respuesta_insegura(self, concepto, contenido):
+    def _respuesta_insegura(self, concepto, contenido):
         if concepto.prioridad >= 3:
-            contenido = contenido[0].lower() + contenido[1:]
-            return self.respuestas[self.R_NO_SEGURO].format(contenido)
-        else:
-            return contenido
+            r = contenido
+            if not any(_r in r for _r in(self.respuestas[self.R_NO_SEGURO],
+                                     self.respuestas[self.R_NO_ENTIENDO],
+                                     self.respuestas[self.R_MOD_NO_ENTIENDO])):
+                return self.respuestas[self.R_NO_SEGURO].format(
+                    r[0].lower() + r[1:])
+        return contenido
+
+    def _respuesta_insegura_ed(self, r):
+        if not any(_r in r for _r in(self.respuestas[self.R_NO_SEGURO],
+                                     self.respuestas[self.R_NO_ENTIENDO],
+                                     self.respuestas[self.R_MOD_NO_ENTIENDO])):
+            r = self.respuestas[self.R_NO_SEGURO].format(r[0].lower() + r[1:])
+        return r
 
     def respuesta_global(self, palabras, fn_pesos, umbral_ed=0):
         conceptos = self.scores_conceptos_global(palabras, fn_pesos, umbral_ed)
         c_1, c_2 = conceptos[0], conceptos[1]
-        for c in conceptos:
-            print(c)
-        print(c_1.s_terminos)
         if (  # No se ha detectado una pregunta o pregunta ambigua
           c_1.s_terminos <= 0.0 or 
           c_1.s_terminos == c_2.s_terminos and c_1.prioridad == c_2.prioridad):
             if umbral_ed >= self.MAX_ED:
                 return self.respuestas[self.R_NO_ENTIENDO]
-            return self.respuesta_global(palabras, fn_pesos, umbral_ed + 1)
+            r = self.respuesta_global(palabras, fn_pesos, umbral_ed + 1)
+            return self._respuesta_insegura_ed(r)
+            
         return self.resp_lambda[c_1.tipo_pregunta](c_1, palabras)
 
     def cb_listar_modelos(self, concepto, *args):
-        return self.respuesta_insegura(concepto,
+        return self._respuesta_insegura(concepto,
             self.respuestas[self.TP_LISTAR_MODELOS].format(
                 '\n\t- ' + ('\n\t- '.join(self.bd.keys()))))
 
@@ -560,7 +587,7 @@ class QA:
         ret = self.respuestas[self.TP_MAX_VALORACION].format(
             n_modelo=puntuaciones[0][2],descripcion=puntuaciones[0][1],
         )
-        return self.respuesta_insegura(concepto, ret)
+        return self._respuesta_insegura(concepto, ret)
 
     def cb_listar_paneles(self, concepto, *args):
         tipo_panel = next(
@@ -575,7 +602,7 @@ class QA:
             resto = '\n\tLo siento, no tenemos monitores con ese tipo de panel'
         else:
             resto = '\n\t- ' + ('\n\t- '.join(monitores))
-        return self.respuesta_insegura(concepto,
+        return self._respuesta_insegura(concepto,
             self.respuestas[self.TP_LISTAR_PANELES].format(
                 descripcion=self.verbose['_gen'][tipo_panel], resto=resto))
 
@@ -586,21 +613,21 @@ class QA:
         for m, c in self.bd.items():
             val = self.get_by_keys(c, ('pantalla', 'resolucion', 'de cuanto'),
                                    None)
-            if val and any(e in ''.join(val.lower().split())
+            if val and any(e[0] in ''.join(val.lower().split())
                            for e in self.tesauro[tipo_resolucion]):
                 monitores.append(m)
         if len(monitores) == 0:
             resto = '\n\tLo siento, no tenemos monitores con esa resolución'
         else:
             resto = '\n\t- ' + ('\n\t- '.join(monitores))
-        return self.respuesta_insegura(concepto,
+        return self._respuesta_insegura(concepto,
             self.respuestas[self.TP_LISTAR_RESOLUCIONES].format(
               descripcion=self.verbose['_gen'][tipo_resolucion], resto=resto))
 
     def cb_listar_curvas(self, concepto, palabras, *args):
         tipo_curva = next(
             (x for x in concepto.terminos if x.startswith('_')), None)
-        if any(e in palabras for e in self.tesauro['no']):
+        if any(e[0] in palabras for e in self.tesauro['no']):
             if tipo_curva == '_curva':
                 tipo_curva = '_plana'
             else:
@@ -615,7 +642,7 @@ class QA:
             resto = '\n\tLo siento, no tenemos monitores de ese tipo.'
         else:
             resto = '\n\t- ' + ('\n\t- '.join(monitores))
-        return self.respuesta_insegura(concepto,
+        return self._respuesta_insegura(concepto,
             self.respuestas[self.TP_LISTAR_CURVAS].format(
               descripcion=self.verbose['_gen'][tipo_curva], resto=resto))
         
