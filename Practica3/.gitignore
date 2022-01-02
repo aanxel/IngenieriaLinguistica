@@ -1,2 +1,1 @@
-discord/.env
-*.env
+*env*
