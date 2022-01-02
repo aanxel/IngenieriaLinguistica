@@ -54,7 +54,7 @@ preguntas = [
     "¿Cual es la frecuencia maxima de las entradas HDMI del monitor {m}?",
     "¿Hasta que resolucion adminte el high definition multimedia interface del monitor {m}?",
     "¿Cual es la version del HDMI del monitor {m}?",
-    "¿Cual es el numero de entradas del monitor {m}?",
+    "¿Cual es el numero de entradas de DP del monitor {m}?",
     "¿Que frecuencia adminten las conexiones DP del monitor {m}?",
     "¿Que resolucion se alcanza con las entradas Display Port del monitor {m}?",
     "¿Que version de DP tiene el monitor {m}?",
@@ -76,7 +76,7 @@ preguntas = [
     "¿Que tipo de alimentacion de energia tiene el monitor {m}?",
     "¿Cual es el consumo tipico de energia del monitor {m}?",
     "¿Cuanta energia maxima consume el monitor {m}?",
-    "¿Cual es la media de energia consumida por el monitor {m} en caso de encontrarse en modo ahorro de energia?",
+    "¿Cual es la media de energia consumida por el monitor {m} en caso de encontrarse en modo energystar?",
     "¿Cuanta energia consume el monitor {m} en modo reposo con la pantalla suspendida?",
     "¿Cuanta energía consume el monitor {m} con la pantalla apagada?",
     # Preguntas grupales
@@ -158,17 +158,15 @@ preguntas = [
     ],
     [   # Sobre la pantalla
         "Que sabes sobre la pantalla del monitor {m}",
-        "Dime todo lo que sepas sobre el monitor {m}"
     ],
-    "",
     # Preguntas globales
     [   # Saludo:
         "Hola, como va?",
         "Que tal alexo",
     ],
     [   # Despedida
-            "Adios",
-            "Nos vemos",
+        "Adios",
+        "Nos vemos",
     ],
     [   # Listar modelos
         "Que modelos tienes en la tienda?",
@@ -193,7 +191,6 @@ preguntas = [
         "no tendrás monitoes 5k no?",
         "tienes por ahi algun monitor hd?",
         "hay disponible algún monitor fhd"
-
     ],
     [   # Monitores de pantalla plana
         "por ahi hay algún monitor plano?",

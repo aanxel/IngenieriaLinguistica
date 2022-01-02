@@ -5,14 +5,11 @@
         ["que", 0.25]
     ],
     "cuanto": [
-        ["_tener", 0.25],
         "cuanto",
         "cantidad",
         "numero"
     ],
     "de cuanto": [
-        ["_ser", 0.25],
-        ["que", 0.25],
         "cuanto",
         "cantidad",
         "numero"
@@ -45,7 +42,6 @@
         "enlace"
     ],
     "pantalla": [
-        ["monitor", 0.25],
         ["pantalla", 0.25],
         ["display", 0.25]
     ],
@@ -104,6 +100,7 @@
     "maximo": [
         ["mayor", 0.25],
         ["maximo", 0.5],
+        ["maxima", 0.5],
         ["grande", 0.25],
         ["alto", 0.25],
         ["mas", 0.25],
@@ -130,13 +127,13 @@
     "tipoPanel": [
         "panel",
         "tipo panel",
-        "ips",
+        ["ips", 0.25],
         "in plane switching",
         "in-plane switching",
-        "va",
+        ["va", 0.25],
         "vertical alignment",
         "vertical-alignment",
-        "tn",
+        ["tn", 0.25],
         "twisted nematic",
         "twisted-nematic"
     ],
@@ -246,11 +243,6 @@
         "watio",
         ["w", 0.25]
     ],
-    "numeroCanales": [
-        "numero canal",
-        "cantidad canal",
-        "numero altavoz"
-    ],
     "salidaAuriculares": [
         "salida auricular",
         "output auricular"
@@ -319,7 +311,10 @@
     "consumoPotencia": [
         "consumo potencia",
         "consumo watios",
-        "consumo watio"
+        "consumo watio",
+        "consumo energia",
+        "consumo energetico",
+        "_consumir"
     ],
     "listar": [
         "_listar",
@@ -349,7 +344,7 @@
         "in-plane switching"
     ],
     "_VA": [
-        "va",
+        ["va", 0.5],
         "vertical alignment",
         "vertical-alignment"
     ],

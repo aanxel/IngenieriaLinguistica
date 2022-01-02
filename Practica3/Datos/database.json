@@ -143,10 +143,8 @@
                         "de cuanto": "3840x2160 px a 60Hz"
                     }
                 },
-                "USBinput": {
-                    "null": {
-                        "cuanto": "0"
-                    }
+                "entradas": {
+                    "cuanto": "0"
                 },
                 "USBoutput": {
                     "entradas": {
@@ -169,7 +167,7 @@
                 "tiene": true
             },
             "altavoces": {
-                "numeroCanales": {
+                "cuanto": {
                     "cuanto": "2"
                 },
                 "potencia": {
@@ -347,10 +345,8 @@
                         "de cuanto": "3440x1440 a 60Hz"
                     }
                 },
-                "USBinput": {
-                    "null": {
-                        "cuanto": "0"
-                    }
+                "entradas": {
+                    "cuanto": "0"
                 },
                 "USBoutput": {
                     "entradas": {
@@ -374,7 +370,7 @@
             },
             "altavoces": {
                 "tiene": false,
-                "numeroCanales": {
+                "cuanto": {
                     "cuanto": "0"
                 },
                 "Bluetooth": {

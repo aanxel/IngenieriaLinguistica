@@ -4,6 +4,7 @@ import spacy as spa
 import editdistance
 import regex as re
 from spanishconjugator import Conjugator
+from thinc.config import VARIABLE_RE
 
 class Concepto:
     def __init__(self, terminos, tipo_pregunta, valor):
@@ -97,7 +98,7 @@ class QA:
             '{}. Por favor, limita tu pregunta a un modelo.',
         RET_UN_MODELO_ERRATA: 'Si te refieres al modelo {n_modelo}:\n{resto}',
         R_MOD_NO_ENTIENDO: 'Lo siento, '
-            'no he entendido lo que quieres saber del modelo {n_modelo}',
+            'no dispongo de esa información para el modelo {}',
         R_NO_ENTIENDO:
             'Lo siento, no he entendido tu pregunta.',
         R_NO_SEGURO:
@@ -208,8 +209,8 @@ class QA:
         for e in subetiquetas:
             ed = min(editdistance.eval(e, p) for p in palabras)
             if (ed <= umbral_ed and len(e) >= 5) or ed == 0:
-                score += etiqueta[1]
-        return score / len(subetiquetas)
+                score += 1
+        return etiqueta[1] if score == len(subetiquetas) else 0
 
 
     def score_etiquetas(self, etiquetas, palabras, umbral_ed=0):
@@ -273,7 +274,7 @@ class QA:
                     ret.append(str(w)[:-3])
                 else:
                     ret.append(w.lemma_)
-                    ret.append(str(w))
+                ret.append(str(w))
         return list(set(map(lambda p: self.quitar_ac(p.lower()), ret)))
 
     def detectar_modelo(self, palabras):
@@ -432,13 +433,7 @@ class QA:
         for k in keys:
             dic = dic.get(k, default)
             if type(dic) != dict:
-                if dic is None:
-                    print(dic)
-                    print(keys)
                 return dic
-        if dic is None:
-            print(dic)
-            print(keys)
         return dic
 
     def respuesta_concepto(self, concepto, n_modelo):
@@ -452,9 +447,8 @@ class QA:
         Returns:
             str: Texto con la respuesta generada
         """
-        descripcion = self.get_by_keys(self.verbose, concepto.terminos)
-        if type(descripcion) == dict:
-            descripcion = self.verbose['_gen'][concepto.terminos[-1]]
+        idx = concepto.terminos + [concepto.tipo_pregunta]
+        descripcion = self.get_by_keys(self.verbose, idx)
         valor = concepto.valor
         modelo = n_modelo
         if concepto.tipo_pregunta == self.TP_TIENE:
@@ -492,20 +486,31 @@ class QA:
         """
         conceptos_gen = self.listar_conceptos_gen()
         for c in conceptos_gen:
-            c.score = self.score_etiquetas(self.tesauro[c.termino], palabras,
-                                           umbral_ed)
+            terminos = c.termino.split('&')
+            c.score = 0
+            for t in terminos:
+                if self.score_etiquetas(self.tesauro[t], palabras) > 0:
+                    c.score += 1
+            c.score /= len(terminos)
         conceptos_gen.sort(reverse=True)
         return conceptos_gen
+
+    def _concepto_tiene_terminos(self, concepto, terminos):
+        try:
+            resto = concepto.terminos[concepto.terminos.index(terminos[0])+1:]
+            return not terminos[1:] or resto == terminos[1:]
+        except ValueError:
+            return False
 
     def respuesta_modelo(self, modelo, n_modelo, palabras, fn_pesos,
                          umbral_ed=0):
         conceptos = self.scores_conceptos(palabras, modelo, fn_pesos,
                                           umbral_ed)
         s_0 = conceptos[0].s_terminos
-        if s_0 <= 0.5:
+        if not s_0:
             if umbral_ed >= self.MAX_ED:
                 return (self.respuestas[self.R_MOD_NO_ENTIENDO].format(
-                        n_modelo=n_modelo))        
+                    n_modelo))        
             r = self.respuesta_modelo(modelo, n_modelo, palabras, fn_pesos,
                                       umbral_ed + 1)
             return self._respuesta_insegura_ed(r)
@@ -514,11 +519,12 @@ class QA:
         if len(candidatos) == 1:
             return self.respuesta_concepto(candidatos[0], n_modelo)
         # Intentar desambiguar por el tipo de pregunta
-        candidatos.sort(key=lambda c: c.s_tipo_pregunta, reverse=True)
-        s_0_tp = candidatos[0].s_tipo_pregunta
-        candidatos = [c for c in candidatos if c.s_tipo_pregunta == s_0_tp]
-        if len(candidatos) == 1:
-            return self.respuesta_concepto(candidatos[0], n_modelo)
+        if all(t.terminos[:-1] == candidatos[0].terminos[:-1] for t in candidatos):
+            candidatos.sort(key=lambda c: c.s_tipo_pregunta, reverse=True)
+            s_0_tp = candidatos[0].s_tipo_pregunta
+            candidatos = [c for c in candidatos if c.s_tipo_pregunta == s_0_tp]
+            if len(candidatos) == 1:
+                return self.respuesta_concepto(candidatos[0], n_modelo)
         # Desambiguar por agrupación de conceptos
         conceptos_gen = self.scores_conceptos_gen(palabras)
         c_1, c_2 = conceptos_gen[0], conceptos_gen[1]
@@ -526,7 +532,7 @@ class QA:
         if c_1.score == c_2.score and c_1.prioridad == c_2.prioridad:
             if umbral_ed >= self.MAX_ED:
                 return (self.respuestas[self.R_MOD_NO_ENTIENDO].format(
-                        n_modelo=n_modelo))        
+                        n_modelo))        
             r = self.respuesta_modelo(modelo, n_modelo, palabras, fn_pesos,
                                       umbral_ed + 1)
             return self._respuesta_insegura_ed(r)
@@ -534,24 +540,26 @@ class QA:
         ret = self.respuestas[self.TP_AGRUPACION].format(
             modelo=n_modelo, descripcion=descripcion)
         for c in conceptos:
-            if c_1.termino in c.terminos:
+            if self._concepto_tiene_terminos(c, c_1.termino.split('&')):
                 ret = ret + f'\n\t{self.respuesta_concepto(c, n_modelo)}'
         return self._respuesta_insegura(c_1, ret)
 
     def _respuesta_insegura(self, concepto, contenido):
-        if concepto.prioridad >= 3:
-            r = contenido
-            if not any(_r in r for _r in(self.respuestas[self.R_NO_SEGURO],
-                                     self.respuestas[self.R_NO_ENTIENDO],
-                                     self.respuestas[self.R_MOD_NO_ENTIENDO])):
-                return self.respuestas[self.R_NO_SEGURO].format(
-                    r[0].lower() + r[1:])
-        return contenido
+        if concepto.prioridad < 3:
+            return contenido
+        r = contenido
+        re_mod = self.respuestas[self.R_MOD_NO_ENTIENDO].format('*')
+        if not(re.match(re_mod, r) or
+               any(_r in r for _r in (self.respuestas[self.R_NO_SEGURO],
+                                      self.respuestas[self.R_NO_ENTIENDO]))):
+            r = self.respuestas[self.R_NO_SEGURO].format(r[0].lower() + r[1:])
+        return r
 
     def _respuesta_insegura_ed(self, r):
-        if not any(_r in r for _r in(self.respuestas[self.R_NO_SEGURO],
-                                     self.respuestas[self.R_NO_ENTIENDO],
-                                     self.respuestas[self.R_MOD_NO_ENTIENDO])):
+        re_mod = self.respuestas[self.R_MOD_NO_ENTIENDO].format('*')
+        if not(re.match(re_mod, r) or
+               any(_r in r for _r in (self.respuestas[self.R_NO_SEGURO],
+                                      self.respuestas[self.R_NO_ENTIENDO]))):
             r = self.respuestas[self.R_NO_SEGURO].format(r[0].lower() + r[1:])
         return r
 
