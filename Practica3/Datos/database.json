@@ -373,14 +373,12 @@
                 "tiene": true
             },
             "altavoces": {
-                "altavoces": {
-                    "tiene": false,
-                    "numeroCanales": {
-                        "cuanto": "0"
-                    },
-                    "Bluetooth": {
-                        "tiene": false
-                    }
+                "tiene": false,
+                "numeroCanales": {
+                    "cuanto": "0"
+                },
+                "Bluetooth": {
+                    "tiene": false
                 }
             }
         },

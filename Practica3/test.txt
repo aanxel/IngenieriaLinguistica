@@ -299,12 +299,10 @@ El monitor 27UP850-W no tiene entrada de audio.
 El monitor 34WN80C no tiene entrada de audio.
 
 ¿Hay entrada de microfono en el monitor 27UP850-W?
-Esto es lo que sé sobre la entrada USB para el monitor 27UP850-W:
-	El monitor 27UP850-W tiene 0 conexión/es de entrada USB.
+El monitor 27UP850-W no tiene entrada de micrófono.
 
 ¿Hay entrada de microfono en el monitor 34WN80C?
-Esto es lo que sé sobre la entrada USB para el monitor 34WN80C:
-	El monitor 34WN80C tiene 0 conexión/es de entrada USB.
+El monitor 34WN80C no tiene entrada de micrófono.
 
 ¿El monitor 27UP850-W dispone de salida de auriculares?
 El monitor 27UP850-W tiene salida de auriculares.
@@ -316,42 +314,25 @@ El monitor 34WN80C tiene salida de auriculares.
 El monitor 27UP850-W tiene 2 canal/es de altavoces incorporados.
 
 ¿Cuantos altavoces tiene el monitor 34WN80C?
-None
-['sonido', 'altavoces', 'altavoces', 'numeroCanales']
-El monitor 34WN80C tiene 0 None.
+El monitor 34WN80C tiene 0 canal/es de altavoces incorporados.
 
 ¿Cual es la potencia de los altavoces del monitor 27UP850-W?
 La potencia de los altavoces del monitor 27UP850-W es de 5 W.
 
 ¿Cual es la potencia de los altavoces del monitor 34WN80C?
-None
-['sonido', 'altavoces', 'altavoces', 'numeroCanales']
-El monitor 34WN80C tiene 0 None.
+El monitor 34WN80C tiene 0 canal/es de altavoces incorporados.
 
 ¿El monitor 27UP850-W tiene incorporado control bluetooth para los altavoces?
 El monitor 27UP850-W no tiene incorporado Bluetooth en los altavoces.
 
 ¿El monitor 34WN80C tiene incorporado control bluetooth para los altavoces?
-None
-['sonido', 'altavoces', 'altavoces', 'Bluetooth']
-El monitor 34WN80C no tiene None.
+El monitor 34WN80C no tiene incorporado Bluetooth en los altavoces.
 
 ¿Que tipo de alimentacion de energia tiene el monitor 27UP850-W?
-Esto es lo que sé sobre la alimentación para el monitor 27UP850-W:
-	El consumo de potencia típico del monitor 27UP850-W es de 44 W.
-	El consumo de potencia máximo del monitor 27UP850-W es de 185 W.
-	El consumo de potencia con EnergyStar (ahorro de energía) del monitor 27UP850-W es de 25.4 W.
-	El consumo de potencia en reposo (monitor suspendido) del monitor 27UP850-W es de < 0.5 W (HDMI/DP input condition).
-	El consumo de potencia con DCOff (monitor apagado) del monitor 27UP850-W es de < 0.3 W.
-	El tipo de alimentación del monitor 27UP850-W es Alimentación Externa (Adaptador a Red).
+El tipo de alimentación del monitor 27UP850-W es Alimentación Externa (Adaptador a Red).
 
 ¿Que tipo de alimentacion de energia tiene el monitor 34WN80C?
-Esto es lo que sé sobre la alimentación para el monitor 34WN80C:
-	El consumo de potencia típico del monitor 34WN80C es de 60 W.
-	El consumo de potencia máximo del monitor 34WN80C es de 140 W.
-	El consumo de potencia en reposo (monitor suspendido) del monitor 34WN80C es de < 0.5 W.
-	El consumo de potencia con DCOff (monitor apagado) del monitor 34WN80C es de < 0.3 W.
-	El tipo de alimentación del monitor 34WN80C es Alimentación Externa (Adaptador a Red).
+El tipo de alimentación del monitor 34WN80C es Alimentación Externa (Adaptador a Red).
 
 ¿Cual es el consumo tipico de energia del monitor 27UP850-W?
 El consumo de potencia típico del monitor 27UP850-W es de 44 W.
@@ -404,16 +385,16 @@ Esto es lo que sé sobre la frecuencia para el monitor 34WN80C:
 	La frecuencia del conector DP del monitor 34WN80C es de 56~61Hz.
 
 Cuales son las entradas del monitor 27UP850-W?
-No estoy seguro de que me hayas preguntado esto, pero lo siento, no he entendido lo que quieres saber del modelo 27UP850-W
+El monitor 27UP850-W no tiene entrada de micrófono.
 
 Cuales son las entradas del monitor 34WN80C?
-No estoy seguro de que me hayas preguntado esto, pero lo siento, no he entendido lo que quieres saber del modelo 34WN80C
+El monitor 34WN80C no tiene entrada de micrófono.
 
 que entradas tiene el 27UP850-W
-No estoy seguro de que me hayas preguntado esto, pero lo siento, no he entendido lo que quieres saber del modelo 27UP850-W
+El monitor 27UP850-W no tiene entrada de micrófono.
 
 que entradas tiene el 34WN80C
-No estoy seguro de que me hayas preguntado esto, pero lo siento, no he entendido lo que quieres saber del modelo 34WN80C
+El monitor 34WN80C no tiene entrada de micrófono.
 
 que resolucion tiene el monitor 27UP850-W?
 La resolución del monitor 27UP850-W es de 3840x2160 px (4K).
@@ -598,19 +579,13 @@ Esto es lo que sé sobre sonido para el monitor 27UP850-W:
 	El monitor 27UP850-W no tiene incorporado Bluetooth en los altavoces.
 
 Dame toda la informacion relacionada con el sonido acerca del monitor 34WN80C?
-None
-['sonido', 'altavoces', 'altavoces']
-None
-['sonido', 'altavoces', 'altavoces', 'numeroCanales']
-None
-['sonido', 'altavoces', 'altavoces', 'Bluetooth']
 Esto es lo que sé sobre sonido para el monitor 34WN80C:
 	El monitor 34WN80C no tiene entrada de audio.
 	El monitor 34WN80C no tiene entrada de micrófono.
 	El monitor 34WN80C tiene salida de auriculares.
-	El monitor 34WN80C no tiene None.
-	El monitor 34WN80C tiene 0 None.
-	El monitor 34WN80C no tiene None.
+	El monitor 34WN80C no tiene altavoces.
+	El monitor 34WN80C tiene 0 canal/es de altavoces incorporados.
+	El monitor 34WN80C no tiene incorporado Bluetooth en los altavoces.
 
 Que propiedades de audio tiene disponible el monitor 27UP850-W
 El monitor 27UP850-W no tiene entrada de audio.
@@ -631,44 +606,10 @@ Que informacion albergas sobre los atributos del modelo 34WN80C
 No estoy seguro de que me hayas preguntado esto, pero lo siento, no he entendido lo que quieres saber del modelo 34WN80C
 
 Que conectividades tiene disponible el monitor 27UP850-W?
-Esto es lo que sé sobre la conectividad para el monitor 27UP850-W:
-	El monitor 27UP850-W tiene 2 conexión/es de entrada HDMI.
-	La frecuencia del conector HDMI del monitor 27UP850-W es de 40~60Hz.
-	La resolución máxima del conector HDMI del monitor 27UP850-W es de 3840x2160 px a 60Hz.
-	La versión del conector HDMI del monitor 27UP850-W es 2.0.
-	El monitor 27UP850-W tiene 1 conexión/es de entrada DP.
-	La frecuencia del conector DP del monitor 27UP850-W es de 40~60Hz.
-	La resolución máxima del conector DP del monitor 27UP850-W es de 3840x2160 px a 60Hz.
-	La versión del conector DP del monitor 27UP850-W es 1.4.
-	El monitor 27UP850-W tiene 0 conexión/es de entrada miniDP.
-	El monitor 27UP850-W tiene 0 conexión/es de entrada VGA.
-	El monitor 27UP850-W tiene 0 conexión/es de entrada DVI.
-	El monitor 27UP850-W tiene 0 conexión/es de entrada Thunderbolt.
-	El monitor 27UP850-W tiene 1 conexión/es de entrada USB-C.
-	La resolución máxima del conector USB-C del monitor 27UP850-W es de 3840x2160 px a 60Hz.
-	El monitor 27UP850-W tiene 0 conexión/es de entrada USB.
-	El monitor 27UP850-W tiene 2 conexión/es de salida USB.
-	La versión del conector de salida USB del monitor 27UP850-W es Tipo A.
+No estoy seguro de que me hayas preguntado esto, pero lo siento, no he entendido lo que quieres saber del modelo 27UP850-W
 
 Que conectividades tiene disponible el monitor 34WN80C?
-Esto es lo que sé sobre la conectividad para el monitor 34WN80C:
-	El monitor 34WN80C tiene 2 conexión/es de entrada HDMI.
-	La frecuencia del conector HDMI del monitor 34WN80C es de 56~61Hz.
-	La resolución máxima del conector HDMI del monitor 34WN80C es de 3440x1440 a 60Hz.
-	La versión del conector HDMI del monitor 34WN80C es 2.0.
-	El monitor 34WN80C tiene 1 conexión/es de entrada DP.
-	La frecuencia del conector DP del monitor 34WN80C es de 56~61Hz.
-	La resolución máxima del conector DP del monitor 34WN80C es de 3440x1440 a 60Hz.
-	La versión del conector DP del monitor 34WN80C es 1.4.
-	El monitor 34WN80C tiene 0 conexión/es de entrada miniDP.
-	El monitor 34WN80C tiene 0 conexión/es de entrada VGA.
-	El monitor 34WN80C tiene 0 conexión/es de entrada DVI.
-	El monitor 34WN80C tiene 0 conexión/es de entrada Thunderbolt.
-	El monitor 34WN80C tiene 1 conexión/es de entrada USB-C.
-	La resolución máxima del conector USB-C del monitor 34WN80C es de 3440x1440 a 60Hz.
-	El monitor 34WN80C tiene 0 conexión/es de entrada USB.
-	El monitor 34WN80C tiene 2 conexión/es de salida USB.
-	La versión del conector de salida USB del monitor 34WN80C es Tipo A v3.0.
+No estoy seguro de que me hayas preguntado esto, pero lo siento, no he entendido lo que quieres saber del modelo 34WN80C
 
 Que conexiones de entrada y salida tiene el monitor 27UP850-W
 El monitor 27UP850-W tiene 2 conexión/es de salida USB.
@@ -680,17 +621,13 @@ Dime que sabes sobre los altavoces del monitor 27UP850-W
 El monitor 27UP850-W tiene 2 canal/es de altavoces incorporados.
 
 Dime que sabes sobre los altavoces del monitor 34WN80C
-None
-['sonido', 'altavoces', 'altavoces', 'numeroCanales']
-El monitor 34WN80C tiene 0 None.
+El monitor 34WN80C tiene 0 canal/es de altavoces incorporados.
 
 Que información tienes sobre los altavoces del monitor 27UP850-W
 El monitor 27UP850-W tiene 2 canal/es de altavoces incorporados.
 
 Que información tienes sobre los altavoces del monitor 34WN80C
-None
-['sonido', 'altavoces', 'altavoces', 'numeroCanales']
-El monitor 34WN80C tiene 0 None.
+El monitor 34WN80C tiene 0 canal/es de altavoces incorporados.
 
 Que sabes sobre el consumo de potencia del monitor 27UP850-W
 Esto es lo que sé sobre el consumo de potencia para el monitor 27UP850-W:

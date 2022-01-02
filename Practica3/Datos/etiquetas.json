@@ -55,8 +55,8 @@
         ["caracteristica", 0.25]
     ],
     "conectividad": [
-        "conectividad",
-        "conexion"
+        ["conectividad", 0.25],
+        ["conexion", 0.25]
     ],
     "modelo": [
         ["modelo", 0.25],
@@ -256,9 +256,9 @@
         "output auricular"
     ],
     "entradaMicrofono": [
-        ["entrada microfono", 1],
-        ["input microfono", 1],
-        ["jack microfono", 1]
+        ["entrada microfono", 1.25],
+        ["input microfono", 1.25],
+        ["jack microfono", 1.25]
     ],
     "entradaAudio": [
         ["entrada audio", 1],
@@ -318,7 +318,6 @@
     ],
     "consumoPotencia": [
         "consumo potencia",
-        "consumo energia",
         "consumo watios",
         "consumo watio"
     ],
